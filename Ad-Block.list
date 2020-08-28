@@ -2294,7 +2294,7 @@ DOMAIN-SUFFIX,dviixeyykyqjv.cloudfront.net,REJECT
 DOMAIN-SUFFIX,js.bulkhentai.com,REJECT
 DOMAIN-SUFFIX,script.hqpass.com,REJECT
 DOMAIN-SUFFIX,d2t2on23g4lty1.cloudfront.net,REJECT
-#
+##
 # Source name: AdGuard Base filter ad servers foreign
 # Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/foreign.txt
 #
@@ -33715,30 +33715,30 @@ DOMAIN-SUFFIX,z.nowscore.com,REJECT
 DOMAIN-SUFFIX,zhimg.com,REJECT*adx
 DOMAIN-SUFFIX,zt2088.com,REJECT
 DOMAIN-SUFFIX,ztyumn.ifeng.com,REJECT
-@@DOMAIN-SUFFIX,95599.cn,REJECT*ad
-@@DOMAIN-SUFFIX,abchina.com,REJECT*ad
-@@DOMAIN-SUFFIX,ad.10010.com,REJECT
-@@DOMAIN-SUFFIX,ad.abchina.com,REJECT
-@@DOMAIN-SUFFIX,ad.kazakinfo.com,REJECT
-@@DOMAIN-SUFFIX,ad.ourgame.com,REJECT
-@@DOMAIN-SUFFIX,adcdn.pingan.com,REJECT
-@@DOMAIN-SUFFIX,advert.kf5.com,REJECT
-@@DOMAIN-SUFFIX,api.ads.tvb.com,REJECT
-@@DOMAIN-SUFFIX,app-advertise.zhihuishu.com,REJECT
-@@DOMAIN-SUFFIX,buyad.bi-xenon.cn,REJECT
-@@DOMAIN-SUFFIX,captcha.su.baidu.com,REJECT
-@@DOMAIN-SUFFIX,ccb.com,REJECT*,REJECTad
-@@DOMAIN-SUFFIX,img.ads.tvb.com,REJECT
-@@DOMAIN-SUFFIX,mmy.la,REJECT*300*250
-@@DOMAIN-SUFFIX,newad.mail.wo.cn,REJECT
-@@DOMAIN-SUFFIX,nthu.edu.tw,REJECT*ad
-@@DOMAIN-SUFFIX,static.atm.youku.com,REJECT*.swf
-@@DOMAIN-SUFFIX,szhr.com.cn,REJECT*ad
-@@DOMAIN-SUFFIX,szhr.com,REJECT*ad
-@@DOMAIN-SUFFIX,wubisheng.net,REJECT*.js
-@@DOMAIN-SUFFIX,youku.com,REJECT*,REJECTadshow
-@@DOMAIN-SUFFIX,youku.com,REJECT*,REJECTshowAd
-@@DOMAIN-SUFFIX,yzzkb.com.cn,REJECT*ad.
+#DOMAIN-SUFFIX,95599.cn,REJECT*ad
+#DOMAIN-SUFFIX,abchina.com,REJECT*ad
+#DOMAIN-SUFFIX,ad.10010.com,REJECT
+#DOMAIN-SUFFIX,ad.abchina.com,REJECT
+#DOMAIN-SUFFIX,ad.kazakinfo.com,REJECT
+#DOMAIN-SUFFIX,ad.ourgame.com,REJECT
+#DOMAIN-SUFFIX,adcdn.pingan.com,REJECT
+#DOMAIN-SUFFIX,advert.kf5.com,REJECT
+#DOMAIN-SUFFIX,api.ads.tvb.com,REJECT
+#DOMAIN-SUFFIX,app-advertise.zhihuishu.com,REJECT
+#DOMAIN-SUFFIX,buyad.bi-xenon.cn,REJECT
+#DOMAIN-SUFFIX,captcha.su.baidu.com,REJECT
+#DOMAIN-SUFFIX,ccb.com,REJECT*,REJECTad
+#DOMAIN-SUFFIX,img.ads.tvb.com,REJECT
+#DOMAIN-SUFFIX,mmy.la,REJECT*300*250
+#DOMAIN-SUFFIX,newad.mail.wo.cn,REJECT
+#DOMAIN-SUFFIX,nthu.edu.tw,REJECT*ad
+#DOMAIN-SUFFIX,static.atm.youku.com,REJECT*.swf
+#DOMAIN-SUFFIX,szhr.com.cn,REJECT*ad
+#DOMAIN-SUFFIX,szhr.com,REJECT*ad
+#DOMAIN-SUFFIX,wubisheng.net,REJECT*.js
+#DOMAIN-SUFFIX,youku.com,REJECT*,REJECTadshow
+#DOMAIN-SUFFIX,youku.com,REJECT*,REJECTshowAd
+#DOMAIN-SUFFIX,yzzkb.com.cn,REJECT*ad.
 DOMAIN-SUFFIX,immedlinkum.info,REJECT
 DOMAIN-SUFFIX,xayah.date,REJECT
 DOMAIN-SUFFIX,003store.com,REJECT
@@ -36385,7 +36385,7 @@ DOMAIN-SUFFIX,qhdbfjx.com,REJECT
 DOMAIN-SUFFIX,sohu999.com,REJECT
 DOMAIN-SUFFIX,tcmdz.com,REJECT
 DOMAIN-SUFFIX,withad.cn,REJECT
-@@DOMAIN-SUFFIX,huke88.com,REJECT*-tracking.js
+#DOMAIN-SUFFIX,huke88.com,REJECT*-tracking.js
 #
 # Source name: Additional rules
 # Source: Filters/rules.txt
@@ -36978,91 +36978,91 @@ DOMAIN-SUFFIX,novunu.football-plyus.net,REJECT
 #
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/428
 # CNAME: paymaya.customlinks.appsflyer.com
-@@DOMAIN-SUFFIX,official.paymaya.com,REJECT|
+#DOMAIN-SUFFIX,official.paymaya.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/381
-@@DOMAIN-SUFFIX,gs.statcounter.com,REJECT|
+#DOMAIN-SUFFIX,gs.statcounter.com,REJECT|
 # Fixing NordVPN mobile app launching
-@@DOMAIN-SUFFIX,launches.appsflyer.com,REJECT|
+#DOMAIN-SUFFIX,launches.appsflyer.com,REJECT|
 # Blocked by exacttarget.com alias
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/333
-@@DOMAIN-SUFFIX,click.virt.s*.exacttarget.com,REJECT|
-@@DOMAIN-SUFFIX,click.virt.exacttarget.com,REJECT|
+#DOMAIN-SUFFIX,click.virt.s*.exacttarget.com,REJECT|
+#DOMAIN-SUFFIX,click.virt.exacttarget.com,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/61592
-@@DOMAIN-SUFFIX,login.sendpulse.com,REJECT|
+#DOMAIN-SUFFIX,login.sendpulse.com,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/59840
-@@DOMAIN-SUFFIX,tlaol.com,REJECT|
+#DOMAIN-SUFFIX,tlaol.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/378
-@@DOMAIN-SUFFIX,admin.dable.io,REJECT|
+#DOMAIN-SUFFIX,admin.dable.io,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/358
-@@DOMAIN-SUFFIX,log.mmstat.com,REJECT|
+#DOMAIN-SUFFIX,log.mmstat.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/345
 # Blocked by alimama.com alias
-@@DOMAIN-SUFFIX,click.simba.taobao.com,REJECT|
+#DOMAIN-SUFFIX,click.simba.taobao.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/340
-@@DOMAIN-SUFFIX,cs.silverpop.com,REJECT|
+#DOMAIN-SUFFIX,cs.silverpop.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/312
-@@DOMAIN-SUFFIX,grp07.ias.rakuten.co.jp,REJECT|
+#DOMAIN-SUFFIX,grp07.ias.rakuten.co.jp,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/304
-@@DOMAIN-SUFFIX,cindyholbrook.lpages.co,REJECT|
+#DOMAIN-SUFFIX,cindyholbrook.lpages.co,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/289
 # Fixing Google Shop and Google Ads in search results.
 # These ads cannot be hidden on the DNS-level, so we should not break clicks on the adverts
-@@DOMAIN-SUFFIX,pagead.l.doubleclick.net,REJECT|
-@@DOMAIN-SUFFIX,www.googleadservices.com,REJECT|
-@@DOMAIN-SUFFIX,googleadapis.l.google.com,REJECT|
+#DOMAIN-SUFFIX,pagead.l.doubleclick.net,REJECT|
+#DOMAIN-SUFFIX,www.googleadservices.com,REJECT|
+#DOMAIN-SUFFIX,googleadapis.l.google.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/287
-@@DOMAIN-SUFFIX,my.tealiumiq.com,REJECT|
+#DOMAIN-SUFFIX,my.tealiumiq.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/267
-@@DOMAIN-SUFFIX,artifactory.appodeal.com,REJECT|
+#DOMAIN-SUFFIX,artifactory.appodeal.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/258
-@@DOMAIN-SUFFIX,www.jdoqocy.com,REJECT|
-@@DOMAIN-SUFFIX,cj.dotomi.com,REJECT|
+#DOMAIN-SUFFIX,www.jdoqocy.com,REJECT|
+#DOMAIN-SUFFIX,cj.dotomi.com,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/50415
-@@DOMAIN-SUFFIX,intersport.peerius.com,REJECT|
+#DOMAIN-SUFFIX,intersport.peerius.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/231
-@@DOMAIN-SUFFIX,cutcaptcha.com,REJECT|
+#DOMAIN-SUFFIX,cutcaptcha.com,REJECT|
 # https://forum.adguard.com/index.php?threads/36967/
-@@DOMAIN-SUFFIX,forum.notebookreview.com,REJECT|
+#DOMAIN-SUFFIX,forum.notebookreview.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/199
-@@DOMAIN-SUFFIX,radiofrance.targetspot.com,REJECT|
+#DOMAIN-SUFFIX,radiofrance.targetspot.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/187
-@@DOMAIN-SUFFIX,pathe.emsecure.net,REJECT|
+#DOMAIN-SUFFIX,pathe.emsecure.net,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/190
-@@DOMAIN-SUFFIX,awin1.com,REJECT|
+#DOMAIN-SUFFIX,awin1.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/185
-@@DOMAIN-SUFFIX,app.adjust.com,REJECT|
+#DOMAIN-SUFFIX,app.adjust.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/183
-@@DOMAIN-SUFFIX,feed.adrelayer.com,REJECT|
+#DOMAIN-SUFFIX,feed.adrelayer.com,REJECT|
 # https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/168
-@@DOMAIN-SUFFIX,redirect.appmetrica.yandex.com,REJECT|
+#DOMAIN-SUFFIX,redirect.appmetrica.yandex.com,REJECT|
 # Fixing redirects through guce.advertising.com (www.engadget.com, www.huffpost.com)
-@@DOMAIN-SUFFIX,guce.advertising.com,REJECT
+#DOMAIN-SUFFIX,guce.advertising.com,REJECT
 # Unblock logrocket.com blog
-@@DOMAIN-SUFFIX,blog.logrocket.com,REJECT|
+#DOMAIN-SUFFIX,blog.logrocket.com,REJECT|
 # AdGuard DNS blocks this domain but for some reason, it messes with Android's network validation process.
-@@dnsotls-ds.metric.gstatic.com,REJECT
+#dnsotls-ds.metric.gstatic.com,REJECT
 # https://github.com/AdguardTeam/AdguardFilters/issues/27196
-@@DOMAIN-SUFFIX,a.adwolf.ru,REJECT|
+#DOMAIN-SUFFIX,a.adwolf.ru,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/26607
-@@DOMAIN-SUFFIX,imasdk.googleapis.com,REJECT|
+#DOMAIN-SUFFIX,imasdk.googleapis.com,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/23929
-@@DOMAIN-SUFFIX,cm-beacon.nakanohito.jp,REJECT|
-@@DOMAIN-SUFFIX,cm-widget.nakanohito.jp,REJECT|
+#DOMAIN-SUFFIX,cm-beacon.nakanohito.jp,REJECT|
+#DOMAIN-SUFFIX,cm-widget.nakanohito.jp,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/19113
-@@DOMAIN-SUFFIX,ads.tdbank.com,REJECT
+#DOMAIN-SUFFIX,ads.tdbank.com,REJECT
 # https://forum.adguard.com/index.php?threads/23410/page-7#post-165504
-@@DOMAIN-SUFFIX,nineto5mac-d.openx.net,REJECT|
+#DOMAIN-SUFFIX,nineto5mac-d.openx.net,REJECT|
 # https://github.com/AdguardTeam/AdguardDNS/issues/192
-@@DOMAIN-SUFFIX,clk*.tradedoubler.com,REJECT|
+#DOMAIN-SUFFIX,clk*.tradedoubler.com,REJECT|
 # https://forum.adguard.com/index.php?threads/27021/
-@@DOMAIN-SUFFIX,href.li,REJECT|
+#DOMAIN-SUFFIX,href.li,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/6749
-@@DOMAIN-SUFFIX,str.hit.gemius.pl,REJECT|
+#DOMAIN-SUFFIX,str.hit.gemius.pl,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/6486
-@@DOMAIN-SUFFIX,track.rutarget.ru,REJECT|
+#DOMAIN-SUFFIX,track.rutarget.ru,REJECT|
 # Watson News App for iOS https://github.com/AdguardTeam/AdguardFilters/issues/4524
-@@DOMAIN-SUFFIX,5471782.fls.doubleclick.net,REJECT|
+#DOMAIN-SUFFIX,5471782.fls.doubleclick.net,REJECT|
 # https://github.com/AdguardTeam/AdguardFilters/issues/4405
-@@DOMAIN-SUFFIX,h-sdk.online-metrix.net,REJECT|
+#DOMAIN-SUFFIX,h-sdk.online-metrix.net,REJECT|
 # Fixing Walmart
-@@DOMAIN-SUFFIX,omniture.walmart.com,REJECT|
+#DOMAIN-SUFFIX,omniture.walmart.com,REJECT|
