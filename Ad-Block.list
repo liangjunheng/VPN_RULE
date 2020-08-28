@@ -2069,35 +2069,11 @@ DOMAIN-SUFFIX,yxbtyzqcczra.com,REJECT
 DOMAIN-SUFFIX,zaperplop.info,REJECT
 DOMAIN-SUFFIX,zeti.com,REJECT
 DOMAIN-SUFFIX,zptncsir.com,REJECT
-!
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/142
-DOMAIN-SUFFIX,stripe.rs-1028-a.com,REJECT
-!
-! Ads reinjection (For apps only)
-!+ NOT_PLATFORM(windows, mac, android)
-!+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
-!+ NOT_PLATFORM(windows, mac, android)
-!+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
-DOMAIN-SUFFIX,hub.fghtem.com,REJECT
-!+ NOT_PLATFORM(windows, mac, android)
-DOMAIN-SUFFIX,rcdn.pro,REJECT$badfilter
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/31688
-!
 DOMAIN-SUFFIX,analyticsq.com,REJECT
 DOMAIN-SUFFIX,d71e6dd31a026d45.com
 DOMAIN-SUFFIX,cb8717377086c72d.com,REJECT
 DOMAIN-SUFFIX,go.mobiprotg.com,REJECT
-! https://github.com/AdguardTeam/AdGuardHome/issues/1046
 DOMAIN-SUFFIX,samsungtvads.com,REJECT
-
-!
-! Source name: AdGuard Base filter ad servers first-party
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers_firstparty.txt
-!
-!
-! Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
-!
 DOMAIN-SUFFIX,d13k7prax1yi04.cloudfront.net,REJECT
 DOMAIN-SUFFIX,dq3yxnlzwhcys.cloudfront.net,REJECT
 DOMAIN-SUFFIX,rek.www.wp.pl,REJECT
@@ -2318,80 +2294,80 @@ DOMAIN-SUFFIX,dviixeyykyqjv.cloudfront.net,REJECT
 DOMAIN-SUFFIX,js.bulkhentai.com,REJECT
 DOMAIN-SUFFIX,script.hqpass.com,REJECT
 DOMAIN-SUFFIX,d2t2on23g4lty1.cloudfront.net,REJECT
-!
-! Source name: AdGuard Base filter ad servers foreign
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/foreign.txt
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/17139
+#
+# Source name: AdGuard Base filter ad servers foreign
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/foreign.txt
+#
+# https://github.com/AdguardTeam/AdguardFilters/issues/17139
 DOMAIN-SUFFIX,gjc.gjirafa.com,REJECT
 DOMAIN-SUFFIX,embed.dugout.com,REJECT
-!---------------------------------------------------------------------
-!------------------------------ Azerbaijani --------------------------
-!---------------------------------------------------------------------
+#---------------------------------------------------------------------
+#------------------------------ Azerbaijani --------------------------
+#---------------------------------------------------------------------
 DOMAIN-SUFFIX,code.ainsyndication.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/54572
+# https://github.com/AdguardTeam/AdguardFilters/issues/54572
 DOMAIN-SUFFIX,ads1-adselo.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/51510
+# https://github.com/AdguardTeam/AdguardFilters/issues/51510
 DOMAIN-SUFFIX,adsy.mail.bg,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/44471
-!+ NOT_OPTIMIZED
+# https://github.com/AdguardTeam/AdguardFilters/issues/44471
+#+ NOT_OPTIMIZED
 DOMAIN-SUFFIX,ysx8.vip,REJECT
 DOMAIN-SUFFIX,adblock.sina.cn,REJECT
 DOMAIN-SUFFIX,go.gotourls.bid,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/9156
+# https://github.com/AdguardTeam/AdguardFilters/issues/9156
 DOMAIN-SUFFIX,s1-a*.dnvod.tv
-!
-!+ NOT_OPTIMIZED PLATFORM(ios, ext_android_cb, ext_safari)
+#
+#+ NOT_OPTIMIZED PLATFORM(ios, ext_android_cb, ext_safari)
 DOMAIN-SUFFIX,uerzyr.cn,REJECT
-!+ NOT_OPTIMIZED PLATFORM(ios, ext_android_cb, ext_safari)
+#+ NOT_OPTIMIZED PLATFORM(ios, ext_android_cb, ext_safari)
 DOMAIN-SUFFIX,juejdkio.com,REJECT
 DOMAIN-SUFFIX,ere.wew.92kkdy.cc,REJECT
 DOMAIN-SUFFIX,www5.oss-cn-hangzhou.aliyuncs.com,REJECT
 DOMAIN-SUFFIX,lulu.dian500.com.cn,REJECT
 DOMAIN-SUFFIX,bobo.xmwty.com,REJECT
 DOMAIN-SUFFIX,dota.sykty.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/17278
+# https://github.com/AdguardTeam/AdguardFilters/issues/17278
 DOMAIN-SUFFIX,subs.vingd.com,REJECT
-!+ NOT_OPTIMIZED
+#+ NOT_OPTIMIZED
 DOMAIN-SUFFIX,banner.mob.hr,REJECT
 DOMAIN-SUFFIX,mob.hr,REJECT*-300x250.
-! https://github.com/AdguardTeam/AdguardFilters/issues/45953
+# https://github.com/AdguardTeam/AdguardFilters/issues/45953
 DOMAIN-SUFFIX,rsz.sk,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/41373
+# https://github.com/AdguardTeam/AdguardFilters/issues/41373
 DOMAIN-SUFFIX,bannery.navratdoreality.cz,REJECT
 DOMAIN-SUFFIX,uptopopunder.com,REJECT
-!---------------------------------------------------------------------
-!------------------------------ Hungarian ----------------------------
-!---------------------------------------------------------------------
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/58569
+#---------------------------------------------------------------------
+#------------------------------ Hungarian ----------------------------
+#---------------------------------------------------------------------
+#
+# https://github.com/AdguardTeam/AdguardFilters/issues/58569
 DOMAIN-SUFFIX,a.b.napiszar.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/40119
+# https://github.com/AdguardTeam/AdguardFilters/issues/40119
 /.*prixa.*\.net\/media\/(Parvo|Ratop|Riddh)\/[A-Za-z0-9-_]+.(gif|jpg)/
 /.*prixa.*\.net\/media\/[0-9A-Za-z-_]*.(gif|jpg)/
-! Indonesian telco injecting its ads
+# Indonesian telco injecting its ads
 DOMAIN-SUFFIX,cfs1.uzone.id,REJECT
 DOMAIN-SUFFIX,jor-el.net,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/19323
+# https://github.com/AdguardTeam/AdguardFilters/issues/19323
 DOMAIN-SUFFIX,pijama.*.elasticbeanstalk.com,REJECT
 DOMAIN-SUFFIX,stream.spongead.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/23346
+# https://github.com/AdguardTeam/AdguardFilters/issues/23346
 DOMAIN-SUFFIX,innorame.com,REJECT
 DOMAIN-SUFFIX,adf.acrosspf.com,REJECT
 DOMAIN-SUFFIX,ap.delfi.ee,REJECT
 DOMAIN-SUFFIX,ado.delfi.ee,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/5103
+# https://github.com/AdguardTeam/AdguardFilters/issues/5103
 DOMAIN-SUFFIX,llog.pl,REJECT
-!
+#
 DOMAIN-SUFFIX,bsxmuny.wp.pl,REJECT
 DOMAIN-SUFFIX,fusion.sydsvenskan.se,REJECT
 DOMAIN-SUFFIX,ad.juksy.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/54242
+# https://github.com/AdguardTeam/AdguardFilters/issues/54242
 /movie1168\.com\/storage\/go\/[0-9a-zA-Z]{0,40}\.gif/
 DOMAIN-SUFFIX,ads.8live.com,REJECT
 .3.n.2.1.l50.js
 .3.n.2.2.l30.js
-!
+#
 DOMAIN-SUFFIX,lasimakiz.xyz,REJECT
 DOMAIN-SUFFIX,hostingcloud.racing,REJECT
 DOMAIN-SUFFIX,tercabilis.info,REJECT
@@ -2464,7 +2440,7 @@ DOMAIN-SUFFIX,rintinwa.com,REJECT
 DOMAIN-SUFFIX,salamaleyum.com,REJECT
 DOMAIN-SUFFIX,web.dle-news.pw,REJECT
 DOMAIN-SUFFIX,xbasfbno.info,REJECT
-! don't add `,REJECT` to these rules
+# don't add `,REJECT` to these rules
 DOMAIN-SUFFIX,jshosting.bid
 DOMAIN-SUFFIX,hostingcloud.download
 DOMAIN-SUFFIX,freecontent.racing
@@ -2474,11 +2450,11 @@ DOMAIN-SUFFIX,s*.skencituer.com,REJECT
 DOMAIN-SUFFIX,likeminer.nablabee.com,REJECT
 DOMAIN-SUFFIX,miner.nablabee.com,REJECT
 
-!
-! Source name: EasyList ad servers
-! Source: https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt
-!
-! Non-flagged (Revolving ad servers)
+#
+# Source name: EasyList ad servers
+# Source: https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt
+#
+# Non-flagged (Revolving ad servers)
 DOMAIN-SUFFIX,01dbf3a452b6.com,REJECT
 DOMAIN-SUFFIX,05xz0h2xo799.com,REJECT
 DOMAIN-SUFFIX,0aa89ur58y.top,REJECT
@@ -5479,7 +5455,7 @@ DOMAIN-SUFFIX,zudrurta.com,REJECT
 DOMAIN-SUFFIX,zxa4kxw2nvox.com,REJECT
 DOMAIN-SUFFIX,zxxtkrkzfyy3.com,REJECT
 DOMAIN-SUFFIX,zzdb5p4upiug.com,REJECT
-! Third-party
+# Third-party
 DOMAIN-SUFFIX,0azx1.com,REJECT
 DOMAIN-SUFFIX,0emn.com,REJECT
 DOMAIN-SUFFIX,0fmm.com,REJECT
@@ -9918,9 +9894,9 @@ DOMAIN-SUFFIX,zxxds.net,REJECT
 DOMAIN-SUFFIX,zy16eoat1w.com,REJECT
 DOMAIN-SUFFIX,zyiis.net,REJECT
 DOMAIN-SUFFIX,zypenetwork.com,REJECT
-! steepto used for redirection
+# steepto used for redirection
 DOMAIN-SUFFIX,steepto.com,REJECT
-! fiber-ads (https://blog.confiant.com/hong-kong-based-malvertiser-brokers-traffic-to-fake-antivirus-scams-over-100-million-ads-300e251eff06)
+# fiber-ads (https://blog.confiant.com/hong-kong-based-malvertiser-brokers-traffic-to-fake-antivirus-scams-over-100-million-ads-300e251eff06)
 DOMAIN-SUFFIX,adminpromotion.com,REJECT
 DOMAIN-SUFFIX,automationeventually.com,REJECT
 DOMAIN-SUFFIX,blissfulonline.com,REJECT
@@ -10034,14 +10010,14 @@ DOMAIN-SUFFIX,tukuterus.com,REJECT
 DOMAIN-SUFFIX,vcommission.com,REJECT
 DOMAIN-SUFFIX,veletonjectof.pro,REJECT
 DOMAIN-SUFFIX,vfghc.com,REJECT
-! IP addresses
+# IP addresses
 /(https?:\/\/)213\.32\.115\..{100,}/
 /(https?:\/\/)217\.182\.11\..{100,}/
 /(https?:\/\/)51\.195\.31\..{100,}/
-! Dodgy skimmers
+# Dodgy skimmers
 DOMAIN-SUFFIX,bootstrap-js.com,REJECT
 DOMAIN-SUFFIX,g-statistic.com,REJECT
-! hilltopads
+# hilltopads
 DOMAIN-SUFFIX,afriflatry.co,REJECT
 DOMAIN-SUFFIX,aution.pro,REJECT
 DOMAIN-SUFFIX,automoc.net,REJECT
@@ -10102,11 +10078,11 @@ DOMAIN-SUFFIX,thogethoffic.co,REJECT
 DOMAIN-SUFFIX,vulging.pro,REJECT
 DOMAIN-SUFFIX,wicktrown.co,REJECT
 DOMAIN-SUFFIX,xvika.com,REJECT
-! adsterra
+# adsterra
 DOMAIN-SUFFIX,2p9fyvx.com,REJECT
 DOMAIN-SUFFIX,g5fzq2l.com,REJECT
 DOMAIN-SUFFIX,sa2xskt.com,REJECT
-! Propellerads
+# Propellerads
 DOMAIN-SUFFIX,006a039c957c142bb.com,REJECT
 DOMAIN-SUFFIX,00aaa2d81c1d174.com,REJECT
 DOMAIN-SUFFIX,00ae8b5a9c1d597.com,REJECT
@@ -10562,7 +10538,7 @@ DOMAIN-SUFFIX,shaimsoo.net,REJECT
 DOMAIN-SUFFIX,thoaltie.net,REJECT
 DOMAIN-SUFFIX,thoorest.com,REJECT
 DOMAIN-SUFFIX,ziphoumt.net,REJECT
-! https://forums.lanik.us/viewtopic.php?p=144908#p144908
+# https://forums.lanik.us/viewtopic.php?p=144908#p144908
 DOMAIN-SUFFIX,1bcde.com,REJECT
 DOMAIN-SUFFIX,1ccbt.com,REJECT
 DOMAIN-SUFFIX,abodealley.com,REJECT
@@ -10621,7 +10597,7 @@ DOMAIN-SUFFIX,strongexplain.com,REJECT
 DOMAIN-SUFFIX,theirsvendor.com,REJECT
 DOMAIN-SUFFIX,trafficoverus.com,REJECT
 DOMAIN-SUFFIX,xilbalar.com,REJECT
-! Tag adservers
+# Tag adservers
 DOMAIN-SUFFIX,1han-rit-ten.com,REJECT
 DOMAIN-SUFFIX,1hanritten.com,REJECT
 DOMAIN-SUFFIX,1sen-pit-fan.com,REJECT
@@ -10750,7 +10726,7 @@ DOMAIN-SUFFIX,mysearch-online.com,REJECT
 DOMAIN-SUFFIX,stepkeydo.com,REJECT
 DOMAIN-SUFFIX,wapdollar.in,REJECT
 DOMAIN-SUFFIX,waptrick.com,REJECT
-! Admiral
+# Admiral
 DOMAIN-SUFFIX,acrididae.com,REJECT
 DOMAIN-SUFFIX,agreeableprice.com,REJECT
 DOMAIN-SUFFIX,bedsbreath.com,REJECT
@@ -10759,7 +10735,7 @@ DOMAIN-SUFFIX,puzzlingfall.com,REJECT
 DOMAIN-SUFFIX,ritzysponge.com,REJECT
 DOMAIN-SUFFIX,smilingsock.com,REJECT
 DOMAIN-SUFFIX,atresadvertising.com,REJECT
-! admeasures.com
+# admeasures.com
 DOMAIN-SUFFIX,0a0qetx8et.com,REJECT
 DOMAIN-SUFFIX,0gctp5ht.top,REJECT
 DOMAIN-SUFFIX,0j7z9aw6.top,REJECT
@@ -11004,7 +10980,7 @@ DOMAIN-SUFFIX,zinphyra.com,REJECT
 DOMAIN-SUFFIX,zjo0tjqpm1.com,REJECT
 DOMAIN-SUFFIX,zrav2wkbrs.com,REJECT
 DOMAIN-SUFFIX,zu4l167j77.com,REJECT
-! popads.net
+# popads.net
 DOMAIN-SUFFIX,aabmxezph.com,REJECT
 DOMAIN-SUFFIX,aagmbroxruno.com,REJECT
 DOMAIN-SUFFIX,aaitudxr.com,REJECT
@@ -16812,7 +16788,7 @@ DOMAIN-SUFFIX,zzoacwqfw.com,REJECT
 DOMAIN-SUFFIX,zzpzenvmibvm.com,REJECT
 DOMAIN-SUFFIX,zzvvzfiwyfq.com,REJECT
 DOMAIN-SUFFIX,zzxlukodff.com,REJECT
-! Chameleon Advertising Technologies
+# Chameleon Advertising Technologies
 DOMAIN-SUFFIX,addonsmash.com,REJECT
 DOMAIN-SUFFIX,axeldivision.com,REJECT
 DOMAIN-SUFFIX,chameleon.ad,REJECT
@@ -16827,7 +16803,7 @@ DOMAIN-SUFFIX,spiralstab.com,REJECT
 DOMAIN-SUFFIX,yatab.net,REJECT
 DOMAIN-SUFFIX,inter1ads.com,REJECT
 DOMAIN-SUFFIX,vicegnem.click,REJECT
-! "info" adservers
+# "info" adservers
 DOMAIN-SUFFIX,adalgo.info,REJECT
 DOMAIN-SUFFIX,adwalte.info,REJECT
 DOMAIN-SUFFIX,awdigit.info,REJECT
@@ -16861,7 +16837,7 @@ DOMAIN-SUFFIX,smigro.info,REJECT
 DOMAIN-SUFFIX,svyksa.info,REJECT
 DOMAIN-SUFFIX,urmilan.info,REJECT
 DOMAIN-SUFFIX,vatname.info,REJECT
-! uponit adservers
+# uponit adservers
 DOMAIN-SUFFIX,acrabakasaka.com,REJECT
 DOMAIN-SUFFIX,ajkelra.com,REJECT
 DOMAIN-SUFFIX,akrazappi.com,REJECT
@@ -16924,7 +16900,7 @@ DOMAIN-SUFFIX,zipovoma.com,REJECT
 DOMAIN-SUFFIX,zorbikala.com,REJECT
 DOMAIN-SUFFIX,zortinah.com,REJECT
 DOMAIN-SUFFIX,zozolilla.com,REJECT
-!
+#
 DOMAIN-SUFFIX,arana.pw,REJECT
 DOMAIN-SUFFIX,beiren.xyz,REJECT
 DOMAIN-SUFFIX,daecan.xyz,REJECT
@@ -16952,82 +16928,82 @@ DOMAIN-SUFFIX,urifiel.pw,REJECT
 DOMAIN-SUFFIX,yllanala.pw,REJECT
 DOMAIN-SUFFIX,zinlar.pw,REJECT
 
-!
-! Source name: AdGuard Mobile Ads filter ad servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
-!
-!
-! Section contains list of advertising networks
-!
-!
-! DOMAIN-SUFFIX,mobileapptracking.com,REJECT - don't block this domain with all subdomains. https://forum.adguard.com/index.php?threads/23917/
-!
-! Appnext
+#
+# Source name: AdGuard Mobile Ads filter ad servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
+#
+#
+# Section contains list of advertising networks
+#
+#
+# DOMAIN-SUFFIX,mobileapptracking.com,REJECT - don't block this domain with all subdomains. https://forum.adguard.com/index.php?threads/23917/
+#
+# Appnext
 DOMAIN-SUFFIX,admin.appnext.com,REJECT
 DOMAIN-SUFFIX,global.appnext.com,REJECT
 DOMAIN-SUFFIX,cdn.appnext.com,REJECT
 DOMAIN-SUFFIX,api.appnxt.net,REJECT
 DOMAIN-SUFFIX,apis.appnxt.net,REJECT
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/3933
-! Yandex apps
+#
+# https://github.com/AdguardTeam/AdguardFilters/issues/3933
+# Yandex apps
 DOMAIN-SUFFIX,banners-slb.mobile.yandex.net,REJECT
 DOMAIN-SUFFIX,banners.mobile.yandex.net,REJECT
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/61793
+#
+# https://github.com/AdguardTeam/AdguardFilters/issues/61793
 DOMAIN-SUFFIX,m.yap.yahoo.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/54135
+# https://github.com/AdguardTeam/AdguardFilters/issues/54135
 DOMAIN-SUFFIX,adv0*.msa.cdn.mediaset.net,REJECT
-! Micromax India
+# Micromax India
 DOMAIN-SUFFIX,ads.go2reach.com,REJECT
 DOMAIN-SUFFIX,mimicromax.com,REJECT
-! 3B Meteo
+# 3B Meteo
 DOMAIN-SUFFIX,feed.4wnet.com,REJECT
-! Duodian
+# Duodian
 DOMAIN-SUFFIX,bi.yeshen.com,REJECT
 DOMAIN-SUFFIX,launcher.us.yeshen.com,REJECT
-! iHandy
+# iHandy
 DOMAIN-SUFFIX,search.adcaffe.com,REJECT
 DOMAIN-SUFFIX,monitor.adcaffe.com,REJECT
-! Hawk Internet (TCL)
+# Hawk Internet (TCL)
 DOMAIN-SUFFIX,ad-api.ehawk.com,REJECT
 DOMAIN-SUFFIX,gwrtdp-tn690BFAdt.tclclouds.com,REJECT
-! MoboTap
+# MoboTap
 DOMAIN-SUFFIX,mobotoolpush.moboapps.io,REJECT
-! Duodian (Nox/Aiad)
+# Duodian (Nox/Aiad)
 DOMAIN-SUFFIX,ssp.mediation.trnox.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/11291
+# https://github.com/AdguardTeam/AdguardFilters/issues/11291
 DOMAIN-SUFFIX,behacdn.ksmobile.net,REJECT
 DOMAIN-SUFFIX,cmdts.ksmobile.com,REJECT
 DOMAIN-SUFFIX,p-behacdn.ksmobile.net,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/8642
+# https://github.com/AdguardTeam/AdguardFilters/issues/8642
 DOMAIN-SUFFIX,crosspromotion.weplayer.cc,REJECT
 DOMAIN-SUFFIX,ad.weplayer.cc,REJECT
-! https://forum.adguard.com/index.php?threads/24268/
+# https://forum.adguard.com/index.php?threads/24268/
 DOMAIN-SUFFIX,mobile-campaigns.avast.com,REJECT
-! https://forum.adguard.com/index.php?threads/s-photo-editor-missed-ads-android.21096/
+# https://forum.adguard.com/index.php?threads/s-photo-editor-missed-ads-android.21096/
 DOMAIN-SUFFIX,advs2sonline.goforandroid.com,REJECT
 DOMAIN-SUFFIX,adpush.goforandroid.com,REJECT
 DOMAIN-SUFFIX,advonline.goforandroid.com,REJECT
-! https://forum.adguard.com/index.php?threads/dodonpachi-unlimited-missed-ads-android.21000/
+# https://forum.adguard.com/index.php?threads/dodonpachi-unlimited-missed-ads-android.21000/
 DOMAIN-SUFFIX,dzpu6za66svjl.cloudfront.net,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/4757
+# https://github.com/AdguardTeam/AdguardFilters/issues/4757
 DOMAIN-SUFFIX,ad.flipboard.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/4645
+# https://github.com/AdguardTeam/AdguardFilters/issues/4645
 DOMAIN-SUFFIX,adserver.shadow.snapads.com,REJECT
 DOMAIN-SUFFIX,ads-chunks.prod.ihrhls.com,REJECT
-! Watch ABC
+# Watch ABC
 DOMAIN-SUFFIX,api.ads.watchabc.go.com,REJECT
-! https://play.google.com/store/apps/details?id=fr.playsoft.teleloisirs
+# https://play.google.com/store/apps/details?id=fr.playsoft.teleloisirs
 DOMAIN-SUFFIX,ad.prismamediadigital.com,REJECT
-! https://play.google.com/store/apps/details?id=fr.francetv.pluzz&hl=fr
+# https://play.google.com/store/apps/details?id=fr.francetv.pluzz&hl=fr
 DOMAIN-SUFFIX,ad2play.ftv-publicite.fr,REJECT
-!
+#
 DOMAIN-SUFFIX,appodeal.com,REJECT
 DOMAIN-SUFFIX,a.76674bdad304297eda3d325f449f6f49.com,REJECT
 DOMAIN-SUFFIX,a.4ee395e5b8a076c7bd8592851ff8cad.com,REJECT
 DOMAIN-SUFFIX,a.6d47c1118927cf53ba9654931df80e8d.com,REJECT
-!
+#
 DOMAIN-SUFFIX,banner.hpmdnetwork.ru,REJECT
 DOMAIN-SUFFIX,px.adhigh.net,REJECT
 DOMAIN-SUFFIX,ad.auditude.com,REJECT
@@ -17043,7 +17019,7 @@ DOMAIN-SUFFIX,common.duapps.com,REJECT
 DOMAIN-SUFFIX,api.mobula.sdk.duapps.com,REJECT
 DOMAIN-SUFFIX,mobula.ssl2.duapps.com,REJECT
 DOMAIN-SUFFIX,ad.duapps.com,REJECT
-! Ads on some Chinese smartphones
+# Ads on some Chinese smartphones
 DOMAIN-SUFFIX,sync.mobojoy.baidu.com,REJECT
 DOMAIN-SUFFIX,api.mobojoy.baidu.com,REJECT
 DOMAIN-SUFFIX,js.mobojoy.baidu.com,REJECT
@@ -17055,7 +17031,7 @@ DOMAIN-SUFFIX,i2.myapkcdn.in,REJECT
 DOMAIN-SUFFIX,c3.myapkcdn.in,REJECT
 DOMAIN-SUFFIX,plugin.mobopay.baidu.com,REJECT
 DOMAIN-SUFFIX,mo.freeindoapp.com,REJECT
-!
+#
 DOMAIN-SUFFIX,pa.afreecatv.com,REJECT
 DOMAIN-SUFFIX,matrix.dailyinnovation.biz,REJECT
 DOMAIN-SUFFIX,view.adjust.com,REJECT
@@ -17898,38 +17874,38 @@ DOMAIN-SUFFIX,youradexchange.com,REJECT
 DOMAIN-SUFFIX,yuhuads.com,REJECT
 DOMAIN-SUFFIX,zedo.com,REJECT
 DOMAIN-SUFFIX,zoglafi.info,REJECT
-!+ PLATFORM(ios)
+#+ PLATFORM(ios)
 DOMAIN-SUFFIX,deloton.com$important
-!+ PLATFORM(ios)
+#+ PLATFORM(ios)
 DOMAIN-SUFFIX,oclasrv.com$important
-!----- For HTTPS websites when HTTPS filtering is disabled ------
+#----- For HTTPS websites when HTTPS filtering is disabled ------
 DOMAIN-SUFFIX,jfduv7.com,REJECT
 DOMAIN-SUFFIX,n152adserv.com,REJECT
 DOMAIN-SUFFIX,retarget.ssl-services.com,REJECT
 DOMAIN-SUFFIX,rg.yottos.com,REJECT
 DOMAIN-SUFFIX,weboohost.com,REJECT
-!----------------------------------------------------------------
+#----------------------------------------------------------------
 
-!
-! Source name: AdGuard Tracking Protection filter third-party trackers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers.txt
-!
-!
-! Blocking Firebase crash reporting is quite problematic:
-! https://github.com/AdguardTeam/AdguardForAndroid/issues/1334#issuecomment-319302543
-! DOMAIN-SUFFIX,app-measurement.com,REJECT
-!
-! Crashlytics is commented by @ameshkov.
-! The reason for unblocking crashlytics is to not make developers life worse by breaking crash reporting.
-! In a hostile network like when an ad blocker is present, apps might be crashing, and these errors need to be
-! reported to devs, otherwise they won't learn about the issue and won't fix it.
-! Also, it is not a common third-party analytics tracker, Crashlytics is not used for collecting users' data.
-! DOMAIN-SUFFIX,e.crashlytics.com,REJECT
-! DOMAIN-SUFFIX,settings.crashlytics.com,REJECT
-!
-! DOMAIN-SUFFIX,ensighten.com,REJECT$third-party - not a tracker
-!
-! Be careful when blocking snssdk.com. I is used also for legal purposes
+#
+# Source name: AdGuard Tracking Protection filter third-party trackers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers.txt
+#
+#
+# Blocking Firebase crash reporting is quite problematic:
+# https://github.com/AdguardTeam/AdguardForAndroid/issues/1334#issuecomment-319302543
+# DOMAIN-SUFFIX,app-measurement.com,REJECT
+#
+# Crashlytics is commented by @ameshkov.
+# The reason for unblocking crashlytics is to not make developers life worse by breaking crash reporting.
+# In a hostile network like when an ad blocker is present, apps might be crashing, and these errors need to be
+# reported to devs, otherwise they won't learn about the issue and won't fix it.
+# Also, it is not a common third-party analytics tracker, Crashlytics is not used for collecting users' data.
+# DOMAIN-SUFFIX,e.crashlytics.com,REJECT
+# DOMAIN-SUFFIX,settings.crashlytics.com,REJECT
+#
+# DOMAIN-SUFFIX,ensighten.com,REJECT$third-party - not a tracker
+#
+# Be careful when blocking snssdk.com. I is used also for legal purposes
 DOMAIN-SUFFIX,mcs.snssdk.com,REJECT
 DOMAIN-SUFFIX,i.snssdk.com,REJECT
 DOMAIN-SUFFIX,log-hl.snssdk.com,REJECT
@@ -18627,8 +18603,8 @@ DOMAIN-SUFFIX,youcanoptout.org,REJECT
 DOMAIN-SUFFIX,youmetrix.co.uk,REJECT
 DOMAIN-SUFFIX,zenlivestats.com,REJECT
 DOMAIN-SUFFIX,zowary.com,REJECT
-!
-! https://github.com/easylist/easylist/commit/a4d380ad1a3b33a0fab679a1a8c5a791321622b3
+#
+# https://github.com/easylist/easylist/commit/a4d380ad1a3b33a0fab679a1a8c5a791321622b3
 DOMAIN-SUFFIX,functionalclam.com,REJECT
 DOMAIN-SUFFIX,plainplayground.com,REJECT
 DOMAIN-SUFFIX,strangesink.com,REJECT
@@ -18774,8 +18750,8 @@ DOMAIN-SUFFIX,wateryvan.com,REJECT
 DOMAIN-SUFFIX,wirecomic.com,REJECT
 DOMAIN-SUFFIX,xovq5nemr.com,REJECT
 DOMAIN-SUFFIX,zbwp6ghm.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/42797
-! goguardian tracking
+# https://github.com/AdguardTeam/AdguardFilters/issues/42797
+# goguardian tracking
 DOMAIN-SUFFIX,beacon-fullpage-predictor.goguardian.com,REJECT
 DOMAIN-SUFFIX,countvoncount.goguardian.com,REJECT
 DOMAIN-SUFFIX,ext.goguardian.com,REJECT
@@ -18791,22 +18767,22 @@ DOMAIN-SUFFIX,sockjs-goguardian.pusher.com,REJECT
 DOMAIN-SUFFIX,ws-goguardian.pusher.com,REJECT
 DOMAIN-SUFFIX,x3-policy-maker.goguardian.com,REJECT
 DOMAIN-SUFFIX,x3-predictor.goguardian.com,REJECT
-!
-! Baidu
+#
+# Baidu
 DOMAIN-SUFFIX,als.baidu.com,REJECT
 DOMAIN-SUFFIX,afd.baidu.com,REJECT
 DOMAIN-SUFFIX,wkctj.baidu.com,REJECT
 DOMAIN-SUFFIX,jpaasne.e.shifen.com,REJECT
 DOMAIN-SUFFIX,caclick.baidu.com,REJECT
 DOMAIN-SUFFIX,wkclick.baidu.com,REJECT
-!
+#
 DOMAIN-SUFFIX,jp-axia.m0mentum.net,REJECT
-! Keyade
+# Keyade
 DOMAIN-SUFFIX,keyade.net,REJECT
-! Criteo
+# Criteo
 DOMAIN-SUFFIX,storetail.io,REJECT
 DOMAIN-SUFFIX,dnsdelegation.io,REJECT
-! AT Internet
+# AT Internet
 DOMAIN-SUFFIX,at-o.net,REJECT
 DOMAIN-SUFFIX,atinternet.com,REJECT
 DOMAIN-SUFFIX,mj23.eulerian.com,REJECT
@@ -18819,40 +18795,40 @@ DOMAIN-SUFFIX,eulerian.brandalley.fr,REJECT
 DOMAIN-SUFFIX,eulerian.belambra.fr,REJECT
 DOMAIN-SUFFIX,eulerian.belambra.be,REJECT
 DOMAIN-SUFFIX,commandersact.com,REJECT
-! Wizaly
+# Wizaly
 DOMAIN-SUFFIX,wizaly.com,REJECT
-! Ingenious Technologies
+# Ingenious Technologies
 DOMAIN-SUFFIX,affex.org,REJECT
-! Yesware
+# Yesware
 t.yesware.com
 
-!
-! Source name: AdGuard Tracking Protection filter first-party trackers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers_firstparty.txt
-!
-!
-! Section contains the list of tracking servers, which are hosted on useful sites as subdomains
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/25467
-!
-! Big Star Labs
+#
+# Source name: AdGuard Tracking Protection filter first-party trackers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers_firstparty.txt
+#
+#
+# Section contains the list of tracking servers, which are hosted on useful sites as subdomains
+#
+# https://github.com/AdguardTeam/AdguardFilters/issues/25467
+#
+# Big Star Labs
 DOMAIN-SUFFIX,ben.crxmouse.com,REJECT
 DOMAIN-SUFFIX,api2.poperblocker.com,REJECT
 DOMAIN-SUFFIX,yourblocksite.com,REJECT
 DOMAIN-SUFFIX,taskapi.net,REJECT
-! start: unimania
+# start: unimania
 DOMAIN-SUFFIX,d10vy5gom1ed53.cloudfront.net,REJECT
 DOMAIN-SUFFIX,um-public-panel-prod.s3.amazonaws.com,REJECT
 DOMAIN-SUFFIX,collection-endpoint-prod.herokuapp.com,REJECT
 DOMAIN-SUFFIX,collection-endpoint-staging.herokuapp.com,REJECT
-! end:
-!
-! This rule breaks Australian sites
-!+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
-!
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/344
-! Disabled in DNS filter
-!
+# end:
+#
+# This rule breaks Australian sites
+#+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
+#
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/344
+# Disabled in DNS filter
+#
 DOMAIN-SUFFIX,c0.adalyser.com,REJECT
 DOMAIN-SUFFIX,d3eyd961wi10bl.cloudfront.net,REJECT
 DOMAIN-SUFFIX,d1daeonbqcq0oh.cloudfront.net,REJECT
@@ -19564,7 +19540,7 @@ DOMAIN-SUFFIX,vstats.digitaltrends.com,REJECT
 DOMAIN-SUFFIX,vzw.sp1.convertro.com,REJECT
 DOMAIN-SUFFIX,w88.espn.com,REJECT
 DOMAIN-SUFFIX,xtag.autotrader.com,REJECT
-! Tiktok app
+# Tiktok app
 DOMAIN-SUFFIX,log.musical.ly,REJECT
 DOMAIN-SUFFIX,log2.musical.ly,REJECT
 DOMAIN-SUFFIX,frontier.musical.ly,REJECT
@@ -19572,8 +19548,8 @@ DOMAIN-SUFFIX,xlog-va.musical.ly,REJECT
 DOMAIN-SUFFIX,do-not-tracker.org,REJECT
 DOMAIN-SUFFIX,eviltracker.net,REJECT
 DOMAIN-SUFFIX,trackersimulator.org,REJECT
-!
-! For apps
+#
+# For apps
 DOMAIN-SUFFIX,analytics.kidoz.net,REJECT
 DOMAIN-SUFFIX,track.tenjin.com,REJECT
 DOMAIN-SUFFIX,tracker.mtrtb.com,REJECT
@@ -19584,19 +19560,19 @@ DOMAIN-SUFFIX,analysis.polarisoffice.com
 DOMAIN-SUFFIX,plbslog.umeng.com,REJECT
 DOMAIN-SUFFIX,analysys.cn,REJECT
 DOMAIN-SUFFIX,logs.supersonic.com,REJECT
-!
-! Swiftkey(Microsoft) Keyboard 
+#
+# Swiftkey(Microsoft) Keyboard 
 DOMAIN-SUFFIX,telemetry.api.swiftkey.com,REJECT
 DOMAIN-SUFFIX,telemetry.swiftkey.com,REJECT
-!
-! QuQa.ch for Android
+#
+# QuQa.ch for Android
 DOMAIN-SUFFIX,analytics.qoqa.ninja,REJECT
 DOMAIN-SUFFIX,analytics-sprint.qoqa.com,REJECT
 DOMAIN-SUFFIX,analytics.qoqa.ch,REJECT
 DOMAIN-SUFFIX,analytics.qoqa.com,REJECT
-!
-! Appsflyer
-!
+#
+# Appsflyer
+#
 DOMAIN-SUFFIX,gcdsdk.appsflyer.com,REJECT
 DOMAIN-SUFFIX,statsgoogle.appsflyer.com,REJECT
 DOMAIN-SUFFIX,impression.appsflyer.com,REJECT
@@ -19604,8 +19580,8 @@ DOMAIN-SUFFIX,api.appsflyer.com,REJECT
 DOMAIN-SUFFIX,register.appsflyer.com,REJECT
 DOMAIN-SUFFIX,events.appsflyer.com,REJECT
 DOMAIN-SUFFIX,track.appsflyer.com,REJECT
-!+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
-!
+#+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
+#
 DOMAIN-SUFFIX,collector1.afreecatv.com,REJECT
 DOMAIN-SUFFIX,adtima-static.zadn.vn,REJECT
 DOMAIN-SUFFIX,log.adtimaserver.vn,REJECT
@@ -19884,13 +19860,13 @@ DOMAIN-SUFFIX,yadro.ru,REJECT
 DOMAIN-SUFFIX,ymtracking.com,REJECT
 DOMAIN-SUFFIX,upoll.umengcloud.com,REJECT
 DOMAIN-SUFFIX,utop.umengcloud.com,REJECT
-! KingRoot
+# KingRoot
 DOMAIN-SUFFIX,analy.qq.com,REJECT
 
-!
-! Source name: EasyPrivacy tracking servers
-! Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers.txt
-!
+#
+# Source name: EasyPrivacy tracking servers
+# Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers.txt
+#
 DOMAIN-SUFFIX,0emm.com,REJECT
 DOMAIN-SUFFIX,1-cl0ud.com,REJECT
 DOMAIN-SUFFIX,103bees.com,REJECT
@@ -22368,7 +22344,7 @@ DOMAIN-SUFFIX,zqtk.net,REJECT
 DOMAIN-SUFFIX,zroitracker.com,REJECT
 DOMAIN-SUFFIX,ztsrv.com,REJECT
 DOMAIN-SUFFIX,zuzab.com,REJECT
-! Notification servers (Tracking/Fingerprinting users)
+# Notification servers (Tracking/Fingerprinting users)
 DOMAIN-SUFFIX,accengage.net,REJECT
 DOMAIN-SUFFIX,actirinius.com,REJECT
 DOMAIN-SUFFIX,aimtell.com,REJECT
@@ -22434,7 +22410,7 @@ DOMAIN-SUFFIX,webpu.sh,REJECT
 DOMAIN-SUFFIX,wonderpush.com,REJECT
 DOMAIN-SUFFIX,wwclicktm.club,REJECT
 DOMAIN-SUFFIX,xtremepush.com,REJECT
-! Fingerprinting
+# Fingerprinting
 DOMAIN-SUFFIX,breaktime.com.tw,REJECT
 DOMAIN-SUFFIX,brightedge.com,REJECT
 DOMAIN-SUFFIX,citrusad.net,REJECT
@@ -22452,7 +22428,7 @@ DOMAIN-SUFFIX,sabavision.com,REJECT
 DOMAIN-SUFFIX,sealine.pro,REJECT
 DOMAIN-SUFFIX,simility.com,REJECT
 DOMAIN-SUFFIX,spideraf.com,REJECT
-! Mining
+# Mining
 .1.1.1.l80.js,REJECT
 .n.2.1.js,REJECT
 .n.2.1.l50.js,REJECT
@@ -22759,7 +22735,7 @@ DOMAIN-SUFFIX,xy.nullrefexcep.com,REJECT
 DOMAIN-SUFFIX,yrdrtzmsmt.com,REJECT
 DOMAIN-SUFFIX,yuebofa.cc,REJECT
 DOMAIN-SUFFIX,zlx.com.br,REJECT
-! Admiral
+# Admiral
 DOMAIN-SUFFIX,6ldu6qa.com,REJECT
 DOMAIN-SUFFIX,absorbingband.com,REJECT
 DOMAIN-SUFFIX,absorbingcorn.com,REJECT
@@ -23005,10 +22981,10 @@ DOMAIN-SUFFIX,verseballs.com,REJECT
 DOMAIN-SUFFIX,womanear.com,REJECT
 DOMAIN-SUFFIX,zlp6s.pw,REJECT
 
-!
-! Source name: EasyPrivacy third-party tracking servers
-! Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty.txt
-!
+#
+# Source name: EasyPrivacy third-party tracking servers
+# Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty.txt
+#
 DOMAIN-SUFFIX,100widgets.com,REJECT
 DOMAIN-SUFFIX,51network.com,REJECT
 DOMAIN-SUFFIX,a.mobify.com,REJECT
@@ -23974,7 +23950,7 @@ DOMAIN-SUFFIX,ws.audioeye.com,REJECT
 DOMAIN-SUFFIX,wstat.wibiya.com,REJECT
 DOMAIN-SUFFIX,x.weather.com,REJECT
 DOMAIN-SUFFIX,zdlogs.sphereup.com,REJECT
-! taboola
+# taboola
 DOMAIN-SUFFIX,convsgmp.taboola.com,REJECT
 DOMAIN-SUFFIX,la-sync.taboola.com,REJECT
 DOMAIN-SUFFIX,opps.taboola.com,REJECT
@@ -23995,7 +23971,7 @@ DOMAIN-SUFFIX,rndntpmgnj-a.akamaihd.net,REJECT
 DOMAIN-SUFFIX,sgphctileh-a.akamaihd.net,REJECT
 DOMAIN-SUFFIX,uhytajrtpo-a.akamaihd.net,REJECT
 DOMAIN-SUFFIX,zvsuhljiha-a.akamaihd.net,REJECT
-! fastly
+# fastly
 DOMAIN-SUFFIX,clarium.global.ssl.fastly.net,REJECT
 DOMAIN-SUFFIX,dfapvmql-q.global.ssl.fastly.net,REJECT
 DOMAIN-SUFFIX,nsg.symantec.com,REJECT
@@ -24006,14 +23982,14 @@ DOMAIN-SUFFIX,seal.verisign.com,REJECT
 DOMAIN-SUFFIX,websecurity.norton.com,REJECT
 DOMAIN-SUFFIX,widget.trustpilot.com,REJECT
 DOMAIN-SUFFIX,widgets.trustedshops.com,REJECT
-! Suspect trackers (from privacy badger)
+# Suspect trackers (from privacy badger)
 DOMAIN-SUFFIX,connatix.com,REJECT
 
-!
-! Source name: EasyPrivacy international tracking servers
-! Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers_international.txt
-!
-! German
+#
+# Source name: EasyPrivacy international tracking servers
+# Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers_international.txt
+#
+# German
 DOMAIN-SUFFIX,123-counter.de,REJECT
 DOMAIN-SUFFIX,12mnkys.com,REJECT
 DOMAIN-SUFFIX,24log.de,REJECT
@@ -24288,7 +24264,7 @@ DOMAIN-SUFFIX,xhit.com,REJECT
 DOMAIN-SUFFIX,xplosion.de,REJECT
 DOMAIN-SUFFIX,yoochoose.net,REJECT
 DOMAIN-SUFFIX,zaehler.tv,REJECT
-! French
+# French
 DOMAIN-SUFFIX,123compteur.com,REJECT
 DOMAIN-SUFFIX,7x4.fr,REJECT
 DOMAIN-SUFFIX,7x5.fr,REJECT
@@ -24372,11 +24348,11 @@ DOMAIN-SUFFIX,winitout.com,REJECT
 DOMAIN-SUFFIX,wysistat.com,REJECT
 DOMAIN-SUFFIX,x-traceur.com,REJECT
 DOMAIN-SUFFIX,ywywjrlbsuv.com,REJECT
-! Armenian
+# Armenian
 DOMAIN-SUFFIX,circle.am,REJECT
-! Belarusian
+# Belarusian
 DOMAIN-SUFFIX,call-tracking.by,REJECT
-! Bulgarian
+# Bulgarian
 DOMAIN-SUFFIX,trafit.com,REJECT
 DOMAIN-SUFFIX,tyxo.bg,REJECT
 DOMAIN-SUFFIX,50bang.org,REJECT
@@ -24446,10 +24422,10 @@ DOMAIN-SUFFIX,yigao.com,REJECT
 DOMAIN-SUFFIX,youle55.com,REJECT
 DOMAIN-SUFFIX,zampda.net,REJECT
 DOMAIN-SUFFIX,ztcadx.com,REJECT
-! Croatian
+# Croatian
 DOMAIN-SUFFIX,dotmetrics.net,REJECT
 DOMAIN-SUFFIX,xclaimwords.net,REJECT
-! Czech
+# Czech
 DOMAIN-SUFFIX,affilbox.cz,REJECT
 DOMAIN-SUFFIX,analights.com,REJECT
 DOMAIN-SUFFIX,itop.cz,REJECT
@@ -24461,7 +24437,7 @@ DOMAIN-SUFFIX,performax.cz,REJECT
 DOMAIN-SUFFIX,pocitadlo.cz,REJECT
 DOMAIN-SUFFIX,programmatic.cz,REJECT
 DOMAIN-SUFFIX,semnicneposilejte.cz,REJECT
-! Danish
+# Danish
 DOMAIN-SUFFIX,agillic.eu,REJECT
 DOMAIN-SUFFIX,andersenit.dk,REJECT
 DOMAIN-SUFFIX,chart.dk,REJECT
@@ -24481,7 +24457,7 @@ DOMAIN-SUFFIX,peakcounter.dk,REJECT
 DOMAIN-SUFFIX,telemetric.dk,REJECT
 DOMAIN-SUFFIX,tns-gallup.dk,REJECT
 DOMAIN-SUFFIX,zipstat.dk,REJECT
-! Dutch
+# Dutch
 DOMAIN-SUFFIX,active24stats.nl,REJECT
 DOMAIN-SUFFIX,istats.nl,REJECT
 DOMAIN-SUFFIX,metriweb.be,REJECT
@@ -24491,9 +24467,9 @@ DOMAIN-SUFFIX,stealth.nl,REJECT
 DOMAIN-SUFFIX,svtrd.com,REJECT
 DOMAIN-SUFFIX,synovite-scripts.com,REJECT
 DOMAIN-SUFFIX,traffic4u.nl,REJECT
-! Estonian
+# Estonian
 DOMAIN-SUFFIX,counter.ok.ee,REJECT
-! Finnish
+# Finnish
 DOMAIN-SUFFIX,frosmo.com,REJECT
 DOMAIN-SUFFIX,gallupnet.fi,REJECT
 DOMAIN-SUFFIX,inpref.com,REJECT
@@ -24504,9 +24480,9 @@ DOMAIN-SUFFIX,netmonitor.fi,REJECT
 DOMAIN-SUFFIX,stat.www.fi,REJECT
 DOMAIN-SUFFIX,tracking*.euroads.fi,REJECT
 DOMAIN-SUFFIX,vihtori-analytics.fi,REJECT
-! Greek
+# Greek
 DOMAIN-SUFFIX,linkwi.se,REJECT
-! Hebrew
+# Hebrew
 DOMAIN-SUFFIX,analyti.io,REJECT
 DOMAIN-SUFFIX,erate.co.il,REJECT
 DOMAIN-SUFFIX,fortvision.com,REJECT
@@ -24515,17 +24491,17 @@ DOMAIN-SUFFIX,lead.im,REJECT
 DOMAIN-SUFFIX,mimgoal.com,REJECT
 DOMAIN-SUFFIX,nepohita.com,REJECT
 DOMAIN-SUFFIX,ritogaga.com,REJECT
-! Hungarian
+# Hungarian
 DOMAIN-SUFFIX,gpr.hu,REJECT
 DOMAIN-SUFFIX,hirmatrix.hu,REJECT
 DOMAIN-SUFFIX,mystat.hu,REJECT
 DOMAIN-SUFFIX,p24.hu,REJECT
 DOMAIN-SUFFIX,ripost.services,REJECT
-! Icelandic
+# Icelandic
 DOMAIN-SUFFIX,modernus.is,REJECT
-! Indonesian
+# Indonesian
 DOMAIN-SUFFIX,analytic.rocks,REJECT
-! Italian
+# Italian
 DOMAIN-SUFFIX,0stats.com,REJECT
 DOMAIN-SUFFIX,accessi.it,REJECT
 DOMAIN-SUFFIX,avstat.it,REJECT
@@ -24636,7 +24612,7 @@ DOMAIN-SUFFIX,triver.jp,REJECT
 DOMAIN-SUFFIX,ukw.jp,REJECT
 DOMAIN-SUFFIX,wonder-ma.com,REJECT
 DOMAIN-SUFFIX,ziyu.net,REJECT
-! Korean
+# Korean
 DOMAIN-SUFFIX,adpick.co.kr,REJECT
 DOMAIN-SUFFIX,adtive.com,REJECT
 DOMAIN-SUFFIX,aicontents.net,REJECT
@@ -24645,7 +24621,7 @@ DOMAIN-SUFFIX,dawin.tv,REJECT
 DOMAIN-SUFFIX,logger.co.kr,REJECT
 DOMAIN-SUFFIX,oevery.com,REJECT
 DOMAIN-SUFFIX,tenping.kr,REJECT
-! Latvian
+# Latvian
 DOMAIN-SUFFIX,cms.lv,REJECT
 DOMAIN-SUFFIX,mcloudglobal.com,REJECT
 DOMAIN-SUFFIX,on-line.lv,REJECT
@@ -24657,7 +24633,7 @@ DOMAIN-SUFFIX,top.lv,REJECT
 DOMAIN-SUFFIX,topsite.lv,REJECT
 DOMAIN-SUFFIX,webstatistika.lv,REJECT
 DOMAIN-SUFFIX,wos.lv,REJECT
-! Lithuanian
+# Lithuanian
 DOMAIN-SUFFIX,easy.lv,REJECT
 DOMAIN-SUFFIX,maxtraffic.com,REJECT
 DOMAIN-SUFFIX,mxapis.com,REJECT
@@ -24667,7 +24643,7 @@ DOMAIN-SUFFIX,www.hey.lt,REJECT
 DOMAIN-SUFFIX,trafikkfondet.no,REJECT
 DOMAIN-SUFFIX,webstat.no,REJECT
 DOMAIN-SUFFIX,xtractor.no,REJECT
-! Persian
+# Persian
 DOMAIN-SUFFIX,amarfa.ir,REJECT
 DOMAIN-SUFFIX,persianstat.com,REJECT
 DOMAIN-SUFFIX,persianstat.ir,REJECT
@@ -24676,7 +24652,7 @@ DOMAIN-SUFFIX,tinystat.ir,REJECT
 DOMAIN-SUFFIX,webgozar.com,REJECT
 DOMAIN-SUFFIX,webgozar.ir,REJECT
 DOMAIN-SUFFIX,yektanet.com,REJECT
-! Polish
+# Polish
 DOMAIN-SUFFIX,adschoom.com,REJECT
 DOMAIN-SUFFIX,adstat.4u.pl,REJECT
 DOMAIN-SUFFIX,caanalytics.com,REJECT
@@ -24706,7 +24682,7 @@ DOMAIN-SUFFIX,stat.pl,REJECT
 DOMAIN-SUFFIX,tagcdn.com,REJECT
 DOMAIN-SUFFIX,volvelle.tech,REJECT
 DOMAIN-SUFFIX,way2traffic.com,REJECT
-! Portuguese
+# Portuguese
 DOMAIN-SUFFIX,ad5track.com,REJECT
 DOMAIN-SUFFIX,clearsale.com.br,REJECT
 DOMAIN-SUFFIX,denakop.com,REJECT
@@ -24718,7 +24694,7 @@ DOMAIN-SUFFIX,retargeter.com.br,REJECT
 DOMAIN-SUFFIX,sambaads.com,REJECT
 DOMAIN-SUFFIX,tailtarget.com,REJECT
 DOMAIN-SUFFIX,trugaze.io,REJECT
-! Romanian
+# Romanian
 DOMAIN-SUFFIX,2iui01.com,REJECT
 DOMAIN-SUFFIX,2parale.ro,REJECT
 DOMAIN-SUFFIX,2performant.com,REJECT
@@ -24825,15 +24801,15 @@ DOMAIN-SUFFIX,webtalking.ru,REJECT
 DOMAIN-SUFFIX,webvisor.com,REJECT
 DOMAIN-SUFFIX,webvisor.ru,REJECT
 DOMAIN-SUFFIX,zero.kz,REJECT
-! Serbian
+# Serbian
 DOMAIN-SUFFIX,midas-network.com,REJECT
-! Slovak
+# Slovak
 DOMAIN-SUFFIX,algopine.com,REJECT
 DOMAIN-SUFFIX,data.caroda.io,REJECT
 DOMAIN-SUFFIX,idot.cz,REJECT
 DOMAIN-SUFFIX,pocitadlo.sk,REJECT
 DOMAIN-SUFFIX,toplist.sk,REJECT
-! Spanish
+# Spanish
 DOMAIN-SUFFIX,botize.com,REJECT
 DOMAIN-SUFFIX,ccrtvi.com,REJECT
 DOMAIN-SUFFIX,certifica.com,REJECT
@@ -24847,7 +24823,7 @@ DOMAIN-SUFFIX,estadisticasgratis.es,REJECT
 DOMAIN-SUFFIX,flags.es,REJECT
 DOMAIN-SUFFIX,mabaya.com,REJECT
 DOMAIN-SUFFIX,seedtag.com,REJECT
-! Swedish
+# Swedish
 DOMAIN-SUFFIX,adsettings.com,REJECT
 DOMAIN-SUFFIX,adten.eu,REJECT
 DOMAIN-SUFFIX,adtlgc.com,REJECT
@@ -24867,12 +24843,12 @@ DOMAIN-SUFFIX,suntcontent.se,REJECT
 DOMAIN-SUFFIX,tidningsnatet.se,REJECT
 DOMAIN-SUFFIX,webserviceaward.com,REJECT
 DOMAIN-SUFFIX,yieldbird.com,REJECT
-! Thai
+# Thai
 DOMAIN-SUFFIX,d-stats.com,REJECT
 DOMAIN-SUFFIX,tracker.stats.in.th,REJECT
 DOMAIN-SUFFIX,truehits.net,REJECT
 DOMAIN-SUFFIX,truehits3.gits.net.th,REJECT
-! Turkish
+# Turkish
 DOMAIN-SUFFIX,onlinewebstat.com,REJECT
 DOMAIN-SUFFIX,realist.gen.tr,REJECT
 DOMAIN-SUFFIX,sayyac.com,REJECT
@@ -24880,7 +24856,7 @@ DOMAIN-SUFFIX,sayyac.net,REJECT
 DOMAIN-SUFFIX,sitetistik.com,REJECT
 DOMAIN-SUFFIX,webservis.gen.tr,REJECT
 DOMAIN-SUFFIX,zirve100.com,REJECT
-! Ukranian
+# Ukranian
 DOMAIN-SUFFIX,getaim.info,REJECT
 DOMAIN-SUFFIX,mycounter.com.ua,REJECT
 DOMAIN-SUFFIX,mycounter.ua,REJECT
@@ -24888,10 +24864,10 @@ DOMAIN-SUFFIX,uapoisk.net,REJECT
 DOMAIN-SUFFIX,weblog.com.ua,REJECT
 DOMAIN-SUFFIX,gostats.vn,REJECT
 
-!
-! Source name: EasyPrivacy third-party international tracking servers
-! Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty_international.txt
-!
+#
+# Source name: EasyPrivacy third-party international tracking servers
+# Source: https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_thirdparty_international.txt
+#
 DOMAIN-SUFFIX,analytics.audionow.de,REJECT
 DOMAIN-SUFFIX,analytics.cnd-motionmedia.de,REJECT
 DOMAIN-SUFFIX,analytics.gameforge.de,REJECT
@@ -25019,10 +24995,10 @@ DOMAIN-SUFFIX,tracking.netvigie.com,REJECT
 DOMAIN-SUFFIX,trk.adbutter.net,REJECT
 DOMAIN-SUFFIX,visitping.rossel.be,REJECT
 DOMAIN-SUFFIX,wrapper.lemde.fr,REJECT
-! Croatian
+# Croatian
 DOMAIN-SUFFIX,aff*.kolektiva.net,REJECT
 DOMAIN-SUFFIX,analytics.styria.hr,REJECT
-! Chinese
+# Chinese
 -logging.nextmedia.com,REJECT
 DOMAIN-SUFFIX,adv-sv-stat.focus.cn,REJECT
 DOMAIN-SUFFIX,analytics.meituan.net,REJECT
@@ -25067,9 +25043,9 @@ DOMAIN-SUFFIX,track.ra.icast.cn,REJECT
 DOMAIN-SUFFIX,tracking.cat898.com,REJECT
 DOMAIN-SUFFIX,useg.nextdigital.com.hk,REJECT
 DOMAIN-SUFFIX,v.emedia.cn,REJECT
-! Croatian
+# Croatian
 DOMAIN-SUFFIX,tracking.vid4u.org,REJECT
-! Czech
+# Czech
 DOMAIN-SUFFIX,bisko.mall.tv,REJECT
 DOMAIN-SUFFIX,bnr.alza.cz,REJECT
 DOMAIN-SUFFIX,counter.cnw.cz,REJECT
@@ -25089,26 +25065,26 @@ DOMAIN-SUFFIX,log.ecgh.dk,REJECT
 DOMAIN-SUFFIX,statistics.jfmedier.dk,REJECT
 DOMAIN-SUFFIX,trckr.nordiskemedier.dk,REJECT
 DOMAIN-SUFFIX,ubt.berlingskemedia.net,REJECT
-! Dutch
+# Dutch
 DOMAIN-SUFFIX,analytics.belgacom.be,REJECT
 DOMAIN-SUFFIX,atconnect.npo.nl,REJECT
 DOMAIN-SUFFIX,cookies.reedbusiness.nl,REJECT
 DOMAIN-SUFFIX,hottraffic.nl,REJECT
 DOMAIN-SUFFIX,statistics.rbi-nl.com,REJECT
-! Estonian
+# Estonian
 DOMAIN-SUFFIX,counter.zone.ee,REJECT
 DOMAIN-SUFFIX,inpref.s3.amazonaws.com,REJECT
 DOMAIN-SUFFIX,insight.fonecta.fi,REJECT
 DOMAIN-SUFFIX,tags.op-palvelut.fi,REJECT
-! Georgian
+# Georgian
 DOMAIN-SUFFIX,links.boom.ge,REJECT
-! Greek
+# Greek
 DOMAIN-SUFFIX,analytics.dol.gr,REJECT
 DOMAIN-SUFFIX,analyticsv2.dol.gr,REJECT
 DOMAIN-SUFFIX,rum.marquardmedia.hu,REJECT
 DOMAIN-SUFFIX,videostat-new.index.hu,REJECT
 DOMAIN-SUFFIX,videostat.index.hu,REJECT
-! Indian
+# Indian
 DOMAIN-SUFFIX,analytics.bhaskar.com,REJECT
 DOMAIN-SUFFIX,analytics.competitoor.com,REJECT
 DOMAIN-SUFFIX,analytics00.meride.tv,REJECT
@@ -25180,19 +25156,19 @@ DOMAIN-SUFFIX,mtag.mman.kr,REJECT
 DOMAIN-SUFFIX,performanceplay.co.kr,REJECT
 DOMAIN-SUFFIX,teralog.techhub.co.kr,REJECT
 DOMAIN-SUFFIX,tracking.adweb.co.kr,REJECT
-! Latvian
+# Latvian
 DOMAIN-SUFFIX,counter.hackers.lv,REJECT
 DOMAIN-SUFFIX,hits.sys.lv,REJECT
-! Lithuanian
+# Lithuanian
 DOMAIN-SUFFIX,top.chebra.lt,REJECT
 DOMAIN-SUFFIX,top.dating.lt,REJECT
 DOMAIN-SUFFIX,top.dkd.lt,REJECT
-! Norwegian
+# Norwegian
 DOMAIN-SUFFIX,engage-cdn.schibsted.media,REJECT
 DOMAIN-SUFFIX,webhit.snd.no,REJECT
-! Persian
+# Persian
 DOMAIN-SUFFIX,analytics.aasaam.com,REJECT
-! Polish
+# Polish
 DOMAIN-SUFFIX,analytics.ceneo.pl,REJECT
 DOMAIN-SUFFIX,analytics.greensender.pl,REJECT
 DOMAIN-SUFFIX,cmp.dreamlab.pl,REJECT
@@ -25213,7 +25189,7 @@ DOMAIN-SUFFIX,stats.ulixes.pl,REJECT
 DOMAIN-SUFFIX,statystyki.panelek.com,REJECT
 DOMAIN-SUFFIX,track.omgpl.com,REJECT
 DOMAIN-SUFFIX,tracking.novem.pl,REJECT
-! Portuguese
+# Portuguese
 DOMAIN-SUFFIX,api.nobeta.com.br,REJECT
 DOMAIN-SUFFIX,events.chaordicsystems.com,REJECT
 DOMAIN-SUFFIX,hitserver.ibope.com.br,REJECT
@@ -25276,9 +25252,9 @@ DOMAIN-SUFFIX,track.recreativ.ru,REJECT
 DOMAIN-SUFFIX,tracking.retailrocket.net,REJECT
 DOMAIN-SUFFIX,upstats.yadro.ru,REJECT
 DOMAIN-SUFFIX,webtrack.biz,REJECT
-! Slovak
+# Slovak
 DOMAIN-SUFFIX,stat.ringier.sk,REJECT
-! Spanish
+# Spanish
 DOMAIN-SUFFIX,1to1.bbva.com,REJECT
 DOMAIN-SUFFIX,analitica.webrpp.com,REJECT
 DOMAIN-SUFFIX,contadores.miarroba.com,REJECT
@@ -25292,27 +25268,27 @@ DOMAIN-SUFFIX,tracker.thinkindot.com,REJECT
 DOMAIN-SUFFIX,collector.schibsted.io,REJECT
 DOMAIN-SUFFIX,counter.mtgnewmedia.se,REJECT
 DOMAIN-SUFFIX,vizzit.se,REJECT
-! Thai
+# Thai
 DOMAIN-SUFFIX,sal.isanook.com,REJECT
 DOMAIN-SUFFIX,stat.matichon.co.th,REJECT
-! Turkish
+# Turkish
 DOMAIN-SUFFIX,st.tmgrup.com.tr,REJECT
-! Ukranian
+# Ukranian
 DOMAIN-SUFFIX,informers.sinoptik.ua,REJECT
-! Vietnamese
+# Vietnamese
 DOMAIN-SUFFIX,analytics.yomedia.vn,REJECT
 DOMAIN-SUFFIX,tracking.aita.gov.vn,REJECT
 
-!
-! Source name: AdGuard Spanish/Portuguese filter ad servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpanishFilter/sections/adservers.txt
-!
-!
-! Section contains list of advertising networks
-!
-! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
-! DOMAIN-SUFFIX,addevweb.com,REJECT$third-party
-! 
+#
+# Source name: AdGuard Spanish/Portuguese filter ad servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpanishFilter/sections/adservers.txt
+#
+#
+# Section contains list of advertising networks
+#
+# https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
+# DOMAIN-SUFFIX,addevweb.com,REJECT$third-party
+# 
 DOMAIN-SUFFIX,pregnancydiscreditbee.com,REJECT
 DOMAIN-SUFFIX,adsrv.eacdn.com,REJECT
 DOMAIN-SUFFIX,videoo.tv,REJECT
@@ -25469,22 +25445,22 @@ DOMAIN-SUFFIX,ver-pelis.net,REJECT
 DOMAIN-SUFFIX,xclk-integracion.com,REJECT
 DOMAIN-SUFFIX,yestorrents.org,REJECT
 DOMAIN-SUFFIX,zebestof.com,REJECT
-!
+#
 
-!
-! Source name: AdGuard Russian filter ad servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers.txt
-!
-!
-! Содержит доменные имена, использующиеся рекламными сетями.
-!
-! rbConfig={start:performance.now(),rbDomain:"www.takidd.site",rotator:'1tisz'};
-! например, vph-holod.ru
-!
-! AdsWell.ru
-! `window.adswellBaseDomain`
-! https://damskiy.xyz/vendor/lib/oY.js
-!
+#
+# Source name: AdGuard Russian filter ad servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers.txt
+#
+#
+# Содержит доменные имена, использующиеся рекламными сетями.
+#
+# rbConfig={start:performance.now(),rbDomain:"www.takidd.site",rotator:'1tisz'};
+# например, vph-holod.ru
+#
+# AdsWell.ru
+# `window.adswellBaseDomain`
+# https://damskiy.xyz/vendor/lib/oY.js
+#
 DOMAIN-SUFFIX,safebrowsdv.com,REJECT
 DOMAIN-SUFFIX,xtransferme.com,REJECT
 DOMAIN-SUFFIX,advmedia.by,REJECT
@@ -29474,9 +29450,9 @@ DOMAIN-SUFFIX,zurgerya.ru,REJECT
 DOMAIN-SUFFIX,zxrtn.com,REJECT
 DOMAIN-SUFFIX,zycvyudt.com,REJECT
 DOMAIN-SUFFIX,zz2017.ru,REJECT
-!
-! Ads reinjection (For apps only)
-!
+#
+# Ads reinjection (For apps only)
+#
 DOMAIN-SUFFIX,4jiqzr.ru,REJECT
 DOMAIN-SUFFIX,csp-oz66pp.ru,REJECT
 DOMAIN-SUFFIX,d38dub.ru,REJECT
@@ -29492,19 +29468,19 @@ DOMAIN-SUFFIX,v6t39t.ru,REJECT
 DOMAIN-SUFFIX,vt4dlx.ru,REJECT
 DOMAIN-SUFFIX,xifg6h.ru,REJECT
 DOMAIN-SUFFIX,zfvklk.ru,REJECT
-!
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
+#
+#+ PLATFORM(ios, ext_android_cb, ext_safari)
 adbetnet.com
-!+ NOT_PLATFORM(ios, ext_android_cb, ext_safari)
+#+ NOT_PLATFORM(ios, ext_android_cb, ext_safari)
 DOMAIN-SUFFIX,cpm.wargaming.net,REJECT
 
-!
-! Source name: AdGuard Russian filter ad servers first-party
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers_firstparty.txt
-!
-!
-! Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
-!
+#
+# Source name: AdGuard Russian filter ad servers first-party
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/adservers_firstparty.txt
+#
+#
+# Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
+#
 DOMAIN-SUFFIX,engine-pmbk.ligastavok.ru,REJECT
 DOMAIN-SUFFIX,ad.erkiss.club,REJECT
 DOMAIN-SUFFIX,d2dc2sk4vkh2xn.cloudfront.net,REJECT
@@ -29692,10 +29668,10 @@ DOMAIN-SUFFIX,ukrsvit.ukrmir.info,REJECT
 DOMAIN-SUFFIX,vozer.voffka.com,REJECT
 DOMAIN-SUFFIX,vw.onlinia.net,REJECT
 
-!
-! Source name: AdGuard Russian filter news exchange servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/news_exchange.txt
-!
+#
+# Source name: AdGuard Russian filter news exchange servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/RussianFilter/sections/news_exchange.txt
+#
 DOMAIN-SUFFIX,novosti-online.gq,REJECT
 DOMAIN-SUFFIX,mirror.smi.fm,REJECT
 DOMAIN-SUFFIX,info.emoment.com,REJECT
@@ -29750,11 +29726,11 @@ DOMAIN-SUFFIX,secure.ognyvo.ru,REJECT
 DOMAIN-SUFFIX,top-newsrustoria.ru,REJECT
 DOMAIN-SUFFIX,topruistory.ru,REJECT
 DOMAIN-SUFFIX,toprustory.ru,REJECT
-!
-! Source name: AdGuard Turkish filter ad servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers.txt
-!
-!
+#
+# Source name: AdGuard Turkish filter ad servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers.txt
+#
+#
 DOMAIN-SUFFIX,makuzeko.xyz,REJECT
 DOMAIN-SUFFIX,tidint.pro,REJECT
 DOMAIN-SUFFIX,kralseo.info,REJECT
@@ -29995,13 +29971,13 @@ DOMAIN-SUFFIX,winaffiliates.com,REJECT
 DOMAIN-SUFFIX,xpornoizlex.net,REJECT
 DOMAIN-SUFFIX,xyztanitim.com,REJECT
 
-!
-! Source name: AdGuard Turkish filter ad servers first-party
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers_firstparty.txt
-!
-!
-! Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
-!
+#
+# Source name: AdGuard Turkish filter ad servers first-party
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TurkishFilter/sections/adservers_firstparty.txt
+#
+#
+# Section contains the list of advertising networks, which are hosted on non advertising sites as subdomains
+#
 DOMAIN-SUFFIX,partnerx.bethub.io,REJECT
 DOMAIN-SUFFIX,ttauri.livescience.com,REJECT
 DOMAIN-SUFFIX,adn.bursadabugun.com,REJECT
@@ -30052,28 +30028,28 @@ DOMAIN-SUFFIX,ad.sacitaslan.com,REJECT
 DOMAIN-SUFFIX,cdn.hiperadverts.com,REJECT
 DOMAIN-SUFFIX,savoy.cubecdn.net,REJECT
 
-!
-! Source name: AdGuard French filter ad servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/FrenchFilter/sections/adservers.txt
-!
-!
-! Section contains list of advertising networks
-!
+#
+# Source name: AdGuard French filter ad servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/FrenchFilter/sections/adservers.txt
+#
+#
+# Section contains list of advertising networks
+#
 DOMAIN-SUFFIX,mystighty.info,REJECT
 DOMAIN-SUFFIX,i4tvy8vk9f74.com,REJECT
 DOMAIN-SUFFIX,sohjah-thahka.info,REJECT
 DOMAIN-SUFFIX,goitcl.com,REJECT
-!
-! Source name: AdGuard Japanese filter ad servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/JapaneseFilter/sections/adservers.txt
-!
-!
-! Section contains list of advertising networks
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/23113
-! DOMAIN-SUFFIX,weblio.jp,REJECT$third-party
-!
-! Yahoo
+#
+# Source name: AdGuard Japanese filter ad servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/JapaneseFilter/sections/adservers.txt
+#
+#
+# Section contains list of advertising networks
+#
+# https://github.com/AdguardTeam/AdguardFilters/issues/23113
+# DOMAIN-SUFFIX,weblio.jp,REJECT$third-party
+#
+# Yahoo
 DOMAIN-SUFFIX,promotionalads.yahoo.co.jp,REJECT
 DOMAIN-SUFFIX,adserver.yahoo.co.jp,REJECT
 DOMAIN-SUFFIX,smartads.mobile.yahoo.co.jp,REJECT
@@ -30085,8 +30061,8 @@ DOMAIN-SUFFIX,logoole.yahoo.co.jp,REJECT
 DOMAIN-SUFFIX,yads.yahoo.co.jp,REJECT
 DOMAIN-SUFFIX,yads.yjtag.yahoo.co.jp,REJECT
 DOMAIN-SUFFIX,yjaxc.yahoo.co.jp,REJECT
-!
-! Shinobi.jp
+#
+# Shinobi.jp
 DOMAIN-SUFFIX,adm.shinobi.jp,REJECT
 DOMAIN-SUFFIX,adf.shinobi.jp,REJECT
 DOMAIN-SUFFIX,axad.shinobi.jp,REJECT
@@ -30094,38 +30070,38 @@ DOMAIN-SUFFIX,bar*.shinobi.jp,REJECT
 DOMAIN-SUFFIX,ct1.shinobi.jp,REJECT
 DOMAIN-SUFFIX,ct2.shinobi.jp,REJECT
 DOMAIN-SUFFIX,vis1.shinobi.jp,REJECT
-!
-! Rakuten.co.jp
+#
+# Rakuten.co.jp
 DOMAIN-SUFFIX,affiliate.rakuten.co.jp,REJECT
 DOMAIN-SUFFIX,ranking.rakuten.co.jp,REJECT
 DOMAIN-SUFFIX,hbb.afl.rakuten.co.jp,REJECT
 DOMAIN-SUFFIX,hb.afl.rakuten.co.jp,REJECT
-!
-! Nikkeibp.co.jp
+#
+# Nikkeibp.co.jp
 DOMAIN-SUFFIX,bizad.nikkeibp.co.jp,REJECT
 DOMAIN-SUFFIX,adserve5.nikkeibp.co.jp,REJECT
-!
-! Livedoor.com
+#
+# Livedoor.com
 DOMAIN-SUFFIX,adv.livedoor.com,REJECT
 DOMAIN-SUFFIX,counter2.blog.livedoor.com,REJECT
-!
-! Gunosy.com
+#
+# Gunosy.com
 DOMAIN-SUFFIX,ad.gunosy.com,REJECT
 DOMAIN-SUFFIX,adapi.gunosy.com,REJECT
 DOMAIN-SUFFIX,adntokyo.gunosy.com,REJECT
 DOMAIN-SUFFIX,creatives.gunosy.com,REJECT
-!
-! Fc2.com
+#
+# Fc2.com
 DOMAIN-SUFFIX,analyzer*.fc2.com,REJECT
-!
-! Excite.co.jp
+#
+# Excite.co.jp
 DOMAIN-SUFFIX,nc-log.excite.co.jp,REJECT
 DOMAIN-SUFFIX,adimp.excite.co.jp,REJECT
 DOMAIN-SUFFIX,adimpkwd.excite.co.jp,REJECT
-!
-! Eimg.jp
+#
+# Eimg.jp
 DOMAIN-SUFFIX,adingo.jp.eimg.jp,REJECT
-!
+#
 DOMAIN-SUFFIX,scottdwebgraphics.com,REJECT
 DOMAIN-SUFFIX,p.permalink-system.com,REJECT
 DOMAIN-SUFFIX,adp.homes.co.jp,REJECT
@@ -30357,10 +30333,10 @@ DOMAIN-SUFFIX,widget-view.dmm.com,REJECT
 DOMAIN-SUFFIX,widget.zenback.jp,REJECT
 DOMAIN-SUFFIX,w.zenback.jp,REJECT
 
-!
-! Source name: EasyList Germany ad servers
-! Source: https://raw.githubusercontent.com/easylist/easylistgermany/master/easylistgermany/easylistgermany_adservers.txt
-!
+#
+# Source name: EasyList Germany ad servers
+# Source: https://raw.githubusercontent.com/easylist/easylistgermany/master/easylistgermany/easylistgermany_adservers.txt
+#
 DOMAIN-SUFFIX,4rm.de,REJECT
 DOMAIN-SUFFIX,a3h.de,REJECT
 DOMAIN-SUFFIX,ablida-rotation.com,REJECT
@@ -30649,14 +30625,14 @@ DOMAIN-SUFFIX,z0a.de,REJECT
 DOMAIN-SUFFIX,za-ads.de,REJECT
 DOMAIN-SUFFIX,zieltracker.de,REJECT
 DOMAIN-SUFFIX,zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqp.de,REJECT
-! Mobile
+# Mobile
 DOMAIN-SUFFIX,avault.net,REJECT
 DOMAIN-SUFFIX,recognified.net,REJECT
 
-!
-! Source name: AdGuard German filter ad servers
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/GermanFilter/sections/adservers.txt
-!
+#
+# Source name: AdGuard German filter ad servers
+# Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/GermanFilter/sections/adservers.txt
+#
 DOMAIN-SUFFIX,kunner.wiesentbote.de,REJECT
 DOMAIN-SUFFIX,yieldlove-ad-serving.net,REJECT
 DOMAIN-SUFFIX,partner.shop.vorwerk.de,REJECT
@@ -30682,10 +30658,10 @@ DOMAIN-SUFFIX,bauernative.com,REJECT
 DOMAIN-SUFFIX,chickensaladandads.com,REJECT
 DOMAIN-SUFFIX,adshot.de,REJECT
 DOMAIN-SUFFIX,content.acc-hd.de,REJECT
-!
-! Source name: EasyList Italy ad servers
-! Source: https://hg.adblockplus.org/easylistitaly/raw-file/tip/easylistitaly/easylistitaly_adservers.txt
-!
+#
+# Source name: EasyList Italy ad servers
+# Source: https://hg.adblockplus.org/easylistitaly/raw-file/tip/easylistitaly/easylistitaly_adservers.txt
+#
 DOMAIN-SUFFIX,24network.it,REJECT
 DOMAIN-SUFFIX,4strokemedia.com,REJECT
 DOMAIN-SUFFIX,ad4mat.it,REJECT
@@ -30799,10 +30775,10 @@ DOMAIN-SUFFIX,yobee.it,REJECT
 DOMAIN-SUFFIX,zanox-affiliate.de,REJECT
 DOMAIN-SUFFIX,zodiakactive.com,REJECT
 
-!
-! Source name: ABPindo ad servers
-! Source: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/src/advert/adservers.txt
-!
+#
+# Source name: ABPindo ad servers
+# Source: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/src/advert/adservers.txt
+#
 DOMAIN-SUFFIX,05ee3a24ed11df058c8.com,REJECT
 DOMAIN-SUFFIX,188affiliates.com,REJECT
 DOMAIN-SUFFIX,2go7v1nes8.com,REJECT
@@ -31030,18 +31006,18 @@ DOMAIN-SUFFIX,yx-ads6.com,REJECT
 DOMAIN-SUFFIX,zukxd6fkxqn.com,REJECT
 DOMAIN-SUFFIX,zuyejecgb.com,REJECT
 
-!
-! Source name: hostsVN ad servers
-! Source: https://raw.githubusercontent.com/bigdargon/hostsVN/master/filters/adservers.txt
-!
-! Title: hostsVN
-! Description: The filter contains ad and tracking networks in Vietnam.
-! Last modified: 27 Aug 2020 13:47 UTC+7
-! Version: 2008271347
-! Blocked: 495 rules
-! Expires: 1 days (update frequency)
-! Homepage: https://bigdargon.github.io/hostsVN/
-!
+#
+# Source name: hostsVN ad servers
+# Source: https://raw.githubusercontent.com/bigdargon/hostsVN/master/filters/adservers.txt
+#
+# Title: hostsVN
+# Description: The filter contains ad and tracking networks in Vietnam.
+# Last modified: 27 Aug 2020 13:47 UTC+7
+# Version: 2008271347
+# Blocked: 495 rules
+# Expires: 1 days (update frequency)
+# Homepage: https://bigdargon.github.io/hostsVN/
+#
 DOMAIN-SUFFIX,123c.vn,REJECT
 DOMAIN-SUFFIX,24h*-ad.24hstatic.com,REJECT
 DOMAIN-SUFFIX,ad*.24hstatic.com,REJECT
@@ -31538,10 +31514,10 @@ DOMAIN-SUFFIX,quangcaotructuyen247.com,REJECT
 DOMAIN-SUFFIX,rituationscardb.info,REJECT
 DOMAIN-SUFFIX,sacchaeleduk.com,REJECT
 
-!
-! Source name: EasyList China ad servers
-! Source: https://easylist-downloads.adblockplus.org/easylistchina.txt
-!
+#
+# Source name: EasyList China ad servers
+# Source: https://easylist-downloads.adblockplus.org/easylistchina.txt
+#
 DOMAIN-SUFFIX,oneyearonechange.com,REJECT
 DOMAIN-SUFFIX,00-gov.cn,REJECT
 DOMAIN-SUFFIX,0024aaaa.com,REJECT
@@ -36410,27 +36386,27 @@ DOMAIN-SUFFIX,sohu999.com,REJECT
 DOMAIN-SUFFIX,tcmdz.com,REJECT
 DOMAIN-SUFFIX,withad.cn,REJECT
 @@DOMAIN-SUFFIX,huke88.com,REJECT*-tracking.js
-!
-! Source name: Additional rules
-! Source: Filters/rules.txt
-!
-!
-! Temporary to fix Keenetic health check - resolve dnscheck.adguard.com to 0.0.0.0
-! Date: 18.04.2020
-! TODO: Remove in a week
-!
+#
+# Source name: Additional rules
+# Source: Filters/rules.txt
+#
+#
+# Temporary to fix Keenetic health check - resolve dnscheck.adguard.com to 0.0.0.0
+# Date: 18.04.2020
+# TODO: Remove in a week
+#
 DOMAIN-SUFFIX,dnscheck.adguard.com,REJECT
-!
-! Tracking
-!
-! This domain does not exist and is used for health checks
+#
+# Tracking
+#
+# This domain does not exist and is used for health checks
 DOMAIN-SUFFIX,abcounter.de,REJECT
-! replacing DOMAIN-SUFFIX,bpmonline.com,REJECT from easyprivacy
+# replacing DOMAIN-SUFFIX,bpmonline.com,REJECT from easyprivacy
 *.bpmonline.com,REJECT
 DOMAIN-SUFFIX,adc.9news.com.au,REJECT
 DOMAIN-SUFFIX,adc.api.nine.com.au,REJECT
 DOMAIN-SUFFIX,adc.nine.com.au,REJECT
-! https://github.com/AdguardTeam/AdguardDNS/issues/52
+# https://github.com/AdguardTeam/AdguardDNS/issues/52
 DOMAIN-SUFFIX,mobileanalytics.*.amazonaws.com,REJECT
 DOMAIN-SUFFIX,affiliate.mercola.com,REJECT
 DOMAIN-SUFFIX,affiliate.productreview.com.au,REJECT
@@ -36942,9 +36918,9 @@ DOMAIN-SUFFIX,tracking.unrealengine.com,REJECT
 DOMAIN-SUFFIX,tracking.ustream.tv,REJECT
 DOMAIN-SUFFIX,tracking.yourfilehost.com,REJECT
 DOMAIN-SUFFIX,trackpm.shop2market.com,REJECT
-!
-! Ads
-!
+#
+# Ads
+#
 DOMAIN-SUFFIX,adocean.cz,REJECT
 DOMAIN-SUFFIX,doubleclick.net,REJECT
 DOMAIN-SUFFIX,tt.onthe.io,REJECT
@@ -36992,101 +36968,101 @@ DOMAIN-SUFFIX,torvind.com,REJECT
 DOMAIN-SUFFIX,a4.overclockers.ua,REJECT
 DOMAIN-SUFFIX,novunu.football-plyus.net,REJECT
 
-!
-! Source name: Exception rules
-! Source: Filters/exceptions.txt
-!
-! Fixing the issue with "Wi-Fi" connection mark when you configure private DNS on Android 9
-! Once you enable private DNS, Android 9 starts resolving random domains looking like
-! `*-dnsotls-ds.metric.gstatic.com` (for instance, `a5a6380f-dnsotls-ds.metric.gstatic.com`).
-!
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/428
-! CNAME: paymaya.customlinks.appsflyer.com
+#
+# Source name: Exception rules
+# Source: Filters/exceptions.txt
+#
+# Fixing the issue with "Wi-Fi" connection mark when you configure private DNS on Android 9
+# Once you enable private DNS, Android 9 starts resolving random domains looking like
+# `*-dnsotls-ds.metric.gstatic.com` (for instance, `a5a6380f-dnsotls-ds.metric.gstatic.com`).
+#
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/428
+# CNAME: paymaya.customlinks.appsflyer.com
 @@DOMAIN-SUFFIX,official.paymaya.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/381
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/381
 @@DOMAIN-SUFFIX,gs.statcounter.com,REJECT|
-! Fixing NordVPN mobile app launching
+# Fixing NordVPN mobile app launching
 @@DOMAIN-SUFFIX,launches.appsflyer.com,REJECT|
-! Blocked by exacttarget.com alias
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/333
+# Blocked by exacttarget.com alias
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/333
 @@DOMAIN-SUFFIX,click.virt.s*.exacttarget.com,REJECT|
 @@DOMAIN-SUFFIX,click.virt.exacttarget.com,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/61592
+# https://github.com/AdguardTeam/AdguardFilters/issues/61592
 @@DOMAIN-SUFFIX,login.sendpulse.com,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/59840
+# https://github.com/AdguardTeam/AdguardFilters/issues/59840
 @@DOMAIN-SUFFIX,tlaol.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/378
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/378
 @@DOMAIN-SUFFIX,admin.dable.io,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/358
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/358
 @@DOMAIN-SUFFIX,log.mmstat.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/345
-! Blocked by alimama.com alias
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/345
+# Blocked by alimama.com alias
 @@DOMAIN-SUFFIX,click.simba.taobao.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/340
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/340
 @@DOMAIN-SUFFIX,cs.silverpop.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/312
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/312
 @@DOMAIN-SUFFIX,grp07.ias.rakuten.co.jp,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/304
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/304
 @@DOMAIN-SUFFIX,cindyholbrook.lpages.co,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/289
-! Fixing Google Shop and Google Ads in search results.
-! These ads cannot be hidden on the DNS-level, so we should not break clicks on the adverts
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/289
+# Fixing Google Shop and Google Ads in search results.
+# These ads cannot be hidden on the DNS-level, so we should not break clicks on the adverts
 @@DOMAIN-SUFFIX,pagead.l.doubleclick.net,REJECT|
 @@DOMAIN-SUFFIX,www.googleadservices.com,REJECT|
 @@DOMAIN-SUFFIX,googleadapis.l.google.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/287
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/287
 @@DOMAIN-SUFFIX,my.tealiumiq.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/267
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/267
 @@DOMAIN-SUFFIX,artifactory.appodeal.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/258
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/258
 @@DOMAIN-SUFFIX,www.jdoqocy.com,REJECT|
 @@DOMAIN-SUFFIX,cj.dotomi.com,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/50415
+# https://github.com/AdguardTeam/AdguardFilters/issues/50415
 @@DOMAIN-SUFFIX,intersport.peerius.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/231
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/231
 @@DOMAIN-SUFFIX,cutcaptcha.com,REJECT|
-! https://forum.adguard.com/index.php?threads/36967/
+# https://forum.adguard.com/index.php?threads/36967/
 @@DOMAIN-SUFFIX,forum.notebookreview.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/199
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/199
 @@DOMAIN-SUFFIX,radiofrance.targetspot.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/187
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/187
 @@DOMAIN-SUFFIX,pathe.emsecure.net,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/190
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/190
 @@DOMAIN-SUFFIX,awin1.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/185
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/185
 @@DOMAIN-SUFFIX,app.adjust.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/183
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/183
 @@DOMAIN-SUFFIX,feed.adrelayer.com,REJECT|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/168
+# https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/168
 @@DOMAIN-SUFFIX,redirect.appmetrica.yandex.com,REJECT|
-! Fixing redirects through guce.advertising.com (www.engadget.com, www.huffpost.com)
+# Fixing redirects through guce.advertising.com (www.engadget.com, www.huffpost.com)
 @@DOMAIN-SUFFIX,guce.advertising.com,REJECT
-! Unblock logrocket.com blog
+# Unblock logrocket.com blog
 @@DOMAIN-SUFFIX,blog.logrocket.com,REJECT|
-! AdGuard DNS blocks this domain but for some reason, it messes with Android's network validation process.
+# AdGuard DNS blocks this domain but for some reason, it messes with Android's network validation process.
 @@dnsotls-ds.metric.gstatic.com,REJECT
-! https://github.com/AdguardTeam/AdguardFilters/issues/27196
+# https://github.com/AdguardTeam/AdguardFilters/issues/27196
 @@DOMAIN-SUFFIX,a.adwolf.ru,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/26607
+# https://github.com/AdguardTeam/AdguardFilters/issues/26607
 @@DOMAIN-SUFFIX,imasdk.googleapis.com,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/23929
+# https://github.com/AdguardTeam/AdguardFilters/issues/23929
 @@DOMAIN-SUFFIX,cm-beacon.nakanohito.jp,REJECT|
 @@DOMAIN-SUFFIX,cm-widget.nakanohito.jp,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/19113
+# https://github.com/AdguardTeam/AdguardFilters/issues/19113
 @@DOMAIN-SUFFIX,ads.tdbank.com,REJECT
-! https://forum.adguard.com/index.php?threads/23410/page-7#post-165504
+# https://forum.adguard.com/index.php?threads/23410/page-7#post-165504
 @@DOMAIN-SUFFIX,nineto5mac-d.openx.net,REJECT|
-! https://github.com/AdguardTeam/AdguardDNS/issues/192
+# https://github.com/AdguardTeam/AdguardDNS/issues/192
 @@DOMAIN-SUFFIX,clk*.tradedoubler.com,REJECT|
-! https://forum.adguard.com/index.php?threads/27021/
+# https://forum.adguard.com/index.php?threads/27021/
 @@DOMAIN-SUFFIX,href.li,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/6749
+# https://github.com/AdguardTeam/AdguardFilters/issues/6749
 @@DOMAIN-SUFFIX,str.hit.gemius.pl,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/6486
+# https://github.com/AdguardTeam/AdguardFilters/issues/6486
 @@DOMAIN-SUFFIX,track.rutarget.ru,REJECT|
-! Watson News App for iOS https://github.com/AdguardTeam/AdguardFilters/issues/4524
+# Watson News App for iOS https://github.com/AdguardTeam/AdguardFilters/issues/4524
 @@DOMAIN-SUFFIX,5471782.fls.doubleclick.net,REJECT|
-! https://github.com/AdguardTeam/AdguardFilters/issues/4405
+# https://github.com/AdguardTeam/AdguardFilters/issues/4405
 @@DOMAIN-SUFFIX,h-sdk.online-metrix.net,REJECT|
-! Fixing Walmart
+# Fixing Walmart
 @@DOMAIN-SUFFIX,omniture.walmart.com,REJECT|
