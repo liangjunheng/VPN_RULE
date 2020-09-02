@@ -1,5 +1,5 @@
 #白名单
-#URL-REGEX,(\S+\.)?com\.wsweb(cdn|pic)\.com$,DIRECT
+##URL-REGEX,(\S+\.)?com\.wsweb(cdn|pic)\.com$,DIRECT
 #广告联盟过滤
 URL-REGEX,(\S+\.)?cymn\d+.top$,REJECT
 URL-REGEX,(\S+\.)?yumi\d+.com$,REJECT
