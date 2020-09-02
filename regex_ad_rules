@@ -1,6 +1,6 @@
 #广告联盟过滤
 (\S+\.)?cymn\d{1,4}.top (null) 302
-(\S+\.)?yumi\d{1,2}.com (null) 302
+(\S+\.)?yumi\d{1,2}.com (null) 302 
 (\S+\.)?ppmh\d{1,2}.com (null) 302
 (\S+\.)?xpj\d.net (null) 302
 (\S+\.)?ylx\d.com (null) 302
