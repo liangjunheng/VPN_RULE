@@ -2,7 +2,7 @@
 (\S+\.)?cymn\d{1,4}.top (null) reject
 (\S+\.)?yumi\d{1,2}.com (null) reject
 (\S+\.)?ppmh\d{1,2}.com (null) reject
-URL-REGEX,(\S+\.)?xpj\d.net$
+(\S+\.)?xpj\d.net (null) reject
 URL-REGEX,(\S+\.)?ylx\d.com$
 URL-REGEX,(\S+\.)?6699[0-9]\.top$
 URL-REGEX,(\S+\.)?9377[a-z]{2}\.com$
