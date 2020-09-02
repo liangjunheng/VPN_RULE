@@ -1,5 +1,5 @@
 #白名单
-##URL-REGEX,(\S+\.)?com\.wsweb(cdn|pic)\.com$,DIRECT
+#URL-REGEX,(\S+\.)?com\.wsweb(cdn|pic)\.com$,DIRECT
 #广告联盟过滤
 URL-REGEX,(\S+\.)?cymn\d+.top$,REJECT
 URL-REGEX,(\S+\.)?yumi\d+.com$,REJECT
@@ -16,8 +16,6 @@ URL-REGEX,(\S+\.)?ad[0-9][0-9][0-9]+m.com$,REJECT
 URL-REGEX,(\S+\.)?afgr[\d]+\.com$,REJECT
 URL-REGEX,(\S+\.)?syma[a-z]\.cn$,REJECT
 URL-REGEX,(\S+\.)?delivery([\d]{2}|dom|modo).com$,REJECT
-URL-REGEX,(\S+\.)?doubleclick(\.[^\.]+)(\.[a-z]{2})?$,REJECT
-URL-REGEX,(\S+\.)?adskeeper(\.[^\.]+)(\.[a-z]{2})?$,REJECT
 #URL-REGEX,(\S+\.)?[a-z]+\.[0-9a-z\-]+\.[^\.]+(\.[a-z]{2})?\.wsweb(cdn|pic)\.com$,REJECT
 #垃圾域名过滤
 URL-REGEX,(\S+\.)?[0-9a-z]*\d[a-z][0-9a-z]*\d[a-z][0-9a-z]+(\.[^\.]+)(\.[a-z]{2})?$,REJECT
