@@ -23,7 +23,8 @@ URL-REGEX,(\S+\.)?[0-9a-z]*[a-z]\d[0-9a-z]+[a-z]\d[0-9a-z]*(\.[^\.]+)(\.[a-z]{2}
 URL-REGEX,(\S+\.)?\d+[a-z]+\d+[a-z]+[0-9a-z]+(\.[^\.]+)(\.[a-z]{2})?$,REJECT
 URL-REGEX,(\S+\.)?[a-z]+\d+[a-z]+\d+[0-9a-z]+(\.[^\.]+)(\.[a-z]{2})?$,REJECT
 URL-REGEX,(\S+\.)?[0-9a-z\-]*\d\d\d\d\d\d+[0-9a-z\-]*(\.[^\.]+)(\.[a-z]{2})?$,REJECT
-URL-REGEX,(\S+\.)?\d\d\d+[a-z\-]+\d\d\d+(\.[^\.]+)(\.[a-z]{2})?$,REJECT
+URL-REGEX,(\S+\.)?\d\d\d\d+[a-z]+\d+(\.[^\.]+)(\.[a-z]{2})?$,REJECT
+URL-REGEX,(\S+\.)?\d+[a-z]+\d\d\d\d+(\.[^\.]+)(\.[a-z]{2})?$,REJECT
 URL-REGEX,(\S+\.)?(mobile|mob|page)?ad(m|s(e[a-z]*)?|v((an|er|i)[a-z]*)?)?(\d*)?(\-|\.),REJECT
 URL-REGEX,(\S+\.)?[0-9a-z\-]+ad(ser[a-z]*|v(er|ic|is)[a-z]*)(\d*)?(\-|\.),REJECT
 URL-REGEX,(\S+\.)?([0-9a-z]*\-|web)?stats?\.,REJECT
