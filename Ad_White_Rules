@@ -1,1 +1,2 @@
-
+#白名单
+URL-REGEX,(\S+\.)?com\.wsweb(cdn|pic)\.com$,DIRECT
