@@ -1,11 +1,10 @@
-#白名单
-#URL-REGEX,(\S+\.)?com\.wsweb(cdn|pic)\.com$,DIRECT
 #广告联盟过滤
 URL-REGEX,(\S+\.)?cymn\d+.top$,REJECT
 URL-REGEX,(\S+\.)?yumi\d+.com$,REJECT
 URL-REGEX,(\S+\.)?ppmh\d+.com$,REJECT
 URL-REGEX,(\S+\.)?xpj\d.net$,REJECT
 URL-REGEX,(\S+\.)?ylx\d.com$,REJECT
+URL-REGEX,(\S+\.)?bysk[0-9]+\.top$,REJECT
 URL-REGEX,(\S+\.)?6699[0-9]\.top$,REJECT
 URL-REGEX,(\S+\.)?9377[a-z]{2}\.com$,REJECT
 URL-REGEX,(\S+\.)?ali2[a-z]\.xyz$,REJECT
