@@ -1,3 +1,5 @@
+#白名单Ad_White_Rules，应该放在本规则上方
+#URL-REGEX,(\S+\.)?com\.wsweb(cdn|pic)\.com$,DIRECT
 #广告联盟过滤
 URL-REGEX,(\S+\.)?cymn\d+.top$,REJECT
 URL-REGEX,(\S+\.)?yumi\d+.com$,REJECT
