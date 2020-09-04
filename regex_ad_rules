@@ -17,7 +17,7 @@ URL-REGEX,(\S+\.)?ad[0-9]{3}[0-9]*m.com$,REJECT
 URL-REGEX,(\S+\.)?afgr\d+\.com$,REJECT
 URL-REGEX,(\S+\.)?syma[a-z]\.cn$,REJECT
 URL-REGEX,(\S+\.)?delivery([\d]{2}|dom|modo).com$,REJECT
-URL-REGEX,(\S+\.)?[a-z]+\.[0-9a-z\-]+\.[^\.]+(\.[a-z]{2})?\.wsweb(cdn|pic)\.com$,REJECT
+#URL-REGEX,(\S+\.)?[a-z]+\.[0-9a-z\-]+\.[^\.]+(\.[a-z]{2})?\.wsweb(cdn|pic)\.com$,REJECT
 #垃圾域名过滤
 URL-REGEX,(\S+\.)?[0-9a-z]*\d[a-z][0-9a-z]+\d[a-z][0-9a-z]*(\.[^\.]+)(\.[a-z]{2})?(:|\/),REJECT
 URL-REGEX,(\S+\.)?[0-9a-z]*[a-z]\d[0-9a-z]+[a-z]\d[0-9a-z]*(\.[^\.]+)(\.[a-z]{2})?(:|\/),REJECT
@@ -26,7 +26,7 @@ URL-REGEX,(\S+\.)?[a-z]+\d+[a-z]+\d+[0-9a-z]+(\.[^\.]+)(\.[a-z]{2})?(:|\/),REJEC
 URL-REGEX,(\S+\.)?[0-9a-z\-]*\d{6}\d*[0-9a-z\-]*(\.[^\.]+)(\.[a-z]{2})?(:|\/),REJECT
 URL-REGEX,(\S+\.)?\d{4}\d*[a-z]+\d+(\.[^\.]+)(\.[a-z]{2})?(:|\/),REJECT
 URL-REGEX,(\S+\.)?\d+[a-z]+\d{4}\d*(\.[^\.]+)(\.[a-z]{2})?(:|\/),REJECT
-URL-REGEX,(ad|[\.\-\/]ad)(m|s(e[a-z]*)?|v((an|er|ic|is)[a-z]*)?)\d*(\-|\.),REJECT
+URL-REGEX,^(ad|[\.\-\/]ad)(m|s(e[a-z]*)?|v((an|er|ic|is)[a-z]*)?)\d*(\-|\.),REJECT
 #URL-REGEX,(\S+\.)?[0-9a-z\-]+ad(ser[a-z]*|v(er|ic|is)[a-z]*)(\d*)?(\-|\.)\S+(:|\/),REJECT
 #URL-REGEX,(\S+\.)?([0-9a-z]*\-|web)?stats?\.\S+(:|\/),REJECT
 URL-REGEX,(\S+\.)?[0-9a-z\-]*(measure|analy|stats|counter|pixels?|track(ing)?|widgets?|toolbar|affiliat(es|ion|e)|tongji)[0-9a-z]*(\.|\-),REJECT
