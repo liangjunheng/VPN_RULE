@@ -28,4 +28,4 @@ URL-REGEX,\d(\d{3,}[a-z]+|[a-z]+\d{3,})\d\.([^\.]{1,7}|(ac|com|net)\.[a-z]{2})(:
 URL-REGEX,(\.|^|\-|\/)ad(m|s(e[a-z]*)?|v((an|er|ic|is)[a-z]*)?)?\d*(\-|\.)
 URL-REGEX,[-0-9a-z]*(measure|analy|stats|counter|pixels?|track(ing)?|widgets?|toolbar|affiliat(es|ion|e)|tongji)[0-9a-z]*(\.|\-)
 #URL-REGEX,[c-s]ads(abs|abz|ans|anz|ats|atz|del|ecs|ecz|ims|imz|ips|ipz|kis|kiz|oks|okz|one|pms|pmz)\.com
-URL-REGEX,([a-z\d\-]+\.)?(?!xn--)[^\.\/]{15,}[^\.\/]*\.(com|net|cn)(:|\/)
+#URL-REGEX,([a-z\d\-]+\.)?(?!xn--)[^\.\/]{15,}[^\.\/]*\.(com|net|cn)(:|\/)
