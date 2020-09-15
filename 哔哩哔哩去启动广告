@@ -1,0 +1,5 @@
+[Rule]
+URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
+
+[MITM]
+hostname = api.bilibili.com
