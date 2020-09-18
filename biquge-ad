@@ -7,4 +7,4 @@ URL-REGEX, ^https:\/\/\S+(bi|book|shu)\S+\.js,REJECT
 hostname = *.biduo.cc
 
 [Script]
-http-response ^http:\/\/\S+(book|shu|bi)\S+\/ script-path= https://raw.githubusercontent.com/LiangJunheng/IOS-Ad-Rule/master/JS/remove-script.js, requires-body=true, timeout=10
+http-response ^http:\/\/\S+(book|shu|bi)+\S+\/ script-path= https://raw.githubusercontent.com/LiangJunheng/IOS-Ad-Rule/master/JS/remove-script.js, requires-body=true, timeout=10
