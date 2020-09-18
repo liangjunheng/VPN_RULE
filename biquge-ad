@@ -1,0 +1,6 @@
+#响应类脚本
+#需配合主机名共同使用
+
+hostname = *.biduo.cc
+
+http-response ^http:\/\/\S+(book|shu|bi)\S+\/ script-path= https://raw.githubusercontent.com/LiangJunheng/IOS-Ad-Rule/master/JS/remove-script.js, requires-body=true, timeout=10
