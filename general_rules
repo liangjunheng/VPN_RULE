@@ -134,6 +134,11 @@ DOMAIN-SUFFIX,dcads.sina.com.cn
 DOMAIN-SUFFIX,sax.sina.cn
 DOMAIN-SUFFIX,sax.sina.com.cn
 DOMAIN-SUFFIX,tjs.sjs.sinajs.cn
+# Netease Music Advertising
+DOMAIN,admusicpic.music.126.net
+DOMAIN,iadmat.nosdn.127.net
+DOMAIN,iadmusicmat.music.126.net
+DOMAIN,iadmusicmatvideo.music.126.net
 #微博（可能有多余项）
 DOMAIN-SUFFIX,c.biz.weibo.com
 DOMAIN-SUFFIX,game.weibo.com
