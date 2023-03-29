@@ -1,27 +1,4 @@
 # 用于china列表兜底工作
 
-# 常用UA
-user-agent, %E4%BA%AC%E4%B8%9C%E5%88%B0%E5%AE%B6*,DIRECT
-user-agent,%E5%8D%B3%E5%88%BB*,DIRECT
-user-agent,*Vainglory* ,DIRECT
-user-agent,AdBlock*,DIRECT
-user-agent,arrowio*,DIRECT
-user-agent,balls*,DIRECT
-user-agent,Best%20Trace*,DIRECT
-user-agent,cmblife*,DIRECT
-user-agent,eusoft_ting_en_iphone,DIRECT
-user-agent,hide*,DIRECT
-user-agent,MegaWerewolf*,DIRECT
-user-agent,MicroMessenger*,DIRECT
-user-agent,Moke*,DIRECT
-user-agent,osee2unifiedRelease*,DIRECT
-user-agent,QQ*,DIRECT
-user-agent,TeamViewer*,DIRECT
-user-agent,TIM*,DIRECT
-user-agent,ting_en,DIRECT
-user-agent,WebTorrent*,DIRECT
-user-agent,WeChat*,DIRECT
-
 #兜底
-host-suffix,cn,DIRECT
 GEOIP,CN,DIRECT
