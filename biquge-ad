@@ -1,2 +1,0 @@
-[Script]
-http-response ^http:\/\/\S+(book|shu|bi)+\S+\/ script-path= https://raw.githubusercontent.com/LiangJunheng/IOS-Ad-Rule/master/JS/remove-script.js, requires-body=true, timeout=10
