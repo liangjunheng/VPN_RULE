@@ -1,0 +1,2 @@
+trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=右下角“风车”图标 -> 节点资源 -> 右上角图标 -> 添加机场订阅
+trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=自定义策略 -> 代理 -> 选择节点
