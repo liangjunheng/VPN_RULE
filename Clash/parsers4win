@@ -141,7 +141,7 @@ parsers: # array
         - RULE-SET,ProxyMedia,PROXY
         - RULE-SET,ProxyLite,PROXY
         - RULE-SET,proxy,PROXY
-        - GEOIP,CN,DIRECT
         - RULE-SET,ChinaDomain,DIRECT
         - RULE-SET,cncidr,DIRECT
+        - GEOIP,CN,DIRECT
         - MATCH,PROXY
