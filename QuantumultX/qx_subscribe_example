@@ -1,4 +1,4 @@
 trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=无效节点
 trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=软件使用操作:
-trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=  1. 右下角“风车”图标 > 节点资源 > 添加订阅
-trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=  2. 自定义策略 > 代理 > 选择节点
+trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=1.右下角“风车”图标 > 节点资源 > 添加订阅
+trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=2.自定义策略 > 代理 > 选择节点
