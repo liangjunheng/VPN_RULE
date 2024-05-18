@@ -1,3 +1,7 @@
+# clash for windows
+# Setting -> Profiles -> Parsers
+#
+
 parsers: # array
   - reg: url
     yaml:
