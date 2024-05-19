@@ -1,4 +1,7 @@
 /*
+节点网速测试
+来源于https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/CloudflareSpeedtest.js
+
 作者：@wuhu_zzz @xream @keywos @整点猫咪 技术指导：整点薯条 
 整点花里胡哨
 各种花里胡哨参数，通过argument传入，用=连接key及相应value，用&链接各种key，可以任意选择想填入的参数
