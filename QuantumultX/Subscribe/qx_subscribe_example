@@ -1,1 +1,0 @@
-trojan=example.com:443, password=pwd, over-tls=true, tls-verification=false, fast-open=false, udp-relay=false, tag=节点示例
