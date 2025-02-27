@@ -24,4 +24,5 @@ payload:
   - PROCESS-NAME,studio.exe
   - PROCESS-NAME,studio64.exe
   - PROCESS-NAME,clion64.exe
-  - PROCESS-NAME,clion64.exe
+  - PROCESS-NAME,rustrover.exe
+  - PROCESS-NAME,rustrover64.exe
