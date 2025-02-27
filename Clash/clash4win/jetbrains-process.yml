@@ -1,0 +1,27 @@
+payload:
+  ## > Jetbrains
+  - PROCESS-NAME,jetbrains-toolbox.exe
+  - PROCESS-NAME,idea.exe
+  - PROCESS-NAME,idea64.exe
+  - PROCESS-NAME,webstorm.exe
+  - PROCESS-NAME,webstorm64.exe
+  - PROCESS-NAME,datagrip.exe
+  - PROCESS-NAME,datagrip64.exe
+  - PROCESS-NAME,clion.exe
+  - PROCESS-NAME,clion64.exe
+  - PROCESS-NAME,rider.exe
+  - PROCESS-NAME,rider64.exe
+  - PROCESS-NAME,datagrip.exe
+  - PROCESS-NAME,datagrip64.exe
+  - PROCESS-NAME,goland.exe
+  - PROCESS-NAME,goland64.exe
+  - PROCESS-NAME,phpstorm.exe
+  - PROCESS-NAME,phpstorm64.exe
+  - PROCESS-NAME,pycharm.exe
+  - PROCESS-NAME,pycharm64.exe
+  - PROCESS-NAME,rubymine.exe
+  - PROCESS-NAME,rubymine64.exe
+  - PROCESS-NAME,studio.exe
+  - PROCESS-NAME,studio64.exe
+  - PROCESS-NAME,clion64.exe
+  - PROCESS-NAME,clion64.exe
