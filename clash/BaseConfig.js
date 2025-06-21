@@ -3,7 +3,9 @@ const baseConfig = {
     'unified-delay': true,
     'tcp-concurrent': true,
     'external-controller': 9090,
-    'secret': '******',
+    'secret': '',
+    'use-hosts': true,
+    'use-system-hosts': true,
     'find-process-mode': 'strict',
     'geodata-mode': true,
     'geo-update-interval': 12,
@@ -21,12 +23,12 @@ const baseConfig = {
 }
 
 // 国内DNS服务器
-const domesticNameservers = [
+const chinaDNS = [
   "https://223.5.5.5/dns-query", // 阿里DoH
   "https://1.12.12.12/dns-query", // 腾讯DoH
 ];
 // 国外DNS服务器
-const foreignNameservers = [
+const foreignDNS = [
   "https://8.8.8.8/dns-query", // GoogleDNS
   "https://1.1.1.1/dns-query", // CloudflareDNS
 ];
@@ -63,10 +65,10 @@ const dnsConfig = {
     "localhost.work.weixin.qq.com"
   ],
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
-  "nameserver": [...foreignNameservers],
-  "proxy-server-nameserver":[...domesticNameservers],
+  "nameserver": [...foreignDNS],
+  "proxy-server-nameserver":[...chinaDNS],
   "nameserver-policy": {
-    "geosite:private,cn": domesticNameservers
+    "geosite:cn,steam@cn,category-games@cn,microsoft@cn,apple@cn": chinaDNS
   }
 };
 
