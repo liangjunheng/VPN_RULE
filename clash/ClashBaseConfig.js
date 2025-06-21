@@ -43,7 +43,7 @@ const dnsConfig = {
   "listen": ":53",
   "ipv6": false,
   "prefer-h3": true,
-  "respect-rules": true,
+  "respect-rules": false,
   "use-system-hosts": true,
   "cache-algorithm": "arc",
   "enhanced-mode": "fake-ip",
@@ -71,9 +71,9 @@ const dnsConfig = {
   ],
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
   "nameserver": [...foreignDNS],
-  "proxy-server-nameserver":[...chinaDNS],
   "nameserver-policy": {
-    "geosite:cn,steam@cn,category-games@cn,microsoft@cn,apple@cn": chinaDNS,
+    "geosite:private": system,
+    "geosite:cn": chinaDNS,
   }
 };
 
