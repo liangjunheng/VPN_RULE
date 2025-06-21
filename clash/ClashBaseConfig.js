@@ -387,10 +387,9 @@ const rules = [
   "RULE-SET,tld-not-cn,国外服务",
   // 其他规则
   "GEOIP,LAN,全局直连,no-resolve",
-  "GEOSITE,geolocation-!cn@cn,中国服务" # DIRECT 为直连分组，可以改为你自己的分组
-  "GEOSITE,geolocation-!cn,国外服务"     # PROXY 为代理分组，可以改为你自己的分组
-  "GEOSITE,geolocation-cn@!cn,国外服务"
-  "GEOSITE,geolocation-cn,中国服务",
+  "GEOSITE,geolocation-!cn@cn,中国服务",
+  "GEOSITE,geolocation-!cn,国外服务",
+  "GEOSITE,geolocation-cn@!cn,国外服务",
   "GEOSITE,CN,中国服务",
   "GEOIP,CN,中国服务,no-resolve",
   "MATCH,漏网之鱼",
