@@ -16,7 +16,7 @@ const baseConfig = {
         mmdb: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb`,
         asn: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb`
     },
-    profile: {
+    'profile': {
         'store-selected': true,
         'store-fake-ip': true
     }
@@ -70,6 +70,26 @@ const dnsConfig = {
   "nameserver-policy": {
     "geosite:cn,steam@cn,category-games@cn,microsoft@cn,apple@cn": chinaDNS
   }
+};
+
+const sniffConfig = {
+  'enable': true,
+  'force-dns-mapping': true,
+  'parse-pure-ip': true,
+  'override-destination': false,
+  'sniff': {
+    'TLS': {
+      'ports': [443, 8443],
+    },
+    'HTTP': {
+      'ports': [80, "8080-8880"],
+    },
+    'QUIC': {
+      'ports': [443, 8443],
+    },
+  },
+  'force-domain': [],
+  'skip-domain': ["Mijia Cloud", "+.oray.com"],
 };
 
 // 代理组通用配置
@@ -381,10 +401,9 @@ function main(config) {
 
   // 覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
-
+  config["sniffer"] = sniffConfig;
   // 覆盖原配置中的代理组
   config["proxy-groups"] = proxyGroups;
-
   // 覆盖原配置中的规则
   config["rule-providers"] = ruleProviders;
   config["rules"] = rules;
