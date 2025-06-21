@@ -24,8 +24,6 @@ const baseConfig = {
   'hosts': {
     'time.facebook.com': '17.253.84.125',
     'time.android.com': '17.253.84.125',
-    'edge.microsoft.com': '117.28.245.88',
-    'msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com': '13.107.9.158',
   },
 }
 
@@ -75,7 +73,7 @@ const dnsConfig = {
   "nameserver": [...foreignDNS],
   "proxy-server-nameserver":[...chinaDNS],
   "nameserver-policy": {
-    "geosite:cn,steam@cn,category-games@cn,microsoft@cn,apple@cn": chinaDNS
+    "geosite:cn,steam@cn,category-games@cn,microsoft@cn,apple@cn": chinaDNS,
   }
 };
 
