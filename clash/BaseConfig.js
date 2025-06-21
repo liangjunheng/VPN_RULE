@@ -1,7 +1,5 @@
 const githubMirror = "https://hub.gitmirror.com/"
 const baseConfig = {
-  'allow-lan': true,
-  'bind-address': '*',
   'mode': 'rule',
   'unified-delay': true,
   'tcp-concurrent': true,
