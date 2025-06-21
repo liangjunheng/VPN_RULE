@@ -1,3 +1,5 @@
+// 参考：https://gist.github.com/2045gemini/4aea375b94c60a883f8e6c16ca3875b8
+// 参考：https://gist.github.com/dahaha-365/0b8beb613f8d1ee656fe1f21e1a07959
 const githubMirror = "https://hub.gitmirror.com/"
 const baseConfig = {
     'unified-delay': true,
