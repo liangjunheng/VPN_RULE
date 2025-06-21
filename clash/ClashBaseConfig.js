@@ -72,7 +72,7 @@ const dnsConfig = {
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
-    "geosite:private": system,
+    "geosite:private": "system",
     "geosite:cn": chinaDNS,
   }
 };
