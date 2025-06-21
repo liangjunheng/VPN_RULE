@@ -74,6 +74,7 @@ const dnsConfig = {
   "nameserver-policy": {
     "geosite:private": "system",
     "geosite:cn": chinaDNS,
+    "geosite:geolocation-!cn": foreignDNS,
   }
 };
 
