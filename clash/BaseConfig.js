@@ -5,9 +5,8 @@ const baseConfig = {
     'external-controller': 9090,
     'secret': '******',
     'find-process-mode': 'strict',
-    'global-client-fingerprint': 'chrome',
     'geodata-mode': true,
-    'geo-update-interval': 24,
+    'geo-update-interval': 12,
     'geo-auto-update': true,
     'geox-url': {
         geoip: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
@@ -225,16 +224,10 @@ const proxyGroups=[
 const ruleProviderCommon = {
   "type": "http",
   "format": "yaml",
-  "interval": 86400
+  "interval": 43200
 };
 // 规则集配置
 const ruleProviders = {
-  "reject": {
-    ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
-    "path": "./ruleset/loyalsoldier/reject.yaml"
-  },
   "icloud": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -265,11 +258,11 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
     "path": "./ruleset/loyalsoldier/proxy.yaml"
   },
-  "direct": {
+  "ChinaDomain": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt",
-    "path": "./ruleset/loyalsoldier/direct.yaml"
+    "url": "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml",
+    "path": "./ruleset/loyalsoldier/ChinaDomain.yaml"
   },
   "private": {
     ...ruleProviderCommon,
@@ -345,7 +338,6 @@ const rules = [
   "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
   "DOMAIN,v2rayse.com,国外服务", // V2rayse节点工具
   // Loyalsoldier 规则集
-  "RULE-SET,reject,全局拦截",
   "RULE-SET,lancidr,全局直连,no-resolve",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,icloud,微软服务",
@@ -355,7 +347,7 @@ const rules = [
   "RULE-SET,YouTube,YouTube",
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,Spotify,Spotify",
-  "RULE-SET,direct,中国服务",
+  "RULE-SET,ChinaDomain,中国服务",
   "RULE-SET,applications,中国服务",
   "RULE-SET,private,中国服务",
   "RULE-SET,cncidr,中国服务,no-resolve",
