@@ -337,6 +337,7 @@ const rules = [
   // 自定义规则
   "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
   "DOMAIN,v2rayse.com,国外服务", // V2rayse节点工具
+  "DOMAIN,linux.do,中国服务",
   // Loyalsoldier 规则集
   "RULE-SET,lancidr,全局直连,no-resolve",
   "RULE-SET,google,谷歌服务",
