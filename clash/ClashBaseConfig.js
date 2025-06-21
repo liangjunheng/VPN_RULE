@@ -24,6 +24,8 @@ const baseConfig = {
   'hosts': {
     'time.facebook.com': '17.253.84.125',
     'time.android.com': '17.253.84.125',
+    'edge.microsoft.com': '117.28.245.88',
+    'msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com': '117.28.245.88',
   },
 }
 
