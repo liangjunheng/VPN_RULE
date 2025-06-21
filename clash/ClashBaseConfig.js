@@ -44,7 +44,7 @@ const dnsConfig = {
   "ipv6": false,
   "prefer-h3": true,
   "respect-rules": true,
-  "use-system-hosts": false,
+  "use-system-hosts": true,
   "cache-algorithm": "arc",
   "enhanced-mode": "fake-ip",
   "fake-ip-range": "198.18.0.1/16",
