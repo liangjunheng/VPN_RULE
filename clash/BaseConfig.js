@@ -1,25 +1,32 @@
 const githubMirror = "https://hub.gitmirror.com/"
 const baseConfig = {
-    'unified-delay': true,
-    'tcp-concurrent': true,
-    'external-controller': 9090,
-    'secret': '',
-    'use-hosts': true,
-    'use-system-hosts': true,
-    'find-process-mode': 'strict',
-    'geodata-mode': true,
-    'geo-update-interval': 12,
-    'geo-auto-update': true,
-    'geox-url': {
-        geoip: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
-        geosite: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat`,
-        mmdb: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb`,
-        asn: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb`
-    },
-    'profile': {
-        'store-selected': true,
-        'store-fake-ip': true
-    }
+  'allow-lan': true,
+  'bind-address': '*',
+  'mode': 'rule',
+  'unified-delay': true,
+  'tcp-concurrent': true,
+  'external-controller': 9090,
+  'secret': '',
+  'use-hosts': true,
+  'use-system-hosts': true,
+  'find-process-mode': 'strict',
+  'geodata-mode': true,
+  'geo-update-interval': 12,
+  'geo-auto-update': true,
+  'geox-url': {
+      geoip: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
+      geosite: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat`,
+      mmdb: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb`,
+      asn: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb`
+  },
+  'profile': {
+      'store-selected': true,
+      'store-fake-ip': true
+  },
+  'hosts': {
+    'time.facebook.com': '17.253.84.125',
+    'time.android.com': '17.253.84.125',
+  },
 }
 
 // 国内DNS服务器
