@@ -67,17 +67,19 @@ const dnsConfig = {
     "time.*.gov",
     "pool.ntp.org",
     // 微信快速登录检测失败
-    "localhost.work.weixin.qq.com"
+    "localhost.work.weixin.qq.com",
+    "geosite:connectivity-check",
+    "geosite:private",
   ],
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
     "geosite:private": "system",
-    "geosite:geolocation-!cn@cn": chinaDNS,
-    "geosite:geolocation-!cn": foreignDNS,
-    "geosite:geolocation-cn@!cn": foreignDNS,
-    "geosite:cn": chinaDNS,
-    },
+    "geosite:geolocation-!cn@cn": [...chinaDNS],
+    "geosite:geolocation-!cn": [...foreignDNS],
+    "geosite:geolocation-cn@!cn": [...foreignDNS],
+    "geosite:cn": [...chinaDNS],
+  },
 };
 
 const sniffConfig = {
