@@ -293,7 +293,7 @@ const ruleProviders = {
   "ChinaDomain": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Domestic.list",
+    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/Domestic.yaml",
     "path": "./ruleset/ChinaDomain.yaml"
   },
   "private": {
