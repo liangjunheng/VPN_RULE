@@ -282,7 +282,7 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/PROXY/Jetbrains.yaml",
-    "path": "./ruleset/loyalsoldier/jetbrainsDomain.yaml"
+    "path": "./ruleset/jetbrainsDomain.yaml"
   },
   "proxy": {
     ...ruleProviderCommon,
@@ -312,7 +312,7 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt",
-    "path": "./ruleset/loyalsoldier/tld-not-cn.yaml"
+    "path": "./ruleset/tld-not-cn.yaml"
   },
   "telegramcidr": {
     ...ruleProviderCommon,
