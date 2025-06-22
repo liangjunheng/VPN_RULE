@@ -9,7 +9,7 @@ const baseConfig = {
   'use-system-hosts': true,
   'find-process-mode': 'strict',
   'geodata-mode': true,
-  'geo-update-interval': 15,
+  'geo-update-interval': 12,
   'geo-auto-update': true,
   'geox-url': {
       geoip: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
@@ -256,7 +256,7 @@ const proxyGroups=[
 const ruleProviderCommon = {
   "type": "http",
   "format": "yaml",
-  "interval": 54000
+  "interval": 43200
 };
 // 规则集配置
 const ruleProviders = {
