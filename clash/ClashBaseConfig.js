@@ -264,19 +264,19 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt",
-    "path": "./ruleset/loyalsoldier/icloud.yaml"
+    "path": "./ruleset/icloud.yaml"
   },
   "apple": {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt",
-    "path": "./ruleset/loyalsoldier/apple.yaml"
+    "path": "./ruleset/apple.yaml"
   },
   "google": {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt",
-    "path": "./ruleset/loyalsoldier/google.yaml"
+    "path": "./ruleset/google.yaml"
   },
   "JetbrainsDomain": {
     ...ruleProviderCommon,
@@ -288,25 +288,25 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
-    "path": "./ruleset/loyalsoldier/proxy.yaml"
+    "path": "./ruleset/proxy.yaml"
   },
   "ChinaDomain": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml",
-    "path": "./ruleset/loyalsoldier/ChinaDomain.yaml"
+    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Domestic.list",
+    "path": "./ruleset/ChinaDomain.yaml"
   },
   "private": {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt",
-    "path": "./ruleset/loyalsoldier/private.yaml"
+    "path": "./ruleset/private.yaml"
   },
   "gfw": {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
-    "path": "./ruleset/loyalsoldier/gfw.yaml"
+    "path": "./ruleset/gfw.yaml"
   },
   "tld-not-cn": {
     ...ruleProviderCommon,
@@ -318,49 +318,49 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
-    "path": "./ruleset/loyalsoldier/telegramcidr.yaml"
+    "path": "./ruleset/telegramcidr.yaml"
   },
   "cncidr": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt",
-    "path": "./ruleset/loyalsoldier/cncidr.yaml"
+    "path": "./ruleset/cncidr.yaml"
   },
   "lancidr": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt",
-    "path": "./ruleset/loyalsoldier/lancidr.yaml"
+    "path": "./ruleset/lancidr.yaml"
   },
   "applications": {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt",
-    "path": "./ruleset/loyalsoldier/applications.yaml"
+    "path": "./ruleset/applications.yaml"
   },
   "bahamut": {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Bahamut.txt",
-    "path": "./ruleset/xiaolin-007/bahamut.yaml"
+    "path": "./ruleset/bahamut.yaml"
   },
   "YouTube": {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/YouTube.txt",
-    "path": "./ruleset/xiaolin-007/YouTube.yaml"
+    "path": "./ruleset/YouTube.yaml"
   },
   "Netflix": {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Netflix.txt",
-    "path": "./ruleset/xiaolin-007/Netflix.yaml"
+    "path": "./ruleset/Netflix.yaml"
   },
   "Spotify": {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Spotify.txt",
-    "path": "./ruleset/xiaolin-007/Spotify.yaml"
+    "path": "./ruleset/Spotify.yaml"
   },
 };
 
@@ -370,7 +370,7 @@ const rules = [
   "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
   "DOMAIN,v2rayse.com,国外服务", // V2rayse节点工具
   "DOMAIN,linux.do,中国服务",
-  // Loyalsoldier 规则集
+  // RULE-SET 规则集
   "RULE-SET,lancidr,全局直连,no-resolve",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,icloud,微软服务",
@@ -387,13 +387,14 @@ const rules = [
   "RULE-SET,proxy,国外服务",
   "RULE-SET,gfw,国外服务",
   "RULE-SET,tld-not-cn,国外服务",
-  // 其他规则
+  // GEO规则,
   "GEOIP,LAN,全局直连,no-resolve",
   "GEOSITE,geolocation-!cn@cn,中国服务",
   "GEOSITE,geolocation-!cn,国外服务",
   "GEOSITE,geolocation-cn@!cn,国外服务",
   "GEOSITE,CN,中国服务",
   "GEOIP,CN,中国服务,no-resolve",
+  // 兜底
   "MATCH,漏网之鱼",
 ];
 
