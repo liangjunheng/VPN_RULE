@@ -392,7 +392,7 @@ const rules = [
   "GEOSITE,geolocation-!cn@cn,中国服务",
   "GEOSITE,geolocation-!cn,国外服务",
   "GEOSITE,geolocation-cn@!cn,国外服务",
-  "GEOSITE,CN,中国服务",
+  "GEOSITE,cn,中国服务",
   "GEOIP,CN,中国服务,no-resolve",
   // 兜底
   "MATCH,漏网之鱼",
