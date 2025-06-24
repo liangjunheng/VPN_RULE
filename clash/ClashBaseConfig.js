@@ -275,7 +275,7 @@ const ruleProviders = {
   "google": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt",
+    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/PROXY/Google.yaml",
     "path": "./ruleset/google.yaml"
   },
   "JetbrainsDomain": {
