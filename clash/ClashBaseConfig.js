@@ -34,8 +34,8 @@ const chinaDNS = [
 ];
 // 国外DNS服务器
 const foreignDNS = [
-  "https://8.8.8.8/dns-query", // GoogleDNS
-  "https://1.1.1.1/dns-query", // CloudflareDNS
+  "https://8.8.8.8/dns-query#节点选择", // GoogleDNS
+  "https://1.1.1.1/dns-query#节点选择", // CloudflareDNS
 ];
 // DNS配置
 const dnsConfig = {
