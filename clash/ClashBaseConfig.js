@@ -125,7 +125,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "代理",
     "type": "select",
-    "include-all": true,
+    "include-all": false,
     "proxies": ["美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Auto.png",
   },
