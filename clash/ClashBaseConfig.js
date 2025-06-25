@@ -280,13 +280,13 @@ const ruleProviders = {
   },
   "google": {
     ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/PROXY/Google.yaml",
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list",
     "path": "./ruleset/google.yaml"
   },
   "JetbrainsDomain": {
     ...ruleProviderCommon,
-    "behavior": "domain",
+    "behavior": "classical",
     "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/PROXY/Jetbrains.yaml",
     "path": "./ruleset/jetbrainsDomain.yaml"
   },
@@ -298,7 +298,7 @@ const ruleProviders = {
   },
   "ChinaDomain": {
     ...ruleProviderCommon,
-    "behavior": "domain",
+    "behavior": "classical",
     "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/Domestic.yaml",
     "path": "./ruleset/ChinaDomain.yaml"
   },
