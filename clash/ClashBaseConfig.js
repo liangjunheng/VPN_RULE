@@ -150,7 +150,7 @@ const proxyGroups=[
     "name": "DNS",
     "type": "select",
     "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "include-all": true,
+    "include-all": false,
     "icon": ""
   },
   {
@@ -320,10 +320,10 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt",
     "path": "./ruleset/tld-not-cn.yaml"
   },
-  "telegramcidr": {
+  "telegram": {
     ...ruleProviderCommon,
-    "behavior": "ipcidr",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Telegram.yaml",
     "path": "./ruleset/telegramcidr.yaml"
   },
   "cncidr": {
@@ -381,7 +381,7 @@ const rules = [
   "RULE-SET,icloud,微软服务",
   "RULE-SET,apple,苹果服务",
   "RULE-SET,JetbrainsDomain,Jetbrains服务",
-  "RULE-SET,telegramcidr,电报消息,no-resolve",
+  "RULE-SET,telegram,电报消息",
   "RULE-SET,YouTube,YouTube",
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,Spotify,Spotify",
