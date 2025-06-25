@@ -34,8 +34,8 @@ const chinaDNS = [
 ];
 // 国外DNS服务器
 const foreignDNS = [
-  "https://8.8.8.8/dns-query#节点选择", // GoogleDNS
-  "https://1.1.1.1/dns-query#节点选择", // CloudflareDNS
+  "https://8.8.8.8/dns-query#代理", // GoogleDNS
+  "https://1.1.1.1/dns-query#代理", // CloudflareDNS
 ];
 // DNS配置
 const dnsConfig = {
@@ -123,7 +123,7 @@ const filterUS = "美|us|unitedstates|united states"
 const proxyGroups=[
   {
     ...groupBaseOption,
-    "name": "节点选择",
+    "name": "代理",
     "type": "select",
     "include-all": true,
     "proxies": ["美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
@@ -131,19 +131,33 @@ const proxyGroups=[
   },
   {
     ...groupBaseOption,
+    "name": "直连",
+    "type": "select",
+    "hidden": true,
+    "proxies": ["DIRECT"],
+    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
+  },
+  {
+    ...groupBaseOption,
+    "name": "拦截",
+    "type": "select",
+    "hidden": true,
+    "proxies": ["REJECT"],
+    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
+  },
+  {
+    ...groupBaseOption,
     "name": "中国服务",
     "type": "select",
-    "proxies": ["全局直连", "节点选择", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "default": "全局直连",
+    "proxies": ["直连", "代理", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png"
   },
   {
     ...groupBaseOption,
-    "name": "国外服务",
+    "name": "国际服务",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "default": "节点选择",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/UN.png"
   },
@@ -151,8 +165,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "谷歌服务",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "default": "美国节点",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"
   },
@@ -160,8 +173,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "YouTube",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "default": "美国节点",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"
   },
@@ -169,7 +181,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "Netflix",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg"
   },
@@ -177,7 +189,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "电报消息",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
   },
@@ -186,14 +198,14 @@ const proxyGroups=[
     "name": "ChatGPT",
     "type": "select",
     "include-all": true,
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
   },
   {
     ...groupBaseOption,
     "name": "微软服务",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
   },
@@ -201,7 +213,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "苹果服务",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"
   },
@@ -209,7 +221,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "Jetbrains服务",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/master/icon/JetBrains.png"
   },
@@ -217,7 +229,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "Spotify",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg"
   },
@@ -225,23 +237,9 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "漏网之鱼",
     "type": "select",
-    "proxies": ["节点选择", "全局直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": true,
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"
-  },
-  {
-    ...groupBaseOption,
-    "name": "全局直连",
-    "type": "select",
-    "proxies": ["DIRECT"],
-    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
-  },
-  {
-    ...groupBaseOption,
-    "name": "全局拦截",
-    "type": "select",
-    "proxies": ["REJECT"],
-    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
   },
   { ...groupBaseOption, "name": "美国节点", "type": "url-test", "include-all-proxies": true, "filter": `(?i)(${filterUS})`, "exclude-filter": defaultExcludeFilter, "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png" },
   { ...groupBaseOption, "name": "香港节点", "type": "url-test", "include-all-proxies": true, "filter": `(?i)(${filterHK})`, "exclude-filter": defaultExcludeFilter, "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png" },
@@ -368,9 +366,9 @@ const ruleProviders = {
 const rules = [
   // 自定义规则
   "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
-  "DOMAIN,v2rayse.com,国外服务", // V2rayse节点工具
+  "DOMAIN,v2rayse.com,国际服务", // V2rayse节点工具
   // RULE-SET 规则集
-  "RULE-SET,lancidr,全局直连,no-resolve",
+  "RULE-SET,lancidr,直连,no-resolve",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,icloud,微软服务",
   "RULE-SET,apple,苹果服务",
@@ -383,14 +381,14 @@ const rules = [
   "RULE-SET,applications,中国服务",
   "RULE-SET,private,中国服务",
   "RULE-SET,cncidr,中国服务,no-resolve",
-  "RULE-SET,proxy,国外服务",
-  "RULE-SET,gfw,国外服务",
-  "RULE-SET,tld-not-cn,国外服务",
+  "RULE-SET,proxy,国际服务",
+  "RULE-SET,gfw,国际服务",
+  "RULE-SET,tld-not-cn,国际服务",
   // GEO规则,
-  "GEOIP,LAN,全局直连,no-resolve",
+  "GEOIP,LAN,直连,no-resolve",
   "GEOSITE,geolocation-!cn@cn,中国服务",
-  "GEOSITE,geolocation-!cn,国外服务",
-  "GEOSITE,geolocation-cn@!cn,国外服务",
+  "GEOSITE,geolocation-!cn,国际服务",
+  "GEOSITE,geolocation-cn@!cn,国际服务",
   "GEOSITE,cn,中国服务",
   "GEOIP,CN,中国服务,no-resolve",
   // 兜底
