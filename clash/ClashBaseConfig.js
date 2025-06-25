@@ -34,8 +34,8 @@ const chinaDNS = [
 ];
 // 国外DNS服务器
 const foreignDNS = [
-  "https://8.8.8.8/dns-query#代理", // GoogleDNS
-  "https://1.1.1.1/dns-query#代理", // CloudflareDNS
+  "https://8.8.8.8/dns-query#DNS", // GoogleDNS
+  "https://1.1.1.1/dns-query#DNS", // CloudflareDNS
 ];
 // DNS配置
 const dnsConfig = {
@@ -144,6 +144,14 @@ const proxyGroups=[
     "hidden": true,
     "proxies": ["REJECT"],
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
+  },  
+  {
+    ...groupBaseOption,
+    "name": "DNS",
+    "type": "select",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "include-all": true,
+    "icon": ""
   },
   {
     ...groupBaseOption,
