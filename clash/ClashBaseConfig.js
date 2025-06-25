@@ -281,7 +281,7 @@ const ruleProviders = {
   "google": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list",
+    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Google.yaml",
     "path": "./ruleset/google.yaml"
   },
   "JetbrainsDomain": {
