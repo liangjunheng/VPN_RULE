@@ -187,6 +187,14 @@ const proxyGroups=[
   },
   {
     ...groupBaseOption,
+    "name": "Tiktok",
+    "type": "select",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "include-all": false,
+    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"
+  },
+  {
+    ...groupBaseOption,
     "name": "Netflix",
     "type": "select",
     "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
@@ -278,11 +286,23 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt",
     "path": "./ruleset/apple.yaml"
   },
+  "microsoft": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Microsoft.yaml",
+    "path": "./ruleset/Microsoft.yaml"
+  },
   "google": {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Google.yaml",
     "path": "./ruleset/google.yaml"
+  },
+  "tiktok": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Global-Services/TikTok.yaml",
+    "path": "./ruleset/tiktok.yaml"
   },
   "JetbrainsDomain": {
     ...ruleProviderCommon,
@@ -324,7 +344,7 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Telegram.yaml",
-    "path": "./ruleset/telegramcidr.yaml"
+    "path": "./ruleset/telegram.yaml"
   },
   "cncidr": {
     ...ruleProviderCommon,
@@ -378,11 +398,13 @@ const rules = [
   // RULE-SET 规则集
   "RULE-SET,lancidr,直连,no-resolve",
   "RULE-SET,google,谷歌服务",
-  "RULE-SET,icloud,微软服务",
+  "RULE-SET,microsoft,微软服务",
+  "RULE-SET,icloud,苹果服务",
   "RULE-SET,apple,苹果服务",
   "RULE-SET,JetbrainsDomain,Jetbrains服务",
   "RULE-SET,telegram,电报消息",
   "RULE-SET,YouTube,YouTube",
+  "RULE-SET,tiktok,Tiktok",
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,Spotify,Spotify",
   "RULE-SET,ChinaDomain,中国服务",
