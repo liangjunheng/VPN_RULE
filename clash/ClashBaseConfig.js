@@ -70,6 +70,8 @@ const dnsConfig = {
     "localhost.work.weixin.qq.com",
     "geosite:connectivity-check",
     "geosite:private",
+    "geosite:geolocation-!cn@cn",
+    "geosite:cn",
   ],
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
   "nameserver": [...foreignDNS],
