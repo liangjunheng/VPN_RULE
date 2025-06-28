@@ -48,7 +48,7 @@ const dnsConfig = {
   "cache-algorithm": "arc",
   "enhanced-mode": "fake-ip",
   "fake-ip-range": "198.18.0.1/16",
-  "fake-ip-filter-mode": "blacklist"
+  "fake-ip-filter-mode": "blacklist",
   "fake-ip-filter": [
     "www.gstatic.com",
     // 本地主机/设备
