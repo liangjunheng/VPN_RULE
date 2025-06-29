@@ -116,12 +116,11 @@ const sniffConfig = {
 };
 
 const tunConfig = {
-  // 和fake-ip模式好像会冲突，暂时关闭
-  'enable': false,
+  'enable': true,
   'stack': "mixed",
   'dns-hijack': [
     'any:53',
-    'tcp://any:53'，
+    'tcp://any:53',
   ],
   'auto-route': true,
   'auto-redirect': true,
