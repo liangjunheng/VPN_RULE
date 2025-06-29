@@ -30,9 +30,9 @@ const baseConfig = {
 // 国内DNS服务器
 const chinaDNS = [
   "https://223.5.5.5/dns-query", // 阿里DoH
-  "tls://223.6.6.6",
+  "tls://223.6.6.6:853",
   "https://1.12.12.12/dns-query", // 腾讯DoH
-  "tls://120.53.53.53",
+  "tls://120.53.53.53:853",
 ];
 // 国外DNS服务器
 const foreignDNS = [
@@ -80,7 +80,7 @@ const dnsConfig = {
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
-    "geosite:private": "system",
+    "geosite:private":  [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-!cn": [...foreignDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
