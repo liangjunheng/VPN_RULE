@@ -3,7 +3,7 @@ const baseConfig = {
   'mode': 'rule',
   'unified-delay': true,
   'tcp-concurrent': true,
-  'external-controller': 9090,
+  'external-controller': '127.0.0.1:9090',
   'secret': '',
   'use-hosts': true,
   'use-system-hosts': true,
