@@ -115,6 +115,19 @@ const sniffConfig = {
   'skip-domain': ["Mijia Cloud", "+.oray.com"],
 };
 
+const tunConfig = {
+  // 和fake-ip模式好像会冲突，暂时关闭
+  'enable': false,
+  'stack': "mixed",
+  'dns-hijack': [
+    'any:53',
+    'tcp://any:53'，
+  ],
+  'auto-route': true,
+  'auto-redirect': true,
+  'auto-detect-interface': true,
+  };
+
 // 代理组通用配置
 const groupBaseOption = {
   "interval": 300,
@@ -457,6 +470,7 @@ function main(config) {
   // 覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
   config["sniffer"] = sniffConfig;
+  config["tun"] = tunConfig;
   // 覆盖原配置中的代理组
   config["proxy-groups"] = proxyGroups;
   // 覆盖原配置中的规则
