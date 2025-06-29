@@ -30,7 +30,9 @@ const baseConfig = {
 // 国内DNS服务器
 const chinaDNS = [
   "https://223.5.5.5/dns-query", // 阿里DoH
+  "tls://223.5.5.5",
   "https://1.12.12.12/dns-query", // 腾讯DoH
+  "tls://1.12.12.12",
 ];
 // 国外DNS服务器
 const foreignDNS = [
