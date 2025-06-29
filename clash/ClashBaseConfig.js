@@ -157,7 +157,7 @@ const proxyGroups=[
     "type": "select",
     "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": false,
-    "icon": ""
+    "icon": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/blob/master/icon/DNS.png"
   },
   {
     ...groupBaseOption,
@@ -399,6 +399,7 @@ const ruleProviders = {
 // 规则
 const rules = [
   // 自定义规则
+  "DOMAIN-KEYWORD,porn,拦截"
   "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
   "DOMAIN,v2rayse.com,国际服务", // V2rayse节点工具
   // RULE-SET 规则集
