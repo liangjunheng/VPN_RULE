@@ -30,16 +30,16 @@ const baseConfig = {
 // 国内DNS服务器
 const chinaDNS = [
   "https://223.5.5.5/dns-query", // 阿里DoH
-  "tls://223.5.5.5",
+  "tls://223.6.6.6",
   "https://1.12.12.12/dns-query", // 腾讯DoH
-  "tls://1.12.12.12",
+  "tls://120.53.53.53",
 ];
 // 国外DNS服务器
 const foreignDNS = [
   "https://8.8.8.8/dns-query#DNS", // GoogleDNS
-  "tls://8.8.8.8:853#DNS",
+  "tls://8.8.4.4:853#DNS",
   "https://1.1.1.1/dns-query#DNS", // CloudflareDNS
-  "tls://1.1.1.1:853#DNS",
+  "tls://1.0.0.1:853#DNS",
 ];
 // DNS配置
 const dnsConfig = {
