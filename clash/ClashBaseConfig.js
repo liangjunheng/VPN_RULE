@@ -47,7 +47,7 @@ const dnsConfig = {
   "listen": ":53",
   "ipv6": false,
   "prefer-h3": true,
-  "respect-rules": false,
+  "respect-rules": true,
   "use-system-hosts": true,
   "cache-algorithm": "arc",
   "enhanced-mode": "fake-ip",
@@ -77,18 +77,22 @@ const dnsConfig = {
     "geosite:geolocation-!cn@cn",
     "geosite:cn",
   ],
+  // 代理节点是域名时，使用proxy-server-nameserver解析
+  // proxy-server-nameserver设置为国内域名，不然和fake-ip模式冲突
+  "proxy-server-nameserver": [...chinaDNS],
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
+  // nameserver-policy没有命中时，走nameserver
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
     "geosite:private":  [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
-    "geosite:geolocation-!cn": [...foreignDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
     "geosite:cn": [...chinaDNS],
   },
 };
 
 const sniffConfig = {
+  // 和fake-ip模式好像会冲突，暂时关闭
   'enable': false,
   'force-dns-mapping': true,
   'parse-pure-ip': true,
