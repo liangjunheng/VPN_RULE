@@ -80,7 +80,10 @@ const dnsConfig = {
   // 代理节点是域名时，使用proxy-server-nameserver解析
   // proxy-server-nameserver设置为国内域名，不然和fake-ip模式冲突
   "proxy-server-nameserver": [...chinaDNS],
+  // DNS服务是域名时，使用default-nameserver解析
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
+  // Rule规则的"直连"域名，使用direct-nameserver解析
+  "direct-nameserver": [...chinaDNS],
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
