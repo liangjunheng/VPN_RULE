@@ -82,7 +82,7 @@ const dnsConfig = {
   "proxy-server-nameserver": [...chinaDNS],
   // DNS服务是域名时，使用default-nameserver解析
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
-  // Rule规则的"直连"域名，使用direct-nameserver解析
+  // Rule规则的命中"直连"的域名，使用direct-nameserver解析
   "direct-nameserver": [...chinaDNS],
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...foreignDNS],
