@@ -89,7 +89,7 @@ const dnsConfig = {
 };
 
 const sniffConfig = {
-  'enable': true,
+  'enable': false,
   'force-dns-mapping': true,
   'parse-pure-ip': true,
   'override-destination': false,
