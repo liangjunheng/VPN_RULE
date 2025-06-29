@@ -117,7 +117,7 @@ const sniffConfig = {
 
 const tunConfig = {
   'enable': true,
-  'stack': "mixed",
+  'stack': 'mixed',
   'dns-hijack': [
     'any:53',
     'tcp://any:53',
