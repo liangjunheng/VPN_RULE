@@ -88,7 +88,6 @@ const dnsConfig = {
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
-    "rule-set:WorkingNet": system,
     "geosite:private": [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
