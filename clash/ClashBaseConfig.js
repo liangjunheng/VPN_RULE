@@ -95,6 +95,18 @@ const dnsConfig = {
   },
 };
 
+// tun模式
+const tunConfig = {
+  'enable': true,
+  'stack': 'mixed',
+  'dns-hijack': [
+    'any:53',
+    'tcp://any:53',
+  ],
+  'auto-route': true,
+  'auto-detect-interface': true,
+};
+
 const sniffConfig = {
   // 和fake-ip模式好像会冲突，暂时关闭
   'enable': false,
@@ -464,6 +476,7 @@ function main(config) {
 
   // 覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
+  config["tun"] = tunConfig;
   config["sniffer"] = sniffConfig;
   // 覆盖原配置中的代理组
   config["proxy-groups"] = proxyGroups;
