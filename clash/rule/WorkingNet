@@ -1,0 +1,15 @@
+payload:
+  ## 🌏 Domestic
+  ## > alibaba
+  - DOMAIN-SUFFIX,alibaba-inc.com
+  - DOMAIN-SUFFIX,taobao.com
+
+  ## 🌏 Domestic
+  ## > TCL
+  - DOMAIN-SUFFIX,tclking.com
+  - DOMAIN-SUFFIX,tcl.com
+
+  ## 🌏 Domestic
+  ## > Tencent
+  - DOMAIN-SUFFIX,tencent.com
+  - DOMAIN-SUFFIX,myqcloud.com
