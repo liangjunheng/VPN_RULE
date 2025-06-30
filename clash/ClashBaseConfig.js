@@ -72,11 +72,11 @@ const dnsConfig = {
     "pool.ntp.org",
     // 微信快速登录检测失败
     "localhost.work.weixin.qq.com",
+    "rule-set:WorkingNet",
     "geosite:connectivity-check",
     "geosite:private",
     "geosite:geolocation-!cn@cn",
     "geosite:cn",
-    "rule-set:WorkingNet"
   ],
   // 代理节点是域名时，使用proxy-server-nameserver解析
   // proxy-server-nameserver设置为国内域名，不然和fake-ip模式冲突
@@ -88,8 +88,8 @@ const dnsConfig = {
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
-    "geosite:private":  [...chinaDNS],
     "rule-set:WorkingNet": system,
+    "geosite:private":  [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
     "geosite:cn": [...chinaDNS],
@@ -291,7 +291,7 @@ const ruleProviderCommon = {
 const ruleProviders = {
   "WorkingNet": {
     ...ruleProviderCommon,
-    "behavior": "domain",
+    "behavior": "classical",
     "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/WorkingNet",
     "path": "./ruleset/WorkingNet.yaml"
   },
