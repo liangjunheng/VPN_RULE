@@ -76,6 +76,7 @@ const dnsConfig = {
     "geosite:private",
     "geosite:geolocation-!cn@cn",
     "geosite:cn",
+    "rule-set:WorkingNet"
   ],
   // 代理节点是域名时，使用proxy-server-nameserver解析
   // proxy-server-nameserver设置为国内域名，不然和fake-ip模式冲突
@@ -88,6 +89,7 @@ const dnsConfig = {
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
     "geosite:private":  [...chinaDNS],
+    "rule-set:WorkingNet": system,
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
     "geosite:cn": [...chinaDNS],
@@ -287,6 +289,12 @@ const ruleProviderCommon = {
 };
 // 规则集配置
 const ruleProviders = {
+  "WorkingNet": {
+    ...ruleProviderCommon,
+    "behavior": "domain",
+    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/WorkingNet",
+    "path": "./ruleset/WorkingNet.yaml"
+  },
   "icloud": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -411,6 +419,7 @@ const rules = [
   "DOMAIN,v2rayse.com,国际服务", // V2rayse节点工具
   // RULE-SET 规则集
   "RULE-SET,lancidr,直连,no-resolve",
+  "RULE-SET,WorkingNet,直连",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,icloud,苹果服务",
