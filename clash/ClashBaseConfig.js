@@ -88,7 +88,7 @@ const dnsConfig = {
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
-    "+.lan,+.in-addr.arpa": system
+    "+.lan,+.in-addr.arpa": system,
     "geosite:private": [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
