@@ -52,7 +52,9 @@ const dnsConfig = {
   "respect-rules": true,
   "use-system-hosts": true,
   "cache-algorithm": "arc",
-  "enhanced-mode": "fake-ip",
+  // 有fake-ip喝redir-host两种模式
+  "enhanced-mode": "redir-host",
+  // fake-ip专属配置
   "fake-ip-range": "198.18.0.1/16",
   "fake-ip-filter-mode": "blacklist",
   "fake-ip-filter": [
@@ -98,21 +100,11 @@ const dnsConfig = {
   },
 };
 
-// tun模式
-const tunConfig = {
-  'enable': true,
-  'stack': 'mixed',
-  'dns-hijack': [
-    'any:53',
-    'tcp://any:53',
-  ],
-  'auto-route': true,
-  'auto-detect-interface': true,
-};
-
+// sni嗅探
+// 配合redir-host模式使用
+// fake-ip模式需要关闭
 const sniffConfig = {
-  // 和fake-ip模式好像会冲突，暂时关闭
-  'enable': false,
+  'enable': true,
   'force-dns-mapping': true,
   'parse-pure-ip': true,
   'override-destination': false,
@@ -129,6 +121,18 @@ const sniffConfig = {
   },
   'force-domain': [],
   'skip-domain': ["Mijia Cloud", "+.oray.com"],
+};
+
+// tun模式
+const tunConfig = {
+  'enable': true,
+  'stack': 'mixed',
+  'dns-hijack': [
+    'any:53',
+    'tcp://any:53',
+  ],
+  'auto-route': true,
+  'auto-detect-interface': true,
 };
 
 // 代理组通用配置
