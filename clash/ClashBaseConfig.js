@@ -4,7 +4,7 @@ const baseConfig = {
   'unified-delay': true,
   'tcp-concurrent': true,
   'external-controller': '127.0.0.1:9090',
-  'external-ui': 'ui',
+  'external-ui': 'clash-ui',
   'external-ui-url': 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip',
   'secret': '',
   'use-hosts': true,
@@ -52,8 +52,9 @@ const dnsConfig = {
   "respect-rules": true,
   "use-system-hosts": true,
   "cache-algorithm": "arc",
-  // 有fake-ip喝redir-host两种模式
+  // 有fake-ip和redir-host两种模式
   "enhanced-mode": "redir-host",
+  //
   // fake-ip专属配置
   "fake-ip-range": "198.18.0.1/16",
   "fake-ip-filter-mode": "blacklist",
@@ -82,8 +83,9 @@ const dnsConfig = {
     "geosite:geolocation-!cn@cn",
     "geosite:cn",
   ],
+  //
   // 代理节点是域名时，使用proxy-server-nameserver解析
-  // proxy-server-nameserver设置为国内域名，不然和fake-ip模式冲突
+  // proxy-server-nameserver为国内域名，避免无法解析
   "proxy-server-nameserver": [...chinaDNS],
   // DNS服务是域名时，使用default-nameserver解析
   "default-nameserver": ["119.29.29.29", "223.5.5.5"],//可修改成自己ISP的DNS
