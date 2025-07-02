@@ -54,8 +54,7 @@ const dnsConfig = {
   "cache-algorithm": "arc",
   // 有fake-ip和redir-host两种模式
   "enhanced-mode": "redir-host",
-  //
-  // fake-ip专属配置
+  // fake-ip模式专属配置
   "fake-ip-range": "198.18.0.1/16",
   "fake-ip-filter-mode": "blacklist",
   "fake-ip-filter": [
