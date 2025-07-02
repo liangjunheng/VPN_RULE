@@ -105,7 +105,7 @@ const dnsConfig = {
 // 配合redir-host模式使用
 // fake-ip模式需要关闭
 const sniffConfig = {
-  'enable': true,
+  'enable': false,
   'force-dns-mapping': true,
   'parse-pure-ip': true,
   'override-destination': false,
