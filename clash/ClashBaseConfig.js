@@ -127,6 +127,7 @@ const sniffConfig = {
 // tun模式
 const tunConfig = {
   'enable': true,
+  'mtu': 1500,
   'stack': 'mixed',
   'dns-hijack': [
     'any:53',
@@ -308,6 +309,12 @@ const ruleProviderCommon = {
 };
 // 规则集配置
 const ruleProviders = {
+  "ForeignDNS": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ForeignDNS",
+    "path": "./ruleset/ForeignDNS.yaml"
+  },
   "WorkingNet": {
     ...ruleProviderCommon,
     "behavior": "classical",
@@ -438,6 +445,7 @@ const rules = [
   "DOMAIN,v2rayse.com,国际服务", // V2rayse节点工具
   // RULE-SET 规则集
   "RULE-SET,lancidr,直连,no-resolve",
+  "RULE-SET,ForeignDNS,代理",
   "RULE-SET,WorkingNet,直连",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
