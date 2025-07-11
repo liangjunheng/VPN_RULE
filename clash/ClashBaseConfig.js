@@ -4,7 +4,7 @@ const baseConfig = {
   'unified-delay': true,
   'tcp-concurrent': true,
   'external-controller': '127.0.0.1:9090',
-  'external-ui': 'clash-ui',
+  'external-ui': 'ui',
   'external-ui-url': 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip',
   'secret': '',
   'use-hosts': true,
