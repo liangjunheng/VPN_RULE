@@ -1,5 +1,5 @@
 payload:
-  ## 🌏 Foreign
+  ## 🌏 ForeignDNS
   ## > Google
   - DOMAIN-SUFFIX,dns.google
   - DOMAIN-SUFFIX,google-public-dns-a.google.com
