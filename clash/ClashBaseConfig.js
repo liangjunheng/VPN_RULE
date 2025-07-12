@@ -21,7 +21,7 @@ const baseConfig = {
   },
   'profile': {
       'store-selected': true,
-      'store-fake-ip': true
+      'store-fake-ip': false,
   },
   'hosts': {
     'time.facebook.com': '17.253.84.125',
@@ -131,14 +131,7 @@ const tunConfig = {
   'stack': 'mixed',
   'dns-hijack': [
     'any:53',
-    'any:853',
     'tcp://any:53',
-    '8.8.8.8:443',
-    '8.8.4.4:443',
-    '1.1.1.1:443',
-    '1.0.0.1:443',
-    '1.12.12.12:443',
-    '233.5.5.5:443',
   ],
   'auto-route': true,
   'auto-detect-interface': true,
