@@ -55,7 +55,7 @@ const dnsConfig = {
   // 有fake-ip和redir-host两种模式
   "enhanced-mode": "fake-ip",
   // fake-ip模式专属配置
-  "fake-ip-range": "198.18.0.1/16",
+  "fake-ip-range": "172.19.0.1/30",
   "fake-ip-filter-mode": "blacklist",
   "fake-ip-filter": [
     "www.gstatic.com",
