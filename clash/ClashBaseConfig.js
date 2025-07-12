@@ -46,7 +46,7 @@ const foreignDNS = [
 // DNS配置
 const dnsConfig = {
   "enable": true,
-  "listen": "any:1053",
+  "listen": ":1053",
   "ipv6": false,
   "prefer-h3": true,
   "respect-rules": true,
