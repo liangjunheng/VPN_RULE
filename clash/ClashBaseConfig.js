@@ -141,10 +141,10 @@ const tunConfig = {
 const groupBaseOption = {
   "interval": 300,
   "tolerance": 300,
-  "timeout": 1000,
+  "timeout": 3000,
   "url": "https://www.google.com/generate_204",
   "lazy": true,
-  "max-failed-times": 1,
+  "max-failed-times": 3,
   "hidden": false,
 };
 // 代理组筛选条件
