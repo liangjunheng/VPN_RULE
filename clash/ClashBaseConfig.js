@@ -93,7 +93,7 @@ const dnsConfig = {
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...foreignDNS],
   "nameserver-policy": {
-    "rule-set:WorkingNet": "system",
+    "rule-set:ChinaCompany": "system",
     "geosite:private": [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
@@ -315,11 +315,11 @@ const ruleProviders = {
     "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ForeignDNS",
     "path": "./ruleset/ForeignDNS.yaml"
   },
-  "WorkingNet": {
+  "ChinaCompany": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/WorkingNet",
-    "path": "./ruleset/WorkingNet.yaml"
+    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ChinaCompany",
+    "path": "./ruleset/ChinaCompany.yaml"
   },
   "icloud": {
     ...ruleProviderCommon,
@@ -446,7 +446,7 @@ const rules = [
   // RULE-SET 规则集
   "RULE-SET,lancidr,直连,no-resolve",
   "RULE-SET,ForeignDNS,代理",
-  "RULE-SET,WorkingNet,直连",
+  "RULE-SET,ChinaCompany,直连",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,icloud,苹果服务",
