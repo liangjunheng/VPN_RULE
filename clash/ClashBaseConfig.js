@@ -76,7 +76,7 @@ const dnsConfig = {
     "pool.ntp.org",
     // 微信快速登录检测失败
     "localhost.work.weixin.qq.com",
-    "rule-set:WorkingNet",
+    "rule-set:ChinaCompany",
     "geosite:connectivity-check",
     "geosite:private",
     "geosite:geolocation-!cn@cn",
