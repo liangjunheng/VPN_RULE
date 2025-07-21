@@ -53,7 +53,7 @@ const dnsConfig = {
   "use-system-hosts": true,
   "cache-algorithm": "arc",
   // 有fake-ip和redir-host两种模式
-  "enhanced-mode": "fake-ip",
+  "enhanced-mode": "redir-host",
   // fake-ip模式专属配置
   "fake-ip-range": "198.18.0.1/16",
   "fake-ip-filter-mode": "blacklist",
@@ -106,7 +106,7 @@ const dnsConfig = {
 // 配合redir-host模式使用
 // fake-ip模式需要关闭
 const sniffConfig = {
-  'enable': `{ config["dns"]["enhanced-mode"] == "redir-host" }`,
+  'enable': dnsConfig["enhanced-mode"] === "redir-host",
   'force-dns-mapping': true,
   'parse-pure-ip': true,
   'override-destination': false,
