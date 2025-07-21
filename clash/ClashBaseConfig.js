@@ -58,6 +58,7 @@ const dnsConfig = {
   "fake-ip-range": "198.18.0.1/16",
   "fake-ip-filter-mode": "blacklist",
   "fake-ip-filter": [
+    "*",
     "www.gstatic.com",
     // 本地主机/设备
     "+.lan",
@@ -105,7 +106,7 @@ const dnsConfig = {
 // 配合redir-host模式使用
 // fake-ip模式需要关闭
 const sniffConfig = {
-  'enable': false,
+  'enable': `{ config["dns"]["enhanced-mode"] == "redir-host" }`,
   'force-dns-mapping': true,
   'parse-pure-ip': true,
   'override-destination': false,
