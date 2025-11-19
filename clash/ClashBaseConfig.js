@@ -92,7 +92,7 @@ const dnsConfig = {
   // Rule规则的命中"直连"的域名，使用direct-nameserver解析
   "direct-nameserver": [...chinaDNS],
   // nameserver-policy没有命中时，走nameserver
-  "nameserver": [...foreignDNS],
+  "nameserver": [...chinaDNS],
   "nameserver-policy": {
     "rule-set:ChinaCompany": "system",
     "geosite:private": [...chinaDNS],
@@ -289,7 +289,7 @@ const proxyGroups=[
     ...groupBaseOption,
     "name": "漏网之鱼",
     "type": "select",
-    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "proxies": ["直连", "代理", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": false,
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"
   },
@@ -440,6 +440,8 @@ const ruleProviders = {
 
 // 规则
 const rules = [
+  // DNS劫持
+  "DST-PORT,53,DNS",
   // 自定义规则
   "DOMAIN-KEYWORD,porn,拦截",
   "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
