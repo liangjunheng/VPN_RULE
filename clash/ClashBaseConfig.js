@@ -449,7 +449,7 @@ const rules = [
   // RULE-SET 规则集
   "RULE-SET,lancidr,直连,no-resolve",
   "RULE-SET,ForeignDNS,代理",
-  "RULE-SET,ChinaCompany,直连",
+  "RULE-SET,ChinaCompany,中国服务",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,icloud,苹果服务",
