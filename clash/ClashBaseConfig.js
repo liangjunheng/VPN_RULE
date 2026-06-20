@@ -53,7 +53,7 @@ const dnsConfig = {
   "use-system-hosts": true,
   "cache-algorithm": "arc",
   // 有fake-ip和redir-host两种模式
-  "enhanced-mode": "redir-host",
+  "enhanced-mode": "fake-ip",
   // fake-ip模式专属配置
   "fake-ip-range": "198.18.0.1/16",
   "fake-ip-filter-mode": "blacklist",
@@ -98,6 +98,7 @@ const dnsConfig = {
     "geosite:private": [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
+    "geosite:geolocation-!cn": [...foreignDNS],
     "geosite:cn": [...chinaDNS],
   },
 };
