@@ -99,6 +99,9 @@ const dnsConfig = {
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
     "geosite:geolocation-!cn": [...foreignDNS],
+    "RULE-SET,proxy": [...foreignDNS],
+    "RULE-SET,tld-not-cn": [...foreignDNS],
+    "RULE-SET,gfw": [...foreignDNS],
     "geosite:cn": [...chinaDNS],
   },
 };
