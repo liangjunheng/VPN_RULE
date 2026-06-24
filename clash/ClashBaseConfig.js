@@ -66,6 +66,11 @@ const dnsConfig = {
     // // Windows网络出现小地球图标
     "+.msftconnecttest.com",
     "+.msftncsi.com",
+    "+.tcl.com",
+    "+.tclcom.com",
+    "+.tclking.com",
+    "+.tcl-ta.com",
+    "+.tclsite.com",
     // QQ快速登录检测失败
     "localhost.ptlogin2.qq.com",
     "localhost.sec.qq.com",
