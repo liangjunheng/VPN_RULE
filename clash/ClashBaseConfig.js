@@ -219,6 +219,22 @@ const proxyGroups=[
   },
   {
     ...groupBaseOption,
+    "name": "微软服务",
+    "type": "select",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "include-all": false,
+    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
+  },
+  {
+    ...groupBaseOption,
+    "name": "苹果服务",
+    "type": "select",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "include-all": false,
+    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"
+  },
+  {
+    ...groupBaseOption,
     "name": "YouTube",
     "type": "select",
     "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
@@ -256,22 +272,6 @@ const proxyGroups=[
     "include-all": false,
     "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
-  },
-  {
-    ...groupBaseOption,
-    "name": "微软服务",
-    "type": "select",
-    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "include-all": false,
-    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
-  },
-  {
-    ...groupBaseOption,
-    "name": "苹果服务",
-    "type": "select",
-    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "include-all": false,
-    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"
   },
   {
     ...groupBaseOption,
