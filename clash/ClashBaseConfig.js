@@ -46,20 +46,17 @@ const foreignDNS = [
 // DNS配置
 const dnsConfig = {
   "enable": true,
-  "listen": ":1053",
+  "listen": "0.0.0.0:1053",
   "ipv6": false,
   "prefer-h3": true,
   "respect-rules": true,
   "use-system-hosts": true,
-  "cache-algorithm": "arc",
+  "use-hosts": true,
   // 有fake-ip和redir-host两种模式
   "enhanced-mode": "fake-ip",
   // fake-ip模式专属配置
   "fake-ip-range": "198.18.0.1/16",
-  "fake-ip-filter-mode": "blacklist",
   "fake-ip-filter": [
-    "*",
-    "www.gstatic.com",
     // 本地主机/设备
     "+.lan",
     "+.local",
