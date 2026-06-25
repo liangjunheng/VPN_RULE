@@ -66,11 +66,6 @@ const dnsConfig = {
     // // Windows网络出现小地球图标
     "+.msftconnecttest.com",
     "+.msftncsi.com",
-    "+.tcl.com",
-    "+.tclcom.com",
-    "+.tclking.com",
-    "+.tcl-ta.com",
-    "+.tclsite.com",
     // QQ快速登录检测失败
     "localhost.ptlogin2.qq.com",
     "localhost.sec.qq.com",
@@ -82,11 +77,8 @@ const dnsConfig = {
     "pool.ntp.org",
     // 微信快速登录检测失败
     "localhost.work.weixin.qq.com",
+    // 公司
     "rule-set:ChinaCompany",
-    "geosite:connectivity-check",
-    "geosite:private",
-    "geosite:geolocation-!cn@cn",
-    "geosite:cn",
   ],
   //
   // 代理节点是域名时，使用proxy-server-nameserver解析
