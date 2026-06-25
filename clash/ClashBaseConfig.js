@@ -35,6 +35,7 @@ const chinaDNS = [
   "tls://223.6.6.6:853",
   "https://1.12.12.12/dns-query", // 腾讯DoH
   "tls://120.53.53.53:853",
+  "system://",
 ];
 // 国外DNS服务器
 const foreignDNS = [
@@ -89,6 +90,7 @@ const dnsConfig = {
   "nameserver": [...chinaDNS],
   "nameserver-policy": {
     "rule-set:ChinaCompany": "system",
+    "geosite:connectivity-check": [...chinaDNS],
     "geosite:private": [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
