@@ -35,7 +35,6 @@ const chinaDNS = [
   "tls://223.6.6.6:853",
   "https://1.12.12.12/dns-query", // 腾讯DoH
   "tls://120.53.53.53:853",
-  "system://",
 ];
 // 国外DNS服务器
 const foreignDNS = [
@@ -143,9 +142,9 @@ const groupBaseOption = {
   "interval": 300,
   "tolerance": 300,
   "timeout": 3000,
-  "url": "https://www.google.com/generate_204",
+  "url": "https://www.gstatic.com/generate_204",
   "lazy": true,
-  "max-failed-times": 3,
+  "max-failed-times": 5,
   "hidden": false,
 };
 // 代理组筛选条件
