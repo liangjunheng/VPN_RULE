@@ -467,6 +467,8 @@ const rules = [
   "RULE-SET,proxy,国际服务",
   "RULE-SET,gfw,国际服务",
   "RULE-SET,tld-not-cn,国际服务",
+  "GEOSITE,gfw,国际服务",
+  
   // GEO规则,
   "GEOIP,LAN,直连,no-resolve",
   "GEOSITE,geolocation-!cn@cn,中国服务",
