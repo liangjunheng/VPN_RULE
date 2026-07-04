@@ -4,5 +4,6 @@ payload:
   - DOMAIN-SUFFIX,v2rayse.com
   - DOMAIN-SUFFIX,github.io
   - DOMAIN-SUFFIX,browserleaks.com
+  - DOMAIN-SUFFIX,surfsharkdns.com
   - DOMAIN-SUFFIX,surfshark.com
   - DOMAIN-SUFFIX,ip-api.com
