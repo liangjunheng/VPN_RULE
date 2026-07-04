@@ -85,6 +85,7 @@ const dnsConfig = {
   "nameserver": [...chinaDNS],
   "nameserver-policy": {
     "rule-set:ChinaCompany": "system",
+    "geosite:private": "system",
     "rule-set,proxy": [...foreignDNS],
     "rule-set,jh-proxy": [...foreignDNS],
     "rule-set,gfw": [...foreignDNS],
@@ -429,15 +430,15 @@ const ruleProviders = {
 
 // 规则
 const rules = [
-  // DNS劫持
+  // 本地直连
+  "RULE-SET,lancidr,system,no-resolve",
+  "GEOIP,LAN,system,no-resolve",
+  "GEOSITE:private": "system",
+    // DNS劫持
   "DST-PORT,53,DNS",
-  // 自定义规则
-  "DOMAIN-KEYWORD,porn,拦截",
-  "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
-  "DOMAIN,v2rayse.com,国际服务", // V2rayse节点工具
-  // RULE-SET 规则集
-  "RULE-SET,lancidr,直连,no-resolve",
   "RULE-SET,ForeignDNS,代理",
+  // 自定义规则
+  // RULE-SET 规则集
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,icloud,苹果服务",
@@ -453,9 +454,7 @@ const rules = [
   "RULE-SET,gfw,国际服务",
   "RULE-SET,tld-not-cn,国际服务",
   "GEOSITE,gfw,国际服务",
-  
   // GEO规则,
-  "GEOIP,LAN,直连,no-resolve",
   "GEOSITE,geolocation-!cn,国际服务",
   "GEOSITE,geolocation-cn@!cn,国际服务",
   // 兜底
