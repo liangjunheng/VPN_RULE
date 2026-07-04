@@ -5,3 +5,4 @@ payload:
   - DOMAIN-SUFFIX,github.io
   - DOMAIN-SUFFIX,browserleaks.com
   - DOMAIN-SUFFIX,surfshark.com
+  - DOMAIN-SUFFIX,ip-api.com
