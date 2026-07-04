@@ -1,4 +1,4 @@
-// china专用
+// 中国浏览外网专用
 // 本配置使用白名单模式，没有匹配到的规则默认走直连
 //
 const githubMirror = "https://hub.gitmirror.com/"
