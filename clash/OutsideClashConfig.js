@@ -14,7 +14,7 @@ const baseConfig = {
   'use-system-hosts': true,
   'find-process-mode': 'strict',
   'geodata-mode': true,
-  'geo-update-interval': 12,
+  'geo-update-interval': 24,
   'geo-auto-update': true,
   'geox-url': {
       geoip: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
@@ -64,12 +64,14 @@ const dnsConfig = {
   "fake-ip-filter-mode": "whitelist",  
   "fake-ip-filter": [
     "rule-set:proxy",
+    "rule-set:jh-proxy",
     "rule-set:gfw",
     "rule-set:tld-not-cn",
     "rule-set:google",
-    "geoip:!cn",
-    "geosite:geolocation-!cn",
     "geosite,gfw",
+    "geosite:geolocation-cn@!cn",
+    "geosite:geolocation-!cn",
+    "geoip:!cn",
   ],
   //
   // 代理节点是域名时，使用proxy-server-nameserver解析
@@ -83,11 +85,15 @@ const dnsConfig = {
   "nameserver": [...chinaDNS],
   "nameserver-policy": {
     "rule-set:ChinaCompany": "system",
+    "rule-set,proxy": [...foreignDNS],
+    "rule-set,jh-proxy": [...foreignDNS],
+    "rule-set,gfw": [...foreignDNS],
+    "rule-set:tld-not-cn": [...foreignDNS],
+    "rule-set:google": [...foreignDNS],
+    "geosite,gfw": [...foreignDNS],
     "geosite:geolocation-cn@!cn": [...foreignDNS],
     "geosite:geolocation-!cn": [...foreignDNS],
-    "RULE-SET,proxy": [...foreignDNS],
-    "RULE-SET,tld-not-cn": [...foreignDNS],
-    "RULE-SET,gfw": [...foreignDNS],
+    "geoip:!cn": [...foreignDNS],
     // 其他都走国内DNS
     "MATCH": [...chinaDNS],
   },
@@ -299,6 +305,12 @@ const ruleProviders = {
     "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ForeignDNS",
     "path": "./ruleset/ForeignDNS.yaml"
   },
+  "ChinaCompany": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ChinaCompany",
+    "path": "./ruleset/ChinaCompany.yaml"
+  },
   "icloud": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -340,6 +352,12 @@ const ruleProviders = {
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
     "path": "./ruleset/proxy.yaml"
+  },
+  "jh-proxy": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/jh-proxy",
+    "path": "./ruleset/jh-proxy.yaml"
   },
   "private": {
     ...ruleProviderCommon,
@@ -431,6 +449,7 @@ const rules = [
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,Spotify,Spotify",
   "RULE-SET,proxy,国际服务",
+  "RULE-SET,jh-proxy,国际服务",
   "RULE-SET,gfw,国际服务",
   "RULE-SET,tld-not-cn,国际服务",
   "GEOSITE,gfw,国际服务",
