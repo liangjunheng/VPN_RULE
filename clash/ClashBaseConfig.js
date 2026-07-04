@@ -67,7 +67,7 @@ const dnsConfig = {
     "rule-set:gfw",
     "rule-set:tld-not-cn",
     "rule-set:google",
-    "rule-set:google",
+    "geoip:!cn",
     "geosite:geolocation-!cn",
     "geosite,gfw",
   ],
