@@ -7,3 +7,4 @@ payload:
   - DOMAIN-SUFFIX,surfsharkdns.com
   - DOMAIN-SUFFIX,surfshark.com
   - DOMAIN-SUFFIX,ip-api.com
+  - DOMAIN-SUFFIX,browserscan.net
