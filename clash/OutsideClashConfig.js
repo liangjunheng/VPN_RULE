@@ -192,7 +192,7 @@ const proxyGroups=[
     "type": "select",
     "proxies": ["直连", "代理", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": false,
-    "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"
+    "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png"
   },
   {
     ...groupBaseOption,
