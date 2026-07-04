@@ -1,3 +1,6 @@
+// china专用
+// 本配置使用白名单模式，没有匹配到的规则默认走直连
+//
 const githubMirror = "https://hub.gitmirror.com/"
 const baseConfig = {
   'mode': 'rule',
@@ -57,26 +60,16 @@ const dnsConfig = {
   "enhanced-mode": "fake-ip",
   // fake-ip模式专属配置
   "fake-ip-range": "198.18.0.1/16",
+  // whitelist: 只有匹配成功才返回 fake-ip
+  "fake-ip-filter-mode": "whitelist",  
   "fake-ip-filter": [
-    // 本地主机/设备
-    "+.lan",
-    "+.local",
-    // // Windows网络出现小地球图标
-    "+.msftconnecttest.com",
-    "+.msftncsi.com",
-    // QQ快速登录检测失败
-    "localhost.ptlogin2.qq.com",
-    "localhost.sec.qq.com",
-      // 追加以下条目
-    "+.in-addr.arpa",
-    "+.ip6.arpa",
-    "time.*.com",
-    "time.*.gov",
-    "pool.ntp.org",
-    // 微信快速登录检测失败
-    "localhost.work.weixin.qq.com",
-    // 公司
-    "rule-set:ChinaCompany",
+    "rule-set:proxy",
+    "rule-set:gfw",
+    "rule-set:tld-not-cn",
+    "rule-set:google",
+    "rule-set:google",
+    "geosite:geolocation-!cn",
+    "geosite,gfw",
   ],
   //
   // 代理节点是域名时，使用proxy-server-nameserver解析
@@ -99,6 +92,7 @@ const dnsConfig = {
     "RULE-SET,tld-not-cn": [...foreignDNS],
     "RULE-SET,gfw": [...foreignDNS],
     "geosite:cn": [...chinaDNS],
+    "match": [...chinaDNS],
   },
 };
 
