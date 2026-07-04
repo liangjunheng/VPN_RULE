@@ -180,14 +180,6 @@ const proxyGroups=[
   },  
   {
     ...groupBaseOption,
-    "name": "DNS",
-    "type": "select",
-    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
-    "include-all": false,
-    "icon": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/master/icon/DNS.png"
-  },
-    {
-    ...groupBaseOption,
     "name": "中国服务",
     "type": "select",
     "proxies": ["直连", "代理", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
@@ -281,6 +273,14 @@ const proxyGroups=[
     "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
     "include-all": false,
     "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg"
+  },
+  {
+    ...groupBaseOption,
+    "name": "DNS",
+    "type": "select",
+    "proxies": ["代理", "直连", "美国节点", "香港节点", "新加坡节点", "台湾节点", "日本节点", "韩国节点", "其它地区节点"],
+    "include-all": false,
+    "icon": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/master/icon/DNS.png"
   },
   { ...groupBaseOption, "name": "美国节点", "type": "url-test", "include-all-proxies": true, "filter": `(?i)(${filterUS})`, "exclude-filter": defaultExcludeFilter, "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png" },
   { ...groupBaseOption, "name": "香港节点", "type": "url-test", "include-all-proxies": true, "filter": `(?i)(${filterHK})`, "exclude-filter": defaultExcludeFilter, "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png" },
