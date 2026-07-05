@@ -63,14 +63,10 @@ const dnsConfig = {
   // whitelist: 只有匹配成功才返回 fake-ip
   "fake-ip-filter-mode": "whitelist",  
   "fake-ip-filter": [
-    "rule-set:proxy",
     "rule-set:jh-proxy",
-    "rule-set:gfw",
-    "rule-set:tld-not-cn",
-    "rule-set:google",
-    "geosite:geolocation-!cn",
-    "geosite,gfw",
-    "geoip:!cn",
+    "GEOSITE:gfw",
+    "GEOSITE:geolocation-!cn",
+    "GEOIP:!cn",
   ],
   //
   // 代理节点是域名时，使用proxy-server-nameserver解析
@@ -85,19 +81,17 @@ const dnsConfig = {
   "nameserver-policy": {
     // 内网
     "rule-set:ChinaCompany": "system",
-    "geosite:private": "system",
+    "GEOSITE:private": "system",
+    "GEOIP:private": "system",
     // 常见大公司
-    "rule-set:google": [...foreignDNS],
-    "rule-set:YouTube": [...foreignDNS],
-    "rule-set:telegram": [...foreignDNS],
+    "GEOSITE:google": [...foreignDNS],
+    "GEOSITE:youTube": [...foreignDNS],
+    "GEOSITE:telegram": [...foreignDNS],
     // 其他国际网络
-    "rule-set,proxy": [...foreignDNS],
-    "rule-set,jh-proxy": [...foreignDNS],
-    "rule-set,gfw": [...foreignDNS],
-    "rule-set:tld-not-cn": [...foreignDNS],
-    "geosite:geolocation-!cn": [...foreignDNS],
-    "geosite,gfw": [...foreignDNS],
-    "geoip:!cn": [...foreignDNS],
+    "RULE-SET,jh-proxy": [...foreignDNS],
+    "GEOSITE,gfw": [...foreignDNS],
+    "GEOSITE:geolocation-!cn": [...foreignDNS],
+    "GEOIP:!cn": [...foreignDNS],
     // 其他都走国内DNS
     "MATCH": [...chinaDNS],
   },
@@ -434,28 +428,27 @@ const ruleProviders = {
 // 规则
 const rules = [
   // 本地直连
-  "RULE-SET,lancidr,直连,no-resolve",
   "GEOIP,private,直连,no-resolve",
   "GEOSITE,private,直连",
   // DNS劫持
   "DST-PORT,53,DNS",
   "RULE-SET,ForeignDNS,DNS",
+  // 广告商
+  "GEOSITE,category-ads-all,拦截",
   // 常见网站
-  "RULE-SET,google,谷歌服务",
-  "RULE-SET,microsoft,微软服务",
-  "RULE-SET,icloud,苹果服务",
-  "RULE-SET,apple,苹果服务",
   "RULE-SET,JetbrainsDomain,Jetbrains服务",
-  "RULE-SET,telegram,电报消息",
-  "RULE-SET,YouTube,YouTube",
-  "RULE-SET,tiktok,Tiktok",
-  "RULE-SET,Netflix,Netflix",
-  "RULE-SET,Spotify,Spotify",
+  "GEOSITE,google,谷歌服务",
+  "GEOIP,google,谷歌服务",
+  "GEOSITE,youtube,YouTube",
+  "GEOSITE,microsoft,微软服务",
+  "RULE-SET,icloud,苹果服务",
+  "GEOSITE,apple,苹果服务",
+  "GEOSITE,telegram,电报消息",
+  "GEOSITE,tiktok,Tiktok",
+  "GEOSITE,netflix,Netflix",
+  "GEOSITE,spotify,Spotify",
   // 国际服务
-  "RULE-SET,proxy,国际服务",
   "RULE-SET,jh-proxy,国际服务",
-  "RULE-SET,gfw,国际服务",
-  "RULE-SET,tld-not-cn,国际服务",
   "GEOSITE,geolocation-!cn,国际服务",
   "GEOSITE,gfw,国际服务",
   "GEOIP,!cn,国际服务",
