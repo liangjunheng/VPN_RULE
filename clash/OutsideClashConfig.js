@@ -19,12 +19,12 @@ const baseConfig = {
   'geox-url': {
       geoip: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
       geosite: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat`,
-      mmdb: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb`,
-      asn: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb`
+      mmdb: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.dat`,
+      asn: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.dat`
   },
   'profile': {
       'store-selected': true,
-      'store-fake-ip': false,
+      'store-fake-ip': true,
   },
   'hosts': {
     'time.facebook.com': '17.253.84.125',
@@ -63,15 +63,14 @@ const dnsConfig = {
   // whitelist: 只有匹配成功才返回 fake-ip
   "fake-ip-filter-mode": "whitelist",  
   "fake-ip-filter": [
+    "geosite:geolocation-!cn",
+    "geosite,gfw",
+    "geoip:!cn",
     "rule-set:proxy",
     "rule-set:jh-proxy",
     "rule-set:gfw",
     "rule-set:tld-not-cn",
     "rule-set:google",
-    "geosite,gfw",
-    "geosite:geolocation-cn@!cn",
-    "geosite:geolocation-!cn",
-    "geoip:!cn",
   ],
   //
   // 代理节点是域名时，使用proxy-server-nameserver解析
@@ -437,8 +436,16 @@ const rules = [
     // DNS劫持
   "DST-PORT,53,DNS",
   "RULE-SET,ForeignDNS,代理",
+    // GEO规则
+  "GEOSITE,geolocation-!cn,国际服务",
+  "GEOSITE,gfw,国际服务",
+  "GEOIP,!cn,国际服务",
   // 自定义规则
   // RULE-SET 规则集
+  "RULE-SET,proxy,国际服务",
+  "RULE-SET,jh-proxy,国际服务",
+  "RULE-SET,gfw,国际服务",
+  "RULE-SET,tld-not-cn,国际服务",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,icloud,苹果服务",
@@ -449,14 +456,6 @@ const rules = [
   "RULE-SET,tiktok,Tiktok",
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,Spotify,Spotify",
-  "RULE-SET,proxy,国际服务",
-  "RULE-SET,jh-proxy,国际服务",
-  "RULE-SET,gfw,国际服务",
-  "RULE-SET,tld-not-cn,国际服务",
-  "GEOSITE,gfw,国际服务",
-  // GEO规则,
-  "GEOSITE,geolocation-!cn,国际服务",
-  "GEOSITE,geolocation-cn@!cn,国际服务",
   // 兜底
   "MATCH,中国服务",
 ];
