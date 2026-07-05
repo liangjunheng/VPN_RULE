@@ -19,8 +19,8 @@ const baseConfig = {
   'geox-url': {
       geoip: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
       geosite: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat`,
-      mmdb: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.dat`,
-      asn: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.dat`
+      mmdb: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb`,
+      asn: `${githubMirror}https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb`
   },
   'profile': {
       'store-selected': true,
