@@ -83,17 +83,19 @@ const dnsConfig = {
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...chinaDNS],
   "nameserver-policy": {
+    // 内网
     "rule-set:ChinaCompany": "system",
     "geosite:private": "system",
+    // 常见大公司
+    "rule-set:google": [...foreignDNS],
+    // 其他国际网络
+    "geosite:geolocation-!cn": [...foreignDNS],
+    "geosite,gfw": [...foreignDNS],
+    "geoip:!cn": [...foreignDNS],
     "rule-set,proxy": [...foreignDNS],
     "rule-set,jh-proxy": [...foreignDNS],
     "rule-set,gfw": [...foreignDNS],
     "rule-set:tld-not-cn": [...foreignDNS],
-    "rule-set:google": [...foreignDNS],
-    "geosite,gfw": [...foreignDNS],
-    "geosite:geolocation-cn@!cn": [...foreignDNS],
-    "geosite:geolocation-!cn": [...foreignDNS],
-    "geoip:!cn": [...foreignDNS],
     // 其他都走国内DNS
     "MATCH": [...chinaDNS],
   },
