@@ -63,14 +63,14 @@ const dnsConfig = {
   // whitelist: 只有匹配成功才返回 fake-ip
   "fake-ip-filter-mode": "whitelist",  
   "fake-ip-filter": [
-    "geosite:geolocation-!cn",
-    "geosite,gfw",
-    "geoip:!cn",
     "rule-set:proxy",
     "rule-set:jh-proxy",
     "rule-set:gfw",
     "rule-set:tld-not-cn",
     "rule-set:google",
+    "geosite:geolocation-!cn",
+    "geosite,gfw",
+    "geoip:!cn",
   ],
   //
   // 代理节点是域名时，使用proxy-server-nameserver解析
@@ -88,14 +88,16 @@ const dnsConfig = {
     "geosite:private": "system",
     // 常见大公司
     "rule-set:google": [...foreignDNS],
+    "rule-set:YouTube": [...foreignDNS],
+    "rule-set:telegram": [...foreignDNS],
     // 其他国际网络
-    "geosite:geolocation-!cn": [...foreignDNS],
-    "geosite,gfw": [...foreignDNS],
-    "geoip:!cn": [...foreignDNS],
     "rule-set,proxy": [...foreignDNS],
     "rule-set,jh-proxy": [...foreignDNS],
     "rule-set,gfw": [...foreignDNS],
     "rule-set:tld-not-cn": [...foreignDNS],
+    "geosite:geolocation-!cn": [...foreignDNS],
+    "geosite,gfw": [...foreignDNS],
+    "geoip:!cn": [...foreignDNS],
     // 其他都走国内DNS
     "MATCH": [...chinaDNS],
   },
@@ -450,13 +452,13 @@ const rules = [
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,Spotify,Spotify",
   // 国际服务
-  "GEOSITE,geolocation-!cn,国际服务",
-  "GEOSITE,gfw,国际服务",
-  "GEOIP,!cn,国际服务",
   "RULE-SET,proxy,国际服务",
   "RULE-SET,jh-proxy,国际服务",
   "RULE-SET,gfw,国际服务",
   "RULE-SET,tld-not-cn,国际服务",
+  "GEOSITE,geolocation-!cn,国际服务",
+  "GEOSITE,gfw,国际服务",
+  "GEOIP,!cn,国际服务",
   // 兜底
   "MATCH,中国服务",
 ];
