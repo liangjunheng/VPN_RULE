@@ -433,19 +433,10 @@ const rules = [
   "RULE-SET,lancidr,直连,no-resolve",
   "GEOIP,private,直连,no-resolve",
   "GEOSITE,private,直连",
-    // DNS劫持
+  // DNS劫持
   "DST-PORT,53,DNS",
-  "RULE-SET,ForeignDNS,代理",
-    // GEO规则
-  "GEOSITE,geolocation-!cn,国际服务",
-  "GEOSITE,gfw,国际服务",
-  "GEOIP,!cn,国际服务",
-  // 自定义规则
-  // RULE-SET 规则集
-  "RULE-SET,proxy,国际服务",
-  "RULE-SET,jh-proxy,国际服务",
-  "RULE-SET,gfw,国际服务",
-  "RULE-SET,tld-not-cn,国际服务",
+  "RULE-SET,ForeignDNS,DNS",
+  // 常见网站
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,icloud,苹果服务",
@@ -456,6 +447,14 @@ const rules = [
   "RULE-SET,tiktok,Tiktok",
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,Spotify,Spotify",
+  // 国际服务
+  "GEOSITE,geolocation-!cn,国际服务",
+  "GEOSITE,gfw,国际服务",
+  "GEOIP,!cn,国际服务",
+  "RULE-SET,proxy,国际服务",
+  "RULE-SET,jh-proxy,国际服务",
+  "RULE-SET,gfw,国际服务",
+  "RULE-SET,tld-not-cn,国际服务",
   // 兜底
   "MATCH,中国服务",
 ];
