@@ -431,8 +431,8 @@ const ruleProviders = {
 const rules = [
   // 本地直连
   "RULE-SET,lancidr,直连,no-resolve",
-  "GEOIP,LAN,直连,no-resolve",
-  "GEOSITE,private,直连,no-resolve",
+  "GEOIP,private,直连,no-resolve",
+  "GEOSITE,private,直连",
     // DNS劫持
   "DST-PORT,53,DNS",
   "RULE-SET,ForeignDNS,代理",
