@@ -63,10 +63,14 @@ const dnsConfig = {
   // whitelist: 只有匹配成功才返回 fake-ip
   "fake-ip-filter-mode": "whitelist",  
   "fake-ip-filter": [
-    "rule-set:jh-proxy",
+    // 常见大公司
+    "GEOSITE:google",
+    "GEOSITE:youTube",
+    "GEOSITE:telegram",
+    // 其他国际网络
+    "RULE-SET:jh-proxy",
     "GEOSITE:gfw",
     "GEOSITE:geolocation-!cn",
-    "GEOIP:!cn",
   ],
   //
   // 代理节点是域名时，使用proxy-server-nameserver解析
@@ -93,7 +97,6 @@ const dnsConfig = {
     "RULE-SET,jh-proxy": [...foreignDNS],
     "GEOSITE,gfw": [...foreignDNS],
     "GEOSITE:geolocation-!cn": [...foreignDNS],
-    "GEOIP:!cn": [...foreignDNS],
     // 其他都走国内DNS
     "MATCH": [...chinaDNS],
   },
@@ -445,7 +448,6 @@ const rules = [
   "GEOSITE,microsoft,微软服务",
   "GEOSITE,icloud,苹果服务",
   "GEOSITE,apple,苹果服务",
-  "GEOIP,apple,苹果服务",
   "GEOSITE,telegram,电报消息",
   "GEOIP,telegram,电报消息",
   "GEOSITE,tiktok,Tiktok",
