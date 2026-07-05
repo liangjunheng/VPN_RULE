@@ -24,7 +24,7 @@ const baseConfig = {
   },
   'profile': {
       'store-selected': true,
-      'store-fake-ip': true,
+      'store-fake-ip': false,
   },
   'hosts': {
     'time.facebook.com': '17.253.84.125',
