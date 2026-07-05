@@ -83,6 +83,8 @@ const dnsConfig = {
     "rule-set:ChinaCompany": "system",
     "GEOSITE:private": "system",
     "GEOIP:private": "system",
+    // 广告链接
+    "geosite:category-ads-all": "rcode://success",
     // 常见大公司
     "GEOSITE:google": [...foreignDNS],
     "GEOSITE:youTube": [...foreignDNS],
