@@ -432,12 +432,14 @@ const ruleProviders = {
 
 // 规则
 const rules = [
-  // 本地直连
-  "GEOIP,private,直连,no-resolve",
-  "GEOSITE,private,直连",
   // DNS劫持
   "DST-PORT,53,DNS",
   "RULE-SET,ForeignDNS,DNS",
+  // 公司内网
+  "RULE-SET,CompanyInternalNetwork,直连",
+  // 本地直连
+  "GEOIP,private,直连,no-resolve",
+  "GEOSITE,private,直连",
   // 广告商
   "GEOSITE,category-ads-all,拦截",
   // 常见网站
