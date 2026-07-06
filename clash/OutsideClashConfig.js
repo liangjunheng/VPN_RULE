@@ -84,7 +84,7 @@ const dnsConfig = {
   "nameserver": [...chinaDNS],
   "nameserver-policy": {
     // 内网
-    "rule-set:ChinaCompany": "system",
+    "rule-set:CompanyInternalNetwork": "system",
     "GEOSITE:private": "system",
     "GEOIP:private": "system",
     // 广告链接
@@ -308,11 +308,11 @@ const ruleProviders = {
     "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ForeignDNS",
     "path": "./ruleset/ForeignDNS.yaml"
   },
-  "ChinaCompany": {
+  "CompanyInternalNetwork": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ChinaCompany",
-    "path": "./ruleset/ChinaCompany.yaml"
+    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/CompanyInternalNetwork",
+    "path": "./ruleset/CompanyInternalNetwork.yaml"
   },
   "icloud": {
     ...ruleProviderCommon,
