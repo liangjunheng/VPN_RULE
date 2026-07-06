@@ -82,7 +82,7 @@ const dnsConfig = {
   // nameserver-policy没有命中时，走nameserver
   "nameserver": [...chinaDNS],
   "nameserver-policy": {
-    "rule-set:ChinaCompany": "system",
+    "rule-set:CompanyInternalNetwork": "system",
     "geosite:connectivity-check": [...chinaDNS],
     "geosite:private": [...chinaDNS],
     "geosite:geolocation-!cn@cn": [...chinaDNS],
@@ -310,11 +310,11 @@ const ruleProviders = {
     "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ForeignDNS",
     "path": "./ruleset/ForeignDNS.yaml"
   },
-  "ChinaCompany": {
+  "CompanyInternalNetwork": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ChinaCompany",
-    "path": "./ruleset/ChinaCompany.yaml"
+    "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/CompanyInternalNetwork",
+    "path": "./ruleset/CompanyInternalNetwork.yaml"
   },
   "icloud": {
     ...ruleProviderCommon,
@@ -436,6 +436,8 @@ const ruleProviders = {
 const rules = [
   // DNS劫持
   "DST-PORT,53,DNS",
+  // 公司内网
+  "RULE-SET,CompanyInternalNetwork,直连",
   // 自定义规则
   "DOMAIN-KEYWORD,porn,拦截",
   "DOMAIN-SUFFIX,github.io,微软服务", // Github Pages
@@ -443,7 +445,6 @@ const rules = [
   // RULE-SET 规则集
   "RULE-SET,lancidr,直连,no-resolve",
   "RULE-SET,ForeignDNS,代理",
-  "RULE-SET,ChinaCompany,中国服务",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,icloud,苹果服务",
