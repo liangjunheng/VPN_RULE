@@ -8,3 +8,4 @@ payload:
   - DOMAIN-SUFFIX,surfshark.com
   - DOMAIN-SUFFIX,ip-api.com
   - DOMAIN-SUFFIX,browserscan.net
+  - DOMAIN-SUFFIX,android.com
