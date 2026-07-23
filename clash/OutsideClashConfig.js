@@ -308,6 +308,12 @@ const ruleProviders = {
     "url": "https://raw.githubusercontent.com/liangjunheng/VPN_RULE/refs/heads/master/clash/rule/ForeignDNS",
     "path": "./ruleset/ForeignDNS.yaml"
   },
+  "LeakDNS": {
+    ...ruleProviderCommon,
+    "behavior": "domain",
+    "url": "https://raw.githubusercontent.com/xishang0128/rules/main/clash%20or%20stash/prevent_dns_leak/prevent_dns_leak_domain.list",
+    "path": "./ruleset/LeakDNS.yaml"
+  },
   "CompanyInternalNetwork": {
     ...ruleProviderCommon,
     "behavior": "classical",
@@ -433,15 +439,16 @@ const ruleProviders = {
 // 规则
 const rules = [
   // DNS劫持
-  "DST-PORT,53,DNS",
+  //"DST-PORT,53,DNS",
   "RULE-SET,ForeignDNS,DNS",
+  "RULE-SET,LeakDNS,DNS",
   // 公司内网
   "RULE-SET,CompanyInternalNetwork,直连",
   // 本地直连
   "GEOIP,private,直连,no-resolve",
   "GEOSITE,private,直连",
   // 广告商
-  "GEOSITE,category-ads-all,拦截",
+  //"GEOSITE,category-ads-all,拦截",
   // 常见网站
   "RULE-SET,JetbrainsDomain,Jetbrains服务",
   "GEOSITE,google,谷歌服务",
