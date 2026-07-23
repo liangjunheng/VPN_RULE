@@ -311,6 +311,7 @@ const ruleProviders = {
   "LeakDNS": {
     ...ruleProviderCommon,
     "behavior": "domain",
+    "format": "text",
     "url": "https://raw.githubusercontent.com/xishang0128/rules/main/clash%20or%20stash/prevent_dns_leak/prevent_dns_leak_domain.list",
     "path": "./ruleset/LeakDNS.yaml"
   },
