@@ -87,6 +87,8 @@ const dnsConfig = {
     "rule-set:CompanyInternalNetwork": "system",
     "GEOSITE:private": "system",
     "GEOIP:private": "system",
+    // DNS
+    "RULE-SET,LeakDNS": [...foreignDNS],
     // 广告链接
     "geosite:category-ads-all": "rcode://success",
     // 常见大公司
@@ -142,10 +144,10 @@ const tunConfig = {
 const groupBaseOption = {
   "interval": 300,
   "tolerance": 300,
-  "timeout": 3000,
+  "timeout": 5000,
   "url": "https://www.gstatic.com/generate_204",
   "lazy": true,
-  "max-failed-times": 5,
+  "max-failed-times": 50,
   "hidden": false,
 };
 // 代理组筛选条件
