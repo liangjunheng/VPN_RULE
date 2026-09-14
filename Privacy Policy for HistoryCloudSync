@@ -1,0 +1,89 @@
+# Privacy Policy for HistoryCloudSync
+
+**Effective date:** September 9, 2026
+
+HistoryCloudSync (the “Extension”) is a browser extension that stores and synchronizes browsing-history records. This Privacy Policy explains what information the Extension processes, why it processes that information, and the choices available to you.
+
+## 1. Information We Process
+
+### Browsing-history records
+
+When enabled by the browser and used as intended, the Extension reads browsing-history information made available through the browser, such as page URLs, page titles, and visit timestamps. It stores these records in the Extension’s local IndexedDB database on your device.
+
+The Extension does not collect browsing-history records for advertising, profiling, or sale.
+
+### Extension settings and synchronization data
+
+The Extension may store settings such as cloud-provider configuration, synchronization preferences, and address-bar search preferences. If you enable cross-device sign-in state synchronization, OAuth tokens may be stored in the browser’s synchronized storage. Browser synchronized storage is not an encrypted storage system; you should disable this option if you do not want tokens synchronized by the browser.
+
+### Cloud credentials
+
+When you connect Google Drive or OneDrive, the relevant provider may issue OAuth credentials. The Extension uses these credentials only to request the permissions needed to synchronize its data.
+
+When you connect a WebDAV server, you provide the server address, a username, and a password. That password is stored by the Extension in the same browser storage used for OAuth tokens and is sent only to the server address you entered, using HTTP Basic authentication. Use a dedicated directory and, where the server supports it, a dedicated account or app password.
+
+## 2. How We Use Information
+
+The Extension uses processed information only to:
+
+- save browsing-history records locally;
+- search and display those records within the Extension;
+- synchronize records between your devices through a cloud provider that you explicitly connect;
+- maintain synchronization state, settings, and authentication status; and
+- respond to actions that you initiate, such as connecting a provider, synchronizing, or deleting records from the Extension’s local database.
+
+## 3. Cloud Storage
+
+If you connect a provider, the Extension stores synchronization data in the Extension’s private application storage area:
+
+- Google Drive: the `appDataFolder` area; and
+- OneDrive: the application folder through Microsoft Graph; and
+- WebDAV: the directory on the server that you specify.
+
+The Extension is designed to access only its own application storage area or the directory you designate. It does not read or modify your other files.
+
+Your use of Google Drive, OneDrive, or a WebDAV server is also subject to the applicable provider’s privacy policy and terms. The Extension developer does not control how those providers operate their services.
+
+## 4. Data Sharing and Sale
+
+The Extension does not sell, rent, or share your browsing-history records with advertisers, data brokers, or other third parties.
+
+Data is sent to Google, Microsoft, or your own WebDAV server only when you explicitly connect and use the corresponding synchronization provider, and only as necessary to provide that synchronization feature. The Extension does not operate a developer-controlled server for collecting browsing-history records.
+
+## 5. Data Retention and Deletion
+
+Local records remain in the Extension’s local database until you delete them through the Extension or remove the Extension and its stored data through the browser.
+
+Deleted records may be represented temporarily as synchronization tombstones so that deletion can propagate to your connected devices. The Extension is designed to remove expired tombstones after the applicable retention period.
+
+To stop cloud synchronization, disconnect the relevant provider and revoke the Extension’s access through your Google or Microsoft account settings, or remove the credentials and synchronized files from your WebDAV server. Cloud copies already synchronized may also be subject to the provider’s storage and deletion behavior.
+
+## 6. Permissions
+
+The Extension requests browser permissions needed to provide its features, including access to browser history, tabs, local and synchronized storage, identity/OAuth flows, alarms, and idle-state events. It also requests network access to the relevant Google and Microsoft authorization and API endpoints.
+
+Because a WebDAV server address is supplied by you, the Extension cannot declare that host in advance. It declares an optional host permission and asks you to grant access to that specific origin at the moment you connect. No additional host permission is requested unless you connect a WebDAV server.
+
+These permissions are used for the functions described in this Policy and are not used to serve advertising.
+
+## 7. Security
+
+The Extension uses browser storage and OAuth authorization flows provided by the browser and the connected cloud providers. No method of electronic storage or transmission is completely secure. You are responsible for protecting your browser profile and cloud accounts, including enabling appropriate account security controls.
+
+Because browser synchronized storage is not encrypted, do not enable synchronized token storage if that risk is unacceptable to you.
+
+## 8. Children’s Privacy
+
+The Extension is not directed to children under the age required by applicable law, and we do not knowingly collect personal information from children through a developer-controlled service.
+
+## 9. Changes to This Policy
+
+We may update this Privacy Policy when the Extension’s features or data practices change. The revised version will include a new effective date. Your continued use of the Extension after an update means that you acknowledge the revised Policy.
+
+## 10. Contact
+
+For privacy questions or requests, please contact the Extension developer through the support or contact channel provided with the distribution of HistoryCloudSync.
+
+---
+
+This Policy describes the current behavior of HistoryCloudSync. It is not legal advice. You should obtain professional legal review before publishing it as a legally binding policy or submitting it to a platform requiring specific disclosures.
